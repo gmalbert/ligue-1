@@ -1,0 +1,31 @@
+LoggedAt,MatchDate,HomeTeam,AwayTeam,PredHomeWin,PredDraw,PredAwayWin,PredictedResult,ActualResult,Correct,ModelVersion
+2026-04-25 12:49:16,2026-04-25,Deportivo Alavés,RCD Mallorca,35.1,40.5,24.4,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-25,Getafe CF,FC Barcelona,51.4,25.8,22.8,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-25,Valencia CF,Girona FC,28.7,47.9,23.4,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-25,Club Atlético de Madrid,Athletic Club,38.3,27.7,34.0,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-26,Rayo Vallecano de Madrid,Real Sociedad de Fútbol,38.2,41.3,20.5,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-26,Real Oviedo,Elche CF,53.4,26.8,19.8,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-26,CA Osasuna,Sevilla FC,46.6,35.7,17.7,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-26,Villarreal CF,RC Celta de Vigo,31.0,28.0,41.1,A,,,ensemble_v1
+2026-04-25 12:49:16,2026-04-27,RCD Espanyol de Barcelona,Levante UD,55.6,25.0,19.4,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-10,FC Barcelona,Real Madrid CF,27.3,20.8,51.9,A,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Athletic Club,RC Celta de Vigo,43.4,29.3,27.3,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Club Atlético de Madrid,Girona FC,35.0,37.5,27.4,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,FC Barcelona,Real Betis Balompié,33.7,34.9,31.4,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Elche CF,Getafe CF,35.2,41.7,23.0,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Levante UD,RCD Mallorca,23.4,57.6,19.0,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Rayo Vallecano de Madrid,Villarreal CF,37.3,37.6,25.1,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Real Sociedad de Fútbol,Valencia CF,53.6,25.3,21.1,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Real Oviedo,Deportivo Alavés,45.1,27.1,27.8,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,CA Osasuna,RCD Espanyol de Barcelona,39.1,33.4,27.5,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-16,Sevilla FC,Real Madrid CF,46.9,27.1,26.0,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Deportivo Alavés,Rayo Vallecano de Madrid,51.9,26.7,21.5,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Real Betis Balompié,Levante UD,51.4,27.0,21.5,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,RC Celta de Vigo,Sevilla FC,47.9,33.0,19.1,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,RCD Espanyol de Barcelona,Real Sociedad de Fútbol,33.6,48.7,17.8,D,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Getafe CF,CA Osasuna,45.6,32.0,22.5,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,RCD Mallorca,Real Oviedo,41.9,33.5,24.6,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Real Madrid CF,Athletic Club,46.3,26.5,27.2,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Villarreal CF,Club Atlético de Madrid,37.6,30.4,32.0,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Valencia CF,FC Barcelona,46.0,24.7,29.3,H,,,ensemble_v1
+2026-04-25 12:49:16,2026-05-23,Girona FC,Elche CF,47.9,32.6,19.4,H,,,ensemble_v1

@@ -20,12 +20,6 @@ env/
 # Models (large binaries — regenerate with train_models.py)
 models/*.pkl
 
-# Generated data files (regenerate with fetch scripts)
-data_files/combined_historical_data.csv
-data_files/upcoming_fixtures.csv
-data_files/predictions_log.csv
-data_files/raw/
-
 # Logs
 logs/
 
