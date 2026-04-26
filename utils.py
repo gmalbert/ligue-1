@@ -458,17 +458,33 @@ def betting_recommendation(
 
 def color_risk_rows(row: pd.Series) -> list[str]:
     """Pandas Styler row-apply function — color-codes rows by risk category."""
+    import streamlit as st
+    dark = st.session_state.get("dark_mode", True)
     cat = str(row.get("Risk Category", ""))
-    if "Low" in cat:
-        s = "background-color: rgba(46,204,113,0.15); color: #c8ffd4"
-    elif "Moderate" in cat:
-        s = "background-color: rgba(243,156,18,0.15); color: #ffe8a1"
-    elif "High" in cat:
-        s = "background-color: rgba(231,76,60,0.15); color: #ffc0bb"
-    elif "Critical" in cat:
-        s = "background-color: rgba(192,57,43,0.25); color: #ffc0bb"
+    if dark:
+        # Semi-transparent tints over dark canvas; light text
+        if "Low" in cat:
+            s = "background-color: rgba(46,204,113,0.15); color: #c8ffd4"
+        elif "Moderate" in cat:
+            s = "background-color: rgba(243,156,18,0.15); color: #ffe8a1"
+        elif "High" in cat:
+            s = "background-color: rgba(231,76,60,0.15); color: #ffc0bb"
+        elif "Critical" in cat:
+            s = "background-color: rgba(192,57,43,0.25); color: #ffc0bb"
+        else:
+            s = ""
     else:
-        s = ""
+        # Solid backgrounds fully override the dark canvas; dark text on light bg
+        if "Low" in cat:
+            s = "background-color: #d4edda; color: #0a3a1a"
+        elif "Moderate" in cat:
+            s = "background-color: #fff3cd; color: #3a2800"
+        elif "High" in cat:
+            s = "background-color: #cce5ff; color: #0a1e3a"
+        elif "Critical" in cat:
+            s = "background-color: #b8d9f8; color: #0a1428"
+        else:
+            s = "background-color: #f0f8ff; color: #0a1428"
     return [s] * len(row)
 
 
@@ -610,6 +626,31 @@ def get_dataframe_height(
     """Compute a sensible fixed height for st.dataframe()."""
     h = len(df) * row_height + header_height + padding
     return min(h, max_height)
+
+
+def render_table(df_or_styled, *, hide_index: bool = True, use_container_width: bool = True, height: int | None = None, **kwargs) -> None:
+    """Render a DataFrame or Styler.
+
+    Night mode  → st.dataframe() (interactive canvas, dark theme)
+    Day mode    → styled HTML table (no canvas, fully CSS-controlled)
+    """
+    dark = st.session_state.get("dark_mode", True)
+    if dark:
+        st.dataframe(df_or_styled, hide_index=hide_index,
+                     use_container_width=use_container_width, height=height, **kwargs)
+        return
+
+    # Day mode: render as HTML so CSS can control all cell colours
+    if isinstance(df_or_styled, pd.io.formats.style.Styler):
+        try:
+            html_str = df_or_styled.hide(axis="index").to_html()
+        except TypeError:
+            html_str = df_or_styled.to_html()
+    else:
+        html_str = df_or_styled.to_html(index=(not hide_index))
+
+    style = "overflow-x:auto; max-height:{}px; overflow-y:auto;".format(height) if height else "overflow-x:auto;"
+    st.markdown(f'<div class="lt-tbl" style="{style}">{html_str}</div>', unsafe_allow_html=True)
 
 
 def next_match_countdown(upcoming_df: pd.DataFrame) -> str | None:

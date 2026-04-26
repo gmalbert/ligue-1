@@ -5,6 +5,8 @@ from os import path
 import pandas as pd
 import streamlit as st
 
+from utils import render_table
+
 EV_THRESHOLD = 0.04   # Minimum model-vs-market edge to surface a play
 
 PRED_PATH = "data_files/predictions_log.csv"
@@ -81,7 +83,7 @@ bets_df = pd.DataFrame(rows).sort_values("_edge_raw", ascending=False).drop(colu
 
 st.success(f"✅ {len(bets_df)} value play{'s' if len(bets_df) != 1 else ''} found (edge ≥ {EV_THRESHOLD:.0%})")
 
-st.dataframe(bets_df, hide_index=True, use_container_width=True)
+render_table(bets_df, hide_index=True, use_container_width=True)
 
 # ── Edge threshold slider ──────────────────────────────────────────────────
 st.divider()

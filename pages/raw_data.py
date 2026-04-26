@@ -5,7 +5,7 @@ from os import path
 import pandas as pd
 import streamlit as st
 
-from utils import get_dataframe_height, load_historical_data
+from utils import get_dataframe_height, render_table, load_historical_data
 
 HIST_PATH = "data_files/combined_historical_data.csv"
 
@@ -81,10 +81,10 @@ rename_map = {
     "OddsAway":            "B365 A",
 }
 
-st.dataframe(
+render_table(
     df[display_cols].rename(columns=rename_map),
     hide_index=True,
-    use_container_width=True,
+    width='stretch',
     height=get_dataframe_height(df),
 )
 
@@ -95,6 +95,7 @@ st.download_button(
     data=csv_bytes,
     file_name="la_liga_raw_data.csv",
     mime="text/csv",
+    width='stretch',
 )
 
 st.divider()

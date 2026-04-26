@@ -27,11 +27,11 @@
 ## File Conventions
 
 ### Key files
-- `predictions.py` — entry point; sets `st.set_page_config`, sidebar, and `st.navigation`. **No model code here.**
+- `predictions.py` — entry point; sets `st.set_page_config`, sidebar, and `st.navigation`. **No model code here.** Also auto-detects day/night mode from browser clock via `?hour=` query param.
 - `utils.py` — ALL shared functions: data loading, feature engineering, model training, display helpers. Import from here, don't duplicate.
 - `pages/*.py` — individual Streamlit pages. No `st.set_page_config` calls here.
 - `footer.py` — `add_betting_oracle_footer()` must be called in `predictions.py` after `pg.run()`.
-- `themes.py` — `apply_theme()` must be called in `predictions.py` before `pg.run()`.
+- `themes.py` — `apply_theme()` must be called in `predictions.py` before `pg.run()`. Also exports `plotly_theme()` for Plotly chart theming.
 
 ### Data files
 - `data_files/combined_historical_data.csv` — 10 seasons SP1.csv from football-data.co.uk
@@ -40,7 +40,7 @@
 - `data_files/raw/` — raw scraped data (odds, FBref xG, Copa fixtures)
 - `models/ensemble_model.pkl` — trained VotingClassifier (auto-generated)
 
-### Fetch scripts (not yet created — see roadmaps)
+### Fetch scripts
 - `fetch_historical_csvs.py` — downloads SP1.csv for seasons 2015-16 → present
 - `fetch_upcoming_fixtures.py` — football-data.org PD competition, status=SCHEDULED
 - `fetch_fbref_xg.py` — scrapes FBref La Liga team xG (comp ID 12)
@@ -75,6 +75,55 @@
 - **No referee feature** — referee assignment data is sparse in English for La Liga (unlike EPL)
 - **No turf/surface flag** — all 20 La Liga stadiums use natural grass
 - **No travel-distance feature** — not needed (unlike MLS)
+
+---
+
+## Theming
+
+The app has two themes controlled by `st.session_state["dark_mode"]` (bool, default auto-detected from browser clock).
+
+### Theme system
+- `themes.py` exports `apply_theme()` and `plotly_theme()`
+- `_NIGHT` dict — dark navy palette
+- `_SKY` dict — light sky-blue palette
+- `apply_theme()` injects the full CSS template into the page — called in `predictions.py` before `pg.run()`
+- `plotly_theme()` returns a dict of Plotly `update_layout()` kwargs (paper_bgcolor, plot_bgcolor, font, axis colors) — call it on every Plotly figure
+
+### Auto-detection
+`predictions.py` injects a zero-height JS snippet that reads `new Date().getHours()` from the browser and sets `?hour=H` in the URL. On that reload, Python sets `dark_mode = not (6 <= hour < 20)`. Manual toggle in the sidebar overrides for the rest of the session.
+
+### Table rendering
+**Never use `st.dataframe()` directly.** Use `render_table()` from `utils.py` instead:
+```python
+from utils import render_table
+render_table(df, hide_index=True, use_container_width=True, height=400)
+```
+- Night mode → delegates to `st.dataframe()` (interactive canvas)
+- Day mode → renders an HTML table via `st.markdown(unsafe_allow_html=True)` with `.lt-tbl` CSS class, because the canvas renderer ignores CSS and always shows a dark background
+
+### Plotly charts
+```python
+from themes import plotly_theme
+fig.update_layout(**plotly_theme())
+```
+Always apply `plotly_theme()` to every Plotly figure. If `update_layout` already sets `yaxis_title` or other axis kwargs, call `update_layout` twice to avoid kwarg conflicts:
+```python
+fig.update_layout(yaxis_title=None, coloraxis_showscale=False)
+fig.update_layout(**plotly_theme())
+```
+
+### Pandas Styler row coloring
+Row-level cell colors must be applied in Python (Pandas Styler inline styles), not CSS — the canvas renderer ignores CSS. Styler functions must be theme-aware:
+```python
+def my_style(row):
+    dark = st.session_state.get("dark_mode", True)
+    if dark:
+        s = "background-color: rgba(46,204,113,0.15)"
+    else:
+        s = "background-color: #d4edda; color: #0a3a1a"   # solid opaque for day mode
+    return [s] * len(row)
+```
+**Day mode must use solid opaque hex colors** — rgba near-transparent on a light canvas produces unreadable dark-on-dark text.
 
 ---
 
@@ -123,6 +172,7 @@ Always normalize team names when merging data from different sources.
 2. Add `st.Page("pages/new_page.py", title="...", icon="...")` to the appropriate group in `predictions.py`
 3. No `st.set_page_config` in the page file
 4. Import helpers from `utils.py`; do not re-implement
+5. Use `render_table()` not `st.dataframe()`; use `plotly_theme()` on all charts
 
 ## Adding a New Feature Column
 
@@ -142,3 +192,4 @@ Full implementation details with code are in `docs/`:
 - `docs/roadmap-layout.md` — Streamlit layout
 - `docs/roadmap-infrastructure.md` — GitHub Actions, caching, logging
 - `docs/roadmap-quick-wins.md` — quick improvements
+

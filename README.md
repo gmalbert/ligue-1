@@ -1,42 +1,119 @@
 # La Liga Linea 🇪🇸
 
-Statistical predictions and betting analysis for La Liga (Spain's *Primera División*).
+**La Liga Linea** is an AI-powered prediction and betting analysis dashboard for Spain's *La Liga* (Primera División). It turns ten seasons of match data, live bookmaker odds, and advanced football metrics into clear match outcome probabilities, risk scores, and value-betting signals — all in a clean, interactive web app.
 
-Part of the **Betting Oracle** suite — built with the same architecture as the MLS Predictor and Premier League Predictor apps.
+Part of the **Betting Oracle** suite alongside the MLS Predictor and Premier League Predictor.
 
 ---
 
-## Quick Start
+## What It Does
+
+Before every La Liga matchday, La Liga Linea:
+
+- **Predicts** the probability of a Home Win, Draw, or Away Win for each upcoming fixture
+- **Scores** every prediction by confidence and risk, flagging matches where the outcome is uncertain
+- **Surfaces value bets** by comparing model probabilities against bookmaker implied odds — plays where your edge is ≥ 4% are highlighted in the Best Bets page
+- **Shows you the table** — a live standings view built directly from historical results
+- **Tracks its own record** — a rolling performance log validates accuracy over time
+
+---
+
+## Pages
+
+### 🎯 Predictions
+The main page. Every scheduled La Liga fixture appears here with:
+- **Probability bars** for Home Win, Draw, and Away Win
+- A **Risk Score** (Low / Moderate / High / Critical) based on the entropy of the probability distribution — a 40/35/25 split is a High Risk pick; a 72/18/10 split is Low Risk
+- A **Betting Tip** distilled from the model's most confident call
+- Color-coded rows so you can scan for value at a glance
+- **Match commentary** that explains the reasoning behind each prediction in plain English
+
+### 🗓️ Fixtures & Standings
+- Live La Liga table with points, goal difference, form, and position
+- Upcoming fixtures with matchday, kickoff time (Eastern), and weather forecast
+- Season-level stat banner: home win rate, draw rate, BTTS, over 2.5 goals
+
+### 📊 Statistics
+- **xG Rankings** — team expected goals from FBref, updated nightly
+- **Recent Form** — last-5-match form string and points for every team
+- **Head-to-Head Analyzer** — select any two teams to see their last 10 meetings
+- **Copa del Rey Congestion** — flags teams that played a Copa match within 4 days of their next La Liga fixture, a meaningful fatigue signal
+- **Model Feature Importance** — see which inputs matter most to the XGBoost model
+
+### 🔬 Team Deep Dive
+Pick any team for a full breakdown:
+- Season KPIs: goals for/against, xG, win/draw/loss split, clean sheets
+- Home vs Away performance comparison
+- Last 10 results table with outcomes color-coded green/amber/blue
+- Form over time visualised as a cumulative points chart
+
+### 📈 Markets
+A full view of bookmaker odds and vig-removed implied probabilities for upcoming fixtures. Filter by bookmaker or team. Download the filtered table as CSV.
+
+### 💰 Best Bets
+Value plays only. A bet surfaces here when the model's probability for an outcome exceeds the market implied probability by at least 4 percentage points. Shows the edge, the decimal odds, and the bookmaker — sorted by edge descending.
+
+### 📁 Raw Data
+A filterable browser across all historical La Liga data — useful for manual research, sanity checks, or downloading a custom slice of results.
+
+### 📈 Performance
+The model's report card:
+- Cumulative accuracy chart over all resolved predictions
+- Precision, recall, and Brier score
+- Backtest results: out-of-sample accuracy, flat-stake ROI, number of bets placed
+- Full prediction log with correct/incorrect highlighted
+
+---
+
+## How the Model Works
+
+The prediction engine is a **soft-voting ensemble** of four classifiers:
+
+| Model | Weight | Strength |
+|---|---|---|
+| XGBoost | 2 | Captures non-linear feature interactions |
+| Random Forest | 1.5 | Robust to noise, good calibration |
+| Gradient Boosting | 1 | Adds sequential error correction |
+| Logistic Regression | 0.5 | Stable baseline, interpretable |
+
+Each model outputs probabilities for Home Win, Draw, and Away Win. The weighted average is the final prediction.
+
+**Training data:** 10 seasons of SP1.csv from football-data.co.uk (approx. 3,800 matches).
+
+**Features used** (all computed with a one-match lag to prevent data leakage):
+
+| Feature | Window |
+|---|---|
+| Goals scored (home/away) | Last 5 |
+| Goals conceded (home/away) | Last 5 |
+| Win rate (home/away) | Last 10 |
+| Momentum points (home/away) | Last 3 |
+| Rest days since last match | — |
+| Bookmaker implied probabilities | Current odds |
+| Copa del Rey congestion flag | ≤ 4 days |
+
+The model trains automatically on first launch and is cached. Delete `models/ensemble_model.pkl` to force a retrain.
+
+---
+
+## Themes
+
+The app ships with a **Night** (dark navy) and **Day** (sky blue) theme. On first load, the theme is set automatically based on your browser's local time — day mode from 6 AM to 8 PM, night mode otherwise. You can override this at any time using the toggle in the sidebar.
+
+---
+
+## Setup (Developers)
 
 ```bash
-# 1. Clone and set up environment
 git clone https://github.com/gmalbert/la-liga.git
 cd la-liga
 python -m venv venv
 venv\Scripts\activate          # Windows
 # source venv/bin/activate     # macOS / Linux
-
 pip install -r requirements.txt
-
-# 2. Configure API keys
-copy .env.example .env         # Windows
-# cp .env.example .env         # macOS / Linux
-# Edit .env and add your keys
-
-# 3. Fetch data
-python fetch_historical_csvs.py    # 10 seasons of La Liga results
-python fetch_upcoming_fixtures.py  # upcoming PD fixtures
-
-# 4. Run the app (model trains automatically on first load)
-streamlit run predictions.py
 ```
 
----
-
-## Environment Variables
-
-Create a `.env` file in the project root (never commit this):
-
+Create a `.env` file (never commit this):
 ```
 FOOTBALL_DATA_KEY=your_football_data_org_key
 ODDS_API_KEY=your_the_odds_api_key
@@ -46,83 +123,17 @@ Get your keys:
 - [football-data.org](https://www.football-data.org/) — free tier covers La Liga (`PD`)
 - [The Odds API](https://the-odds-api.com/) — free tier, sport key: `soccer_spain_la_liga`
 
----
+```bash
+# Fetch data
+python fetch_historical_csvs.py     # 10 seasons of La Liga results
+python fetch_upcoming_fixtures.py   # upcoming fixtures
+python fetch_fbref_xg.py            # team xG from FBref
+python fetch_odds.py                # bookmaker odds
 
-## Project Structure
-
-```
-la-liga/
-├── predictions.py              # App entry point — run this with streamlit
-├── utils.py                    # Shared helpers: data, features, model, display
-├── footer.py                   # Betting Oracle footer
-├── themes.py                   # CSS theme (La Liga red)
-├── team_name_mapping.py        # Normalize team names across data sources
-│
-├── pages/
-│   ├── predictions_tab.py      # 🎯 Default page — upcoming match predictions
-│   ├── fixtures.py             # 🗓️ Fixtures, standings, live scores
-│   ├── statistics.py           # 📊 xG rankings, form, H2H, Copa congestion
-│   ├── team_deep_dive.py       # 🔬 Per-team deep dive
-│   ├── raw_data.py             # 📁 Historical data browser
-│   ├── markets.py              # 📈 Bookmaker odds and implied probs
-│   └── best_bets.py            # 💰 Model-vs-market value plays
-│
-├── data_files/
-│   ├── logo.png
-│   ├── combined_historical_data.csv   # generated by fetch_historical_csvs.py
-│   ├── upcoming_fixtures.csv          # generated by fetch_upcoming_fixtures.py
-│   ├── predictions_log.csv            # generated by app
-│   └── raw/
-│       ├── fbref_team_xg.csv          # generated by fetch_fbref_xg.py
-│       ├── copa_fixtures.csv          # generated by fetch_copa_fixtures.py
-│       └── odds.csv                   # generated by fetch_odds.py
-│
-├── models/
-│   ├── ensemble_model.pkl             # auto-generated on first app run
-│   └── metrics.json                   # model evaluation metrics
-│
-├── .streamlit/config.toml             # La Liga red theme
-├── docs/                              # Roadmap documents
-├── requirements.txt
-├── .env                               # NOT committed — create from .env.example
-└── .gitignore
+# Launch
+streamlit run predictions.py
 ```
 
----
-
-## How the Model Works
-
-1. **Data** — 10 seasons of La Liga results from [football-data.co.uk](https://www.football-data.co.uk/) (SP1.csv files)
-2. **Features** — Rolling averages computed per team (shift(1) prevents leakage):
-   - Goals scored/conceded (last 5), win rate (last 10), momentum points (last 3), rest days
-   - Vig-removed bookmaker implied probabilities (when odds are available)
-3. **Model** — Soft-voting ensemble: XGBoost (weight 2) + Random Forest (1.5) + Gradient Boosting (1) + Logistic Regression (0.5)
-4. **Predictions** — Feature vector built from each team's most recent stats; model returns P(HomeWin / Draw / AwayWin)
-5. **Risk** — Shannon entropy of the probability distribution; high entropy = high risk
-
-The model trains automatically on first load. Delete `models/ensemble_model.pkl` to retrain.
-
----
-
-## Pages
-
-| Page | Description |
-|---|---|
-| **Predictions** | Upcoming fixture predictions with risk scoring and betting tips |
-| **Fixtures & Standings** | Live La Liga table, upcoming fixtures, live scores |
-| **Statistics** | xG rankings, last-5 form, H2H analyzer, Copa del Rey flag |
-| **Team Deep Dive** | Per-team KPIs, home/away split, last 10 results |
-| **Raw Data** | Filterable historical data browser |
-| **Markets** | Bookmaker odds and implied probabilities |
-| **Best Bets** | Value plays where model edge ≥ 4% vs market |
-
----
-
-## La Liga Notes
-
-- Competition code: `PD` · FBref comp ID: `12` · Season: August–May
-- All natural grass — no surface flag needed
-- Copa del Rey congestion flag is La Liga-specific
-- Avg goals: ~1.45 home / ~1.12 away
+The model trains on first load. All data refreshes nightly via GitHub Actions.
 
 See [`docs/README.md`](docs/README.md) for the full implementation roadmap.
