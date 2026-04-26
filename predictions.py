@@ -18,10 +18,39 @@ st.set_page_config(
 )
 
 from footer import add_betting_oracle_footer  # noqa: E402
-from themes import apply_theme               # noqa: E402
+from themes import apply_theme  # noqa: E402
 from utils import load_upcoming_fixtures, next_match_countdown  # noqa: E402
 
-apply_theme()
+# ── Mode must be set before apply_theme() ─────────────────────────────────
+# Auto-detect from browser clock via ?hour= query param (injected by JS below).
+# Only auto-set when the user hasn't manually toggled this session.
+_hour_param = st.query_params.get("hour", None)
+if not st.session_state.get("dark_mode_manual", False):
+    if _hour_param is not None:
+        try:
+            _h = int(_hour_param)
+            st.session_state["dark_mode"] = not (6 <= _h < 20)
+        except ValueError:
+            st.session_state.setdefault("dark_mode", True)
+    else:
+        st.session_state.setdefault("dark_mode", True)
+
+# Always inject JS so a stale ?hour from a previous session is updated on
+# every page load. JS only does a location.replace() when the value changes.
+st.iframe(
+    """
+    <script>
+    const h = new Date().getHours();
+    const url = new URL(window.parent.location.href);
+    const existing = url.searchParams.get('hour');
+    if (existing === null || parseInt(existing, 10) !== h) {
+        url.searchParams.set('hour', h);
+        window.parent.location.replace(url.toString());
+    }
+    </script>
+    """,
+    height=10,
+)
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
 _logo = path.join("data_files", "logo.png")
@@ -51,6 +80,17 @@ st.session_state["selected_season"] = st.sidebar.selectbox(
     _seasons,
     index=_seasons.index(st.session_state.get("selected_season", _seasons[0])),
 )
+
+st.sidebar.divider()
+
+# Night / Day toggle
+_mode_label = "☀️ Switch to Day" if st.session_state["dark_mode"] else "🌙 Switch to Night"
+if st.sidebar.button(_mode_label, width='stretch'):
+    st.session_state["dark_mode"] = not st.session_state["dark_mode"]
+    st.session_state["dark_mode_manual"] = True  # suppress auto-override for this session
+    st.rerun()
+
+apply_theme()
 
 st.sidebar.divider()
 

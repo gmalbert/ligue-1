@@ -9,6 +9,9 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+from utils import render_table
+from themes import plotly_theme
+
 LOG_PATH      = "data_files/predictions_log.csv"
 BACKTEST_PATH = "models/backtest_results.json"
 METRICS_PATH  = "models/metrics.json"
@@ -76,8 +79,9 @@ else:
         fig.add_hline(y=33.3, line_dash="dash", line_color="gray",
                       annotation_text="Random baseline (33.3%)")
         fig.update_traces(line_color="#e63946", line_width=2)
-        fig.update_layout(yaxis_range=[0, 100], hovermode="x unified")
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(yaxis_range=[0, 100], hovermode="x unified",
+                          **plotly_theme())
+        st.plotly_chart(fig, width='stretch')
 
     st.divider()
 
@@ -89,11 +93,15 @@ else:
                  if c in resolved.columns]
 
     def _row_style(row: pd.Series) -> list[str]:
+        import streamlit as st
+        dark = st.session_state.get("dark_mode", True)
         if row.get("Correct") == 1:
-            return ["background-color: rgba(46,204,113,0.15)"] * len(row)
+            s = "background-color: rgba(46,204,113,0.15)" if dark else "background-color: #d4edda; color: #0a3a1a"
         elif row.get("Correct") == 0:
-            return ["background-color: rgba(231,76,60,0.15)"] * len(row)
-        return [""] * len(row)
+            s = "background-color: rgba(231,76,60,0.15)" if dark else "background-color: #cce5ff; color: #0a1e3a"
+        else:
+            s = "" if dark else "background-color: #f0f8ff; color: #0a1428"
+        return [s] * len(row)
 
     styled = (
         resolved[show_cols]
@@ -105,7 +113,7 @@ else:
             "PredAwayWin": "{:.1%}",
         }, na_rep="—")
     )
-    st.dataframe(styled, hide_index=True, use_container_width=True)
+    render_table(styled, hide_index=True, width='stretch')
 
 st.divider()
 

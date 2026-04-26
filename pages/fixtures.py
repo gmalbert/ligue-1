@@ -12,6 +12,7 @@ from utils import (
     get_dataframe_height,
     load_historical_data,
     load_upcoming_fixtures,
+    render_table,
 )
 
 HIST_PATH     = "data_files/combined_historical_data.csv"
@@ -44,7 +45,7 @@ if path.exists(HIST_PATH):
 
     if not standings.empty:
         st.subheader(f"📊 La Liga Table — {season_year - 1}-{str(season_year)[2:]}")
-        st.dataframe(standings, hide_index=True, use_container_width=True,
+        render_table(standings, hide_index=True, width='stretch',
                      height=get_dataframe_height(standings, max_height=760))
         st.divider()
     else:

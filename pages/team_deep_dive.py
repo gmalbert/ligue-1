@@ -5,7 +5,7 @@ from os import path
 import pandas as pd
 import streamlit as st
 
-from utils import get_dataframe_height, load_historical_data
+from utils import get_dataframe_height, render_table, load_historical_data
 
 HIST_PATH = "data_files/combined_historical_data.csv"
 
@@ -109,15 +109,24 @@ show_cols = ["MatchDate", "HomeTeam", "FullTimeHomeGoals", "FullTimeAwayGoals",
 show_cols = [c for c in show_cols if c in recent.columns]
 
 def _outcome_style(val: str) -> str:
-    return {
-        "Win":  "background-color: rgba(46,204,113,0.2)",
-        "Draw": "background-color: rgba(243,156,18,0.2)",
-        "Loss": "background-color: rgba(231,76,60,0.2)",
-    }.get(val, "")
+    import streamlit as st
+    dark = st.session_state.get("dark_mode", True)
+    if dark:
+        return {
+            "Win":  "background-color: rgba(46,204,113,0.2)",
+            "Draw": "background-color: rgba(243,156,18,0.2)",
+            "Loss": "background-color: rgba(231,76,60,0.2)",
+        }.get(val, "")
+    else:
+        return {
+            "Win":  "background-color: #d4edda; color: #0a3a1a",
+            "Draw": "background-color: #fff3cd; color: #3a2800",
+            "Loss": "background-color: #cce5ff; color: #0a1e3a",
+        }.get(val, "background-color: #f0f8ff; color: #0a1428")
 
 styled = recent[show_cols].rename(columns={
     "MatchDate": "Date", "FullTimeHomeGoals": "HG",
     "FullTimeAwayGoals": "AG", "FullTimeResult": "FTR",
 }).style.map(_outcome_style, subset=["Outcome"])
 
-st.dataframe(styled, hide_index=True, use_container_width=True)
+render_table(styled, hide_index=True, use_container_width=True)
