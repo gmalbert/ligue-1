@@ -1,139 +1,175 @@
-# La Liga Linea 🇪🇸
+<a id="top"></a>
 
-**La Liga Linea** is an AI-powered prediction and betting analysis dashboard for Spain's *La Liga* (Primera División). It turns ten seasons of match data, live bookmaker odds, and advanced football metrics into clear match outcome probabilities, risk scores, and value-betting signals — all in a clean, interactive web app.
+<p align="center">
+  <img src="data_files/logo.png" alt="Ligue Odds logo" width="220">
+</p>
+
+# Ligue Odds
+
+*Ligue Odds* is an AI-powered prediction and betting analysis dashboard for France's **Ligue 1**. It turns ten seasons of match data, bookmaker odds, and football metrics into match probabilities, risk scores, standings, and value-betting signals in a Streamlit app.
 
 Part of the **Betting Oracle** suite alongside the MLS Predictor and Premier League Predictor.
 
----
+## Table Of Contents
+
+- [What It Does](#what-it-does)
+- [Pages](#pages)
+- [How The Model Works](#how-the-model-works)
+- [Nightly Data Pipeline](#nightly-data-pipeline)
+- [Themes](#themes)
+- [Local Setup](#local-setup)
+- [Docs](#docs)
 
 ## What It Does
 
-Before every La Liga matchday, La Liga Linea:
+Before every Ligue 1 matchday, Ligue Odds:
 
-- **Predicts** the probability of a Home Win, Draw, or Away Win for each upcoming fixture
-- **Scores** every prediction by confidence and risk, flagging matches where the outcome is uncertain
-- **Surfaces value bets** by comparing model probabilities against bookmaker implied odds — plays where your edge is ≥ 4% are highlighted in the Best Bets page
-- **Shows you the table** — a live standings view built directly from historical results
-- **Tracks its own record** — a rolling performance log validates accuracy over time
+- **Predicts** home win, draw, and away win probabilities for each scheduled fixture.
+- **Scores risk** using confidence and probability spread.
+- **Surfaces value bets** by comparing model probabilities against market implied odds.
+- **Shows standings** built from historical Ligue 1 results.
+- **Tracks performance** through resolved prediction logs and backtests.
 
----
+[Back to top](#top)
 
 ## Pages
 
-### 🎯 Predictions
-The main page. Every scheduled La Liga fixture appears here with:
-- **Probability bars** for Home Win, Draw, and Away Win
-- A **Risk Score** (Low / Moderate / High / Critical) based on the entropy of the probability distribution — a 40/35/25 split is a High Risk pick; a 72/18/10 split is Low Risk
-- A **Betting Tip** distilled from the model's most confident call
-- Color-coded rows so you can scan for value at a glance
-- **Match commentary** that explains the reasoning behind each prediction in plain English
+### Predictions
 
-### 🗓️ Fixtures & Standings
-- Live La Liga table with points, goal difference, form, and position
-- Upcoming fixtures with matchday, kickoff time (Eastern), and weather forecast
-- Season-level stat banner: home win rate, draw rate, BTTS, over 2.5 goals
+The main page shows upcoming match predictions when fixtures are available. During off-season or empty slates, it shows a friendlier overview with current slate status, standings, top model signals, and navigation to key areas.
 
-### 📊 Statistics
-- **xG Rankings** — team expected goals from FBref, updated nightly
-- **Recent Form** — last-5-match form string and points for every team
-- **Head-to-Head Analyzer** — select any two teams to see their last 10 meetings
-- **Copa del Rey Congestion** — flags teams that played a Copa match within 4 days of their next La Liga fixture, a meaningful fatigue signal
-- **Model Feature Importance** — see which inputs matter most to the XGBoost model
+### Fixtures & Standings
 
-### 🔬 Team Deep Dive
-Pick any team for a full breakdown:
-- Season KPIs: goals for/against, xG, win/draw/loss split, clean sheets
-- Home vs Away performance comparison
-- Last 10 results table with outcomes color-coded green/amber/blue
-- Form over time visualised as a cumulative points chart
+Live standings, upcoming fixtures, kickoff times in Eastern Time, weather, and season-level stats.
 
-### 📈 Markets
-A full view of bookmaker odds and vig-removed implied probabilities for upcoming fixtures. Filter by bookmaker or team. Download the filtered table as CSV.
+### Statistics
 
-### 💰 Best Bets
-Value plays only. A bet surfaces here when the model's probability for an outcome exceeds the market implied probability by at least 4 percentage points. Shows the edge, the decimal odds, and the bookmaker — sorted by edge descending.
+xG proxy rankings, recent form, head-to-head analysis, Coupe de France congestion flags, and model feature importance.
 
-### 📁 Raw Data
-A filterable browser across all historical La Liga data — useful for manual research, sanity checks, or downloading a custom slice of results.
+### Team Deep Dive
 
-### 📈 Performance
-The model's report card:
-- Cumulative accuracy chart over all resolved predictions
-- Precision, recall, and Brier score
-- Backtest results: out-of-sample accuracy, flat-stake ROI, number of bets placed
-- Full prediction log with correct/incorrect highlighted
+Team KPIs, home/away splits, and recent results for any selected club.
 
----
+### Markets
 
-## How the Model Works
+Bookmaker odds and vig-removed implied probabilities for upcoming fixtures.
 
-The prediction engine is a **soft-voting ensemble** of four classifiers:
+### Best Bets
+
+Value plays where the model probability exceeds the market implied probability by the configured edge threshold.
+
+### Raw Data
+
+A filterable browser for historical Ligue 1 match data, with a data dictionary and CSV download.
+
+### Performance
+
+Prediction accuracy, resolved prediction logs, and historical backtest results.
+
+[Back to top](#top)
+
+## How The Model Works
+
+The prediction engine starts with a **soft-voting ensemble**:
 
 | Model | Weight | Strength |
-|---|---|---|
-| XGBoost | 2 | Captures non-linear feature interactions |
-| Random Forest | 1.5 | Robust to noise, good calibration |
-| Gradient Boosting | 1 | Adds sequential error correction |
-| Logistic Regression | 0.5 | Stable baseline, interpretable |
+|---|---:|---|
+| XGBoost | 2.0 | Captures non-linear feature interactions |
+| Random Forest | 1.5 | Robust to noisy tabular data |
+| Gradient Boosting | 1.0 | Adds sequential error correction |
+| Logistic Regression | 0.5 | Stable interpretable baseline |
 
-Each model outputs probabilities for Home Win, Draw, and Away Win. The weighted average is the final prediction.
+Each model outputs probabilities for Home Win, Draw, and Away Win. Those probabilities are evaluated against the bookmaker-implied market baseline, then blended with market probabilities when validation log loss improves. This prevents the model from inventing artificial edges when the market is already stronger.
 
-**Training data:** 10 seasons of SP1.csv from football-data.co.uk (approx. 3,800 matches).
-
-**Features used** (all computed with a one-match lag to prevent data leakage):
+**Training data:** Ligue 1 `FR1.csv` data from football-data.co.uk, currently 2015-16 through 2025-26 when available.
 
 | Feature | Window |
 |---|---|
-| Goals scored (home/away) | Last 5 |
-| Goals conceded (home/away) | Last 5 |
-| Win rate (home/away) | Last 10 |
-| Momentum points (home/away) | Last 3 |
-| Rest days since last match | — |
-| Bookmaker implied probabilities | Current odds |
-| Copa del Rey congestion flag | ≤ 4 days |
+| Goals scored and conceded | Last 5 |
+| Shots and shots on target | Last 5 |
+| Win rate | Last 10 |
+| Momentum points | Last 3 |
+| Rest days since last match | Previous fixture |
+| Home/away venue splits | Last 5-10 |
+| Elo team strength | Pre-match |
+| Bookmaker implied probabilities | Current market |
+| Coupe de France congestion flag | Nearby cup fixture |
 
-The model trains automatically on first launch and is cached. Delete `models/ensemble_model.pkl` to force a retrain.
+Reported accuracy is exact 3-way classification accuracy: the top predicted result must match Home Win, Draw, or Away Win. The headline validation uses the latest full season as the holdout. The app also tracks log loss, Brier score, market baseline deltas, calibration error, ROI, closing line value, draw recall, macro F1, ROC AUC, majority baseline accuracy, market baseline accuracy, and walk-forward season summaries.
 
----
+[Back to top](#top)
+
+## Nightly Data Pipeline
+
+Models, predictions, and app-cache artifacts are generated nightly so users do not wait for model training or common table calculations when opening the app.
+
+The nightly flow:
+
+- Fetches historical Ligue 1 data, upcoming fixtures, odds, weather, xG proxy data, and Coupe de France fixtures.
+- Stores append-only market odds snapshots for movement, consensus, totals, BTTS, and future CLV features.
+- Pulls API-Football enrichment for match statistics/xG when available, injuries, lineups, and squad lists with a 100-request/day quota guard.
+- Prepares model-ready features.
+- Builds an additive enriched feature store at `data_files/model_features/enriched_match_features.csv`.
+- Trains ensemble, Poisson, and neural-network models.
+- Runs the historical backtest.
+- Pre-generates prediction logs.
+- Builds app-cache files for standings, league stats, team form, and feature importance.
+
+Current note: live odds can come from `odds-api.io` or The Odds API. The default local setup prefers `odds-api.io` when `ODDS_API_IO_KEY` is present; failed odds requests clear stale odds data instead of showing old markets.
+
+API-Football note: the free key tested here is quota-guarded at 100 requests/day and currently blocks the 2025 season, so current-season injuries and lineups are unavailable on that plan. The enrichment scripts fall back to the accessible 2024 season for historical xG/stat and squad-strength data.
+
+[Back to top](#top)
 
 ## Themes
 
-The app ships with a **Night** (dark navy) and **Day** (sky blue) theme. On first load, the theme is set automatically based on your browser's local time — day mode from 6 AM to 8 PM, night mode otherwise. You can override this at any time using the toggle in the sidebar.
+The app ships with **Day** and **Night** themes. The theme is selected automatically from the user's browser-local time:
 
----
+- Day mode: 6 AM to 8 PM
+- Night mode: 8 PM to 6 AM
 
-## Setup (Developers)
+[Back to top](#top)
+
+## Local Setup
+
+Create a `.env` file:
 
 ```bash
-git clone https://github.com/gmalbert/la-liga.git
-cd la-liga
-python -m venv venv
-venv\Scripts\activate          # Windows
-# source venv/bin/activate     # macOS / Linux
+FOOTBALL_DATA_KEY=your_football_data_org_key_here
+ODDS_PROVIDER=odds_api_io
+ODDS_API_IO_KEY=your_odds_api_io_key_here
+ODDS_API_IO_LEAGUE=france-ligue-1
+ODDS_API_IO_BOOKMAKERS=DraftKings,BetMGM BR
+ODDS_API_KEY=your_the_odds_api_key_here
+API_FOOTBALL_KEY=your_api_football_key_here
+API_FOOTBALL_DAILY_LIMIT=100
+API_FOOTBALL_DAILY_RESERVE=10
+```
+
+Install dependencies and run the app:
+
+```bash
 pip install -r requirements.txt
-```
-
-Create a `.env` file (never commit this):
-```
-FOOTBALL_DATA_KEY=your_football_data_org_key
-ODDS_API_KEY=your_the_odds_api_key
-```
-
-Get your keys:
-- [football-data.org](https://www.football-data.org/) — free tier covers La Liga (`PD`)
-- [The Odds API](https://the-odds-api.com/) — free tier, sport key: `soccer_spain_la_liga`
-
-```bash
-# Fetch data
-python fetch_historical_csvs.py     # 10 seasons of La Liga results
-python fetch_upcoming_fixtures.py   # upcoming fixtures
-python fetch_fbref_xg.py            # team xG from FBref
-python fetch_odds.py                # bookmaker odds
-
-# Launch
 streamlit run predictions.py
 ```
 
-The model trains on first load. All data refreshes nightly via GitHub Actions.
+Run the full local pipeline:
 
-See [`docs/README.md`](docs/README.md) for the full implementation roadmap.
+```bash
+python automation/nightly_pipeline.py
+```
+
+To preserve paid/free data-provider limits during testing:
+
+```bash
+python automation/nightly_pipeline.py --skip-odds
+python automation/nightly_pipeline.py --skip-api-football
+```
+
+[Back to top](#top)
+
+## Docs
+
+See [docs/README.md](docs/README.md) for the full implementation roadmap and supporting notes.
+
+[Back to top](#top)

@@ -1,0 +1,142 @@
+{
+  "stadiums": [
+    {
+      "team": "Paris SG",
+      "latitude": 48.8414,
+      "longitude": 2.2530,
+      "description": "Parc des Princes"
+    },
+    {
+      "team": "Marseille",
+      "latitude": 43.2698,
+      "longitude": 5.3958,
+      "description": "Stade Vélodrome"
+    },
+    {
+      "team": "Lyon",
+      "latitude": 45.7652,
+      "longitude": 4.9820,
+      "description": "Parc Olympique Lyonnais"
+    },
+    {
+      "team": "Monaco",
+      "latitude": 43.7275,
+      "longitude": 7.4156,
+      "description": "Stade Louis II"
+    },
+    {
+      "team": "Lille",
+      "latitude": 50.6119,
+      "longitude": 3.1304,
+      "description": "Stade Pierre-Mauroy"
+    },
+    {
+      "team": "Nice",
+      "latitude": 43.7051,
+      "longitude": 7.1926,
+      "description": "Allianz Riviera"
+    },
+    {
+      "team": "Lens",
+      "latitude": 50.4329,
+      "longitude": 2.8153,
+      "description": "Stade Bollaert-Delelis"
+    },
+    {
+      "team": "Rennes",
+      "latitude": 48.1075,
+      "longitude": -1.7128,
+      "description": "Roazhon Park"
+    },
+    {
+      "team": "Bordeaux",
+      "latitude": 44.8978,
+      "longitude": -0.5612,
+      "description": "Matmut Atlantique"
+    },
+    {
+      "team": "Montpellier",
+      "latitude": 43.6225,
+      "longitude": 3.8121,
+      "description": "Stade de la Mosson"
+    },
+    {
+      "team": "Reims",
+      "latitude": 49.2468,
+      "longitude": 4.0250,
+      "description": "Stade Auguste-Delaune"
+    },
+    {
+      "team": "Nantes",
+      "latitude": 47.2561,
+      "longitude": -1.5247,
+      "description": "Stade de la Beaujoire"
+    },
+    {
+      "team": "Toulouse",
+      "latitude": 43.5833,
+      "longitude": 1.4342,
+      "description": "Stadium de Toulouse"
+    },
+    {
+      "team": "Strasbourg",
+      "latitude": 48.5601,
+      "longitude": 7.7551,
+      "description": "Stade de la Meinau"
+    },
+    {
+      "team": "Brest",
+      "latitude": 48.3890,
+      "longitude": -4.4618,
+      "description": "Stade Francis-Le Blé"
+    },
+    {
+      "team": "Angers",
+      "latitude": 47.4606,
+      "longitude": -0.5311,
+      "description": "Stade Raymond Kopa"
+    },
+    {
+      "team": "Lorient",
+      "latitude": 47.7482,
+      "longitude": -3.3680,
+      "description": "Stade du Moustoir"
+    },
+    {
+      "team": "St Etienne",
+      "latitude": 45.4608,
+      "longitude": 4.3900,
+      "description": "Stade Geoffroy-Guichard"
+    },
+    {
+      "team": "Le Havre",
+      "latitude": 49.4979,
+      "longitude": 0.1619,
+      "description": "Stade Océane"
+    },
+    {
+      "team": "Clermont",
+      "latitude": 45.8000,
+      "longitude": 3.1167,
+      "description": "Stade Gabriel-Montpied"
+    },
+    {
+      "team": "Metz",
+      "latitude": 49.1099,
+      "longitude": 6.1603,
+      "description": "Stade Saint-Symphorien"
+    },
+    {
+      "team": "Auxerre",
+      "latitude": 47.7978,
+      "longitude": 3.5683,
+      "description": "Stade de l'Abbé-Deschamps"
+    },
+    {
+      "team": "Troyes",
+      "latitude": 48.2978,
+      "longitude": 4.0744,
+      "description": "Stade de l'Aube"
+    }
+  ]
+}

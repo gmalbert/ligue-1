@@ -1,21 +1,48 @@
-# Layout Roadmap — La Liga Linea
+# Layout Roadmap — Ligue Odds
 
 ## Status
-- ⚪ All layout: pending implementation
+- ✅ Primary Streamlit layout and multi-page navigation are implemented for Ligue Odds.
+- 🟡 Partial: the roadmap examples still use old La Liga file names in places; the current app uses `predictions.py` plus `pages/*.py`.
+- ⚪ Outstanding: sidebar refresh button and cleanup of legacy La Liga naming in docs/code aliases.
+- Reviewed: 2026-05-28
+
+## Current Implementation Status
+
+| Area | Status |
+|---|---|
+| App entry point and page config | ✅ Implemented in `predictions.py` |
+| Sidebar logo, season selector, theme toggle, and countdown | ✅ Implemented in `predictions.py` |
+| Sidebar refresh button | ⚪ Not implemented |
+| Streamlit `st.navigation` multi-page layout | ✅ Implemented in `predictions.py` |
+| Fixtures & standings page | ✅ Implemented in `pages/fixtures.py` |
+| Predictions page | ✅ Implemented in `pages/predictions_tab.py` |
+| Statistics page | ✅ Implemented in `pages/statistics.py` |
+| Team deep dive page | ✅ Implemented in `pages/team_deep_dive.py` |
+| Raw data page | ✅ Implemented in `pages/raw_data.py` |
+| Markets page | ✅ Implemented in `pages/markets.py` |
+| Best Bets page | ✅ Implemented in `pages/best_bets.py` |
+| Performance page | ✅ Implemented in `pages/performance.py` |
+| Shared footer and theme helpers | ✅ Implemented in `footer.py` and `themes.py` |
 
 ## Overview
 
-La Liga Linea uses Streamlit's multi-page navigation (introduced in Streamlit 1.36+) with a primary 5-tab main page and two sidebar pages (Markets, Best Bets). The visual style replicates the MLS Predictor and Premier League apps — wide layout, sidebar logo, dark-compatible theming, and a Betting Oracle footer.
+Ligue Odds uses Streamlit's multi-page navigation with prediction, fixture, statistics, team deep dive, raw data, markets, best bets, and performance pages. The visual style follows the Betting Oracle suite: wide layout, sidebar logo, day/night theming, and a shared footer.
 
 ---
 
 ## Page Structure
 
 ```
-la_liga_linea.py        ← Main entry (5-tab homepage)
+predictions.py          ← Main Streamlit entry point
 pages/
-  6_Markets.py          ← Odds comparison, EV engine
-  7_Best_Bets.py        ← Top model-vs-market value plays
+  predictions_tab.py    ← Default predictions page
+  fixtures.py           ← Fixtures and standings
+  statistics.py         ← xG proxy, form, H2H, congestion, importance
+  team_deep_dive.py     ← Team-level breakdown
+  raw_data.py           ← Historical data browser
+  markets.py            ← Odds comparison
+  best_bets.py          ← Top model-vs-market value plays
+  performance.py        ← Accuracy, log, and backtest dashboard
 ```
 
 ---
@@ -268,10 +295,10 @@ def _tab_predictions():
     # Risk filter buttons
     st.subheader("🎯 Match Predictions with Risk Assessment")
     col_f1, col_f2, col_f3, col_f4 = st.columns(4)
-    show_all  = col_f1.button("📊 All",          use_container_width=True)
-    show_low  = col_f2.button("🟢 Low Risk",      use_container_width=True)
-    show_mod  = col_f3.button("🟡 Moderate",      use_container_width=True)
-    show_high = col_f4.button("🔴 High/Critical", use_container_width=True)
+    show_all  = col_f1.button("📊 All",          width='stretch')
+    show_low  = col_f2.button("🟢 Low Risk",      width='stretch')
+    show_mod  = col_f3.button("🟡 Moderate",      width='stretch')
+    show_high = col_f4.button("🔴 High/Critical", width='stretch')
 
     # Build predictions DataFrame
     # ...build display_df with probabilities, risk, betting tips...
@@ -279,7 +306,7 @@ def _tab_predictions():
     # Color-coded risk rows
     if len(filtered) > 0:
         styled = filtered.style.apply(color_risk_rows, axis=1)
-        st.dataframe(styled, use_container_width=True, hide_index=True,
+        st.dataframe(styled, width='stretch', hide_index=True,
                      height=get_dataframe_height(filtered))
     else:
         st.info("No matches for selected filter.")
@@ -480,7 +507,7 @@ def _tab_raw_data():
     df_display = df_raw[display_cols].rename(columns=col_map)
 
     st.write(f"**{len(df_display):,} matches** in dataset")
-    st.dataframe(df_display, height=get_dataframe_height(df_display), use_container_width=True, hide_index=True)
+    st.dataframe(df_display, height=get_dataframe_height(df_display), width='stretch', hide_index=True)
 
     # Data dictionary
     with st.expander("📖 Data Dictionary"):
@@ -529,7 +556,7 @@ if bookmakers:
     if selected_bm != "All":
         df_odds = df_odds[df_odds["Bookmaker"] == selected_bm]
 
-st.dataframe(df_odds, use_container_width=True, hide_index=True)
+st.dataframe(df_odds, width='stretch', hide_index=True)
 ```
 
 ---
@@ -587,7 +614,7 @@ for _, row in merged.iterrows():
 if rows:
     bets_df = pd.DataFrame(rows).sort_values("Edge", ascending=False)
     st.success(f"Found {len(bets_df)} value plays (edge ≥ {EV_THRESHOLD:.0%})")
-    st.dataframe(bets_df, use_container_width=True, hide_index=True)
+    st.dataframe(bets_df, width='stretch', hide_index=True)
 else:
     st.info(f"No plays found with edge ≥ {EV_THRESHOLD:.0%} against current lines.")
 ```

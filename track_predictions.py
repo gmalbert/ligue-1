@@ -1,4 +1,4 @@
-"""Prediction logger and validator for La Liga Linea.
+"""Prediction logger and validator for Ligue Odds.
 
 Responsibilities:
   1. Log new predictions to data_files/predictions_log.csv
@@ -69,18 +69,23 @@ def log_predictions(predictions_df: pd.DataFrame, model_version: str = "ensemble
     log_path = Path(LOG_PATH)
     if log_path.exists():
         existing = pd.read_csv(log_path)
-        # Deduplicate: skip rows already logged for the same match
-        key = ["MatchDate", "HomeTeam", "AwayTeam"]
+        # Deduplicate per model version so ensemble and NN rows can coexist.
         existing_keys = set(
             zip(
                 existing["MatchDate"].astype(str),
                 existing["HomeTeam"].astype(str),
                 existing["AwayTeam"].astype(str),
+                existing["ModelVersion"].astype(str),
             )
         )
         new_rows = df[
             ~df.apply(
-                lambda r: (str(r["MatchDate"]), str(r["HomeTeam"]), str(r["AwayTeam"]))
+                lambda r: (
+                    str(r["MatchDate"]),
+                    str(r["HomeTeam"]),
+                    str(r["AwayTeam"]),
+                    str(r["ModelVersion"]),
+                )
                 in existing_keys,
                 axis=1,
             )
@@ -147,7 +152,7 @@ def print_validation_report(log_df: pd.DataFrame) -> None:
     acc     = correct / total
 
     print(f"\n{'='*50}")
-    print("  La Liga Linea — Prediction Accuracy Report")
+    print("  Ligue Odds — Prediction Accuracy Report")
     print(f"{'='*50}")
     print(f"  Total resolved:  {total}")
     print(f"  Correct:         {correct}  ({acc:.1%})")
@@ -193,7 +198,7 @@ def validate(hist_path: str = HIST_PATH) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Track and validate La Liga predictions")
+    parser = argparse.ArgumentParser(description="Track and validate Ligue 1 predictions")
     parser.add_argument(
         "--validate",
         action="store_true",

@@ -1,4 +1,4 @@
-"""Neural network predictor for La Liga Linea.
+"""Neural network predictor for Ligue Odds.
 
 3-layer fully connected network with batch normalisation and dropout,
 trained on the same FEATURE_COLS as the ensemble model.

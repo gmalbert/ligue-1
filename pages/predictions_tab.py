@@ -1,9 +1,10 @@
-"""Predictions tab — default home page for La Liga Linea."""
+"""Predictions tab — default home page for Ligue Odds."""
 
 import json
 import warnings
 from datetime import datetime
 from os import path
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -15,6 +16,7 @@ from utils import (
     color_risk_rows,
     generate_match_commentary,
     get_dataframe_height,
+    prediction_value_to_probability,
     render_table,
     risk_category,
 )
@@ -24,22 +26,128 @@ warnings.filterwarnings("ignore")
 PRED_LOG_PATH = "data_files/predictions_log.csv"
 FIXTURES_PATH = "data_files/upcoming_fixtures.csv"
 METRICS_PATH  = "models/metrics.json"
+ODDS_PATH = "data_files/raw/odds.csv"
+WEATHER_PATH = "data_files/raw/match_weather.csv"
+APP_CACHE_DIR = Path("data_files/app_cache")
+LOGO_PATH = Path("data_files/logo.png")
 
-st.title("🎯 La Liga Predictions")
+
+def _safe_read_csv(file_path: str | Path) -> pd.DataFrame:
+    try:
+        file_obj = Path(file_path)
+        if not file_obj.exists():
+            return pd.DataFrame()
+        return pd.read_csv(file_obj)
+    except Exception:
+        return pd.DataFrame()
+
+
+def _file_updated(file_path: str | Path) -> str:
+    file_obj = Path(file_path)
+    if not file_obj.exists():
+        return "Missing"
+    return datetime.fromtimestamp(file_obj.stat().st_mtime).strftime("%b %d %I:%M %p")
+
+
+def _load_metrics() -> dict:
+    if not path.exists(METRICS_PATH):
+        return {}
+    try:
+        with open(METRICS_PATH) as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _render_empty_predictions_page(
+    preds_log: pd.DataFrame,
+    fixtures: pd.DataFrame,
+    metrics: dict,
+) -> None:
+    st.subheader("Current Slate")
+
+    status_cols = st.columns(4)
+    status_cols[0].metric("Upcoming Fixtures", f"{len(fixtures):,}")
+    status_cols[1].metric("Open Predictions", f"{len(preds_log):,}")
+    status_cols[2].metric("Holdout Accuracy", f"{metrics.get('accuracy', 0):.1%}" if metrics else "Pending")
+    status_cols[3].metric("Train Rows", f"{metrics.get('n_train', 0):,}" if metrics else "Pending")
+
+    if fixtures.empty:
+        st.info(
+            "No scheduled Ligue 1 fixtures are available right now. "
+            "The nightly job has cleared stale fixtures and predictions."
+        )
+    else:
+        st.caption(f"Fixtures updated: {_file_updated(FIXTURES_PATH)}")
+        fixture_cols = [c for c in ["Date", "Time", "Matchday", "HomeTeam", "AwayTeam", "Status"] if c in fixtures.columns]
+        render_table(
+            fixtures[fixture_cols].head(20),
+            hide_index=True,
+            width="stretch",
+            height=get_dataframe_height(fixtures.head(20), max_height=420),
+        )
+
+    standings = _safe_read_csv(APP_CACHE_DIR / "standings.csv")
+    if not standings.empty:
+        st.divider()
+        selected_season = st.session_state.get("selected_season", "2025-26")
+        if "Season" in standings.columns:
+            season_table = standings[standings["Season"] == selected_season].copy()
+        else:
+            season_table = pd.DataFrame()
+        if season_table.empty:
+            season_table = standings.tail(20).copy()
+        season_table = season_table.drop(columns=["Season", "SeasonStart"], errors="ignore")
+        if not season_table.empty:
+            if "#" in season_table.columns:
+                season_table["#"] = pd.to_numeric(season_table["#"], errors="coerce")
+                season_table = season_table.sort_values("#", ascending=True)
+            st.subheader("Standings")
+            render_table(
+                season_table.head(8),
+                hide_index=True,
+                width="stretch",
+                height=get_dataframe_height(season_table.head(8), max_height=360),
+            )
+
+    st.divider()
+
+    st.subheader("Explore")
+    nav_cols = st.columns(4)
+    nav_cols[0].page_link("pages/fixtures.py", label="Fixtures & Standings", icon="🗓️")
+    nav_cols[1].page_link("pages/statistics.py", label="Statistics", icon="📊")
+    nav_cols[2].page_link("pages/markets.py", label="Markets", icon="📈")
+    nav_cols[3].page_link("pages/performance.py", label="Performance", icon="📈")
+
+    feature_df = _safe_read_csv(APP_CACHE_DIR / "feature_importance.csv")
+    if not feature_df.empty:
+        st.divider()
+        st.subheader("Top Model Signals")
+        feature_df = feature_df.sort_values("Importance", ascending=False).head(6)
+        render_table(feature_df, hide_index=True, width="stretch")
+
+if LOGO_PATH.exists():
+    st.image(str(LOGO_PATH), width=180)
+
+st.title("🎯 Ligue 1 Predictions")
 st.caption("Ensemble model: XGBoost · Random Forest · Gradient Boosting · Logistic Regression")
 
 # ── Load pre-generated predictions ────────────────────────────────────────
-if not path.exists(PRED_LOG_PATH):
-    st.warning("Predictions are not yet available — they are generated nightly.")
-    st.stop()
-
-preds_log = pd.read_csv(PRED_LOG_PATH)
-
-# Only show upcoming matches (no actual result recorded yet)
-preds_log = preds_log[preds_log["ActualResult"].isna()].copy()
+metrics = _load_metrics()
+fixtures = _safe_read_csv(FIXTURES_PATH)
+preds_log = _safe_read_csv(PRED_LOG_PATH)
 
 if preds_log.empty:
-    st.info("No upcoming predictions available yet. Check back after the next nightly update.")
+    _render_empty_predictions_page(preds_log, fixtures, metrics)
+    st.stop()
+
+# Only show upcoming matches (no actual result recorded yet)
+if "ActualResult" in preds_log.columns:
+    actual = preds_log["ActualResult"]
+    preds_log = preds_log[actual.isna() | actual.astype(str).str.strip().eq("")].copy()
+
+if preds_log.empty:
+    _render_empty_predictions_page(preds_log, fixtures, metrics)
     st.stop()
 
 # ── Model version selector ────────────────────────────────────────────────
@@ -69,10 +177,10 @@ else:
     preds_log = preds_log.rename(columns={"MatchDate": "Date"})
     preds_log["Time"] = ""
 
-# Convert stored percentages to raw probabilities for calculations
-preds_log["_ph"] = preds_log["PredHomeWin"] / 100
-preds_log["_pd"] = preds_log["PredDraw"]    / 100
-preds_log["_pa"] = preds_log["PredAwayWin"] / 100
+# Convert stored prediction values to raw probabilities for calculations.
+preds_log["_ph"] = preds_log["PredHomeWin"].apply(prediction_value_to_probability)
+preds_log["_pd"] = preds_log["PredDraw"].apply(prediction_value_to_probability)
+preds_log["_pa"] = preds_log["PredAwayWin"].apply(prediction_value_to_probability)
 
 # Compute display columns (pure math — no model or API calls)
 risk_rows = preds_log.apply(
@@ -91,24 +199,33 @@ preds = preds_log.rename(columns={
     "PredDraw":    "Draw %",
     "PredAwayWin": "Away Win %",
 }).copy()
+preds["Home Win %"] = (preds_log["_ph"] * 100).round(1)
+preds["Draw %"] = (preds_log["_pd"] * 100).round(1)
+preds["Away Win %"] = (preds_log["_pa"] * 100).round(1)
 preds["Risk Score"]   = risk_rows["_rs"].round(1)
 preds["Risk Category"] = risk_rows["Risk Category"]
 preds["Confidence %"] = (risk_rows["_conf"] * 100).round(1)
 preds["Betting Tip"]  = risk_rows["Betting Tip"]
 
-# ── Model info expander ────────────────────────────────────────────────────
-metrics: dict = {}
-if path.exists(METRICS_PATH):
-    with open(METRICS_PATH) as f:
-        metrics = json.load(f)
-
 with st.expander("🤖 Model Info", expanded=False):
     if metrics:
         mc1, mc2, mc3, mc4 = st.columns(4)
-        mc1.metric("Accuracy",   f"{metrics.get('accuracy', 0):.1%}")
-        mc2.metric("F1 Macro",   f"{metrics.get('f1_macro', 0):.3f}")
-        mc3.metric("Log Loss",   f"{metrics.get('log_loss', 0):.3f}")
-        mc4.metric("Train Size", f"{metrics.get('n_train', 0):,}")
+        mc1.metric("Holdout Accuracy", f"{metrics.get('accuracy', 0):.1%}")
+        mc2.metric("Market Baseline", f"{metrics.get('market_baseline_accuracy', 0):.1%}")
+        mc3.metric("Log Loss Edge", f"{metrics.get('market_log_loss_delta', 0):+.3f}")
+        mc4.metric("Draw Recall", f"{metrics.get('draw_recall', 0):.1%}")
+        mc5, mc6, mc7, mc8 = st.columns(4)
+        mc5.metric("Brier Score", f"{metrics.get('brier_score', 0):.3f}")
+        mc6.metric("Calibration Error", f"{metrics.get('calibration_error', 0):.3f}")
+        mc7.metric("ROI", f"{metrics.get('roi_pct', 0):+.1f}%")
+        clv = metrics.get("closing_line_value_pct")
+        mc8.metric("CLV", "N/A" if clv is None else f"{clv:+.2f}%")
+        st.caption(
+            f"Holdout season: {metrics.get('holdout_season', '?')} · "
+            f"{metrics.get('test_start', '?')} to {metrics.get('test_end', '?')} · "
+            f"Market blend weight: {metrics.get('market_blend_weight', 0):.2f} · "
+            f"Train rows: {metrics.get('n_train', 0):,}"
+        )
     st.caption("Predictions are pre-generated nightly via GitHub Actions.")
 
 st.divider()
@@ -219,7 +336,7 @@ with dl1:
     st.download_button(
         label="📥 Download CSV",
         data=csv_bytes,
-        file_name=f"la_liga_predictions_{datetime.now().strftime('%Y%m%d')}.csv",
+        file_name=f"ligue1_predictions_{datetime.now().strftime('%Y%m%d')}.csv",
         mime="text/csv",
         width='stretch',
     )

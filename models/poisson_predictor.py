@@ -1,4 +1,4 @@
-"""Dixon-Coles Poisson model for La Liga goal and scoreline prediction.
+"""Dixon-Coles Poisson model for Ligue 1 goal and scoreline prediction.
 
 Provides:
     compute_team_strengths(df)  → DataFrame of attack/defense multipliers

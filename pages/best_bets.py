@@ -5,7 +5,7 @@ from os import path
 import pandas as pd
 import streamlit as st
 
-from utils import render_table
+from utils import prediction_value_to_probability, render_table
 
 EV_THRESHOLD = 0.04   # Minimum model-vs-market edge to surface a play
 
@@ -57,7 +57,7 @@ outcome_map = [
 rows = []
 for _, row in merged.iterrows():
     for outcome, pred_col, mkt_col, odds_col in outcome_map:
-        pred_p = row.get(pred_col)
+        pred_p = prediction_value_to_probability(row.get(pred_col))
         mkt_p  = row.get(mkt_col)
         if pd.isna(pred_p) or pd.isna(mkt_p):
             continue

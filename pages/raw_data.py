@@ -10,11 +10,11 @@ from utils import get_dataframe_height, render_table, load_historical_data
 HIST_PATH = "data_files/combined_historical_data.csv"
 
 st.title("📁 Raw Data")
-st.caption("Browse the full historical La Liga match dataset.")
+st.caption("Browse the full historical Ligue 1 match dataset.")
 
 if not path.exists(HIST_PATH):
     st.warning(f"`{HIST_PATH}` not found.")
-    st.info("Run `python fetch_historical_csvs.py` to download 10 seasons of La Liga results.")
+    st.info("Run `python fetch_historical_csvs.py` to download 10 seasons of Ligue 1 results.")
     st.stop()
 
 df = load_historical_data(HIST_PATH)
@@ -81,8 +81,16 @@ rename_map = {
     "OddsAway":            "B365 A",
 }
 
+display_df = df[display_cols].rename(columns=rename_map).copy()
+if "Date" in display_df.columns:
+    display_df["Date"] = pd.to_datetime(display_df["Date"], errors="coerce").dt.strftime("%Y-%m-%d")
+if "Time" in display_df.columns:
+    display_df["Time"] = display_df["Time"].replace(
+        {"00:00:00": "", "00:00:00:00": "", "0:00": "", "00:00": ""}
+    )
+
 render_table(
-    df[display_cols].rename(columns=rename_map),
+    display_df,
     hide_index=True,
     width='stretch',
     height=get_dataframe_height(df),
@@ -93,7 +101,7 @@ csv_bytes = df[display_cols].to_csv(index=False).encode("utf-8")
 st.download_button(
     label="📥 Download filtered data as CSV",
     data=csv_bytes,
-    file_name="la_liga_raw_data.csv",
+    file_name="ligue1_raw_data.csv",
     mime="text/csv",
     width='stretch',
 )
@@ -101,20 +109,25 @@ st.download_button(
 st.divider()
 
 # ── Data Dictionary ────────────────────────────────────────────────────────
-with st.expander("📖 Data Dictionary"):
-    st.markdown(
-        """
-| Column | Description |
-|---|---|
-| **Date** | Match date |
-| **HomeTeam / AwayTeam** | Canonical club names |
-| **HG / AG** | Full-time goals for home / away |
-| **FTR** | Full-time result: H = Home win · D = Draw · A = Away win |
-| **Season** | La Liga season (e.g. `2023-24`) |
-| **Home Gls L5** | Rolling 5-game avg goals scored (home team, previous matches) |
-| **Away Gls L5** | Rolling 5-game avg goals scored (away team) |
-| **Home Win% L10** | Rolling 10-game win rate (all venues) |
-| **Mkt Home / Draw / Away** | Vig-removed bookmaker implied probability |
-| **B365 H / D / A** | Raw Bet365 decimal odds |
-        """
-    )
+with st.expander("📖 Data Dictionary", expanded=False):
+    dictionary_rows = [
+        ("Date", "Match date."),
+        ("HomeTeam", "Home club name in the canonical football-data.co.uk format."),
+        ("AwayTeam", "Away club name in the canonical football-data.co.uk format."),
+        ("HG", "Full-time goals scored by the home team."),
+        ("AG", "Full-time goals scored by the away team."),
+        ("FTR", "Full-time result: H = home win, D = draw, A = away win."),
+        ("Season", "Ligue 1 season label, such as 2024-25."),
+        ("B365 H", "Bet365 decimal odds for a home win."),
+        ("B365 D", "Bet365 decimal odds for a draw."),
+        ("B365 A", "Bet365 decimal odds for an away win."),
+        ("Home Gls L5", "Home team's average goals scored over its previous 5 matches."),
+        ("Away Gls L5", "Away team's average goals scored over its previous 5 matches."),
+        ("Home Win% L10", "Home team's win rate over its previous 10 matches, all venues."),
+        ("Away Win% L10", "Away team's win rate over its previous 10 matches, all venues."),
+        ("Mkt Home", "Vig-removed market implied probability for a home win."),
+        ("Mkt Draw", "Vig-removed market implied probability for a draw."),
+        ("Mkt Away", "Vig-removed market implied probability for an away win."),
+    ]
+    dictionary_df = pd.DataFrame(dictionary_rows, columns=["Column", "Description"])
+    render_table(dictionary_df, hide_index=True, width="stretch")

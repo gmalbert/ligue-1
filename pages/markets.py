@@ -10,7 +10,7 @@ from utils import get_dataframe_height, render_table
 ODDS_PATH = "data_files/raw/odds.csv"
 
 st.title("📈 Markets")
-st.caption("Bookmaker odds and vig-removed implied probabilities for upcoming La Liga fixtures.")
+st.caption("Bookmaker odds and vig-removed implied probabilities for upcoming Ligue 1 fixtures.")
 
 if not path.exists(ODDS_PATH):
     st.warning("Odds data is not yet available — it is refreshed nightly.")

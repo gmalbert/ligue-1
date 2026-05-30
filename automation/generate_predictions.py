@@ -28,6 +28,7 @@ FIXTURES_PATH = ROOT / "data_files" / "upcoming_fixtures.csv"
 MODEL_PATH    = ROOT / "models" / "ensemble_model.pkl"
 NN_MODEL_PATH = ROOT / "models" / "nn_model.pt"
 NN_SCALER_PATH= ROOT / "models" / "nn_scaler.pkl"
+LOG_PATH      = ROOT / "data_files" / "predictions_log.csv"
 
 
 def _preds_to_log_df(preds: pd.DataFrame) -> pd.DataFrame:
@@ -51,6 +52,22 @@ def _preds_to_log_df(preds: pd.DataFrame) -> pd.DataFrame:
     return log_df
 
 
+def _clear_open_predictions() -> None:
+    """Remove unresolved predictions before writing the latest fixture slate."""
+    if not LOG_PATH.exists():
+        return
+    existing = pd.read_csv(LOG_PATH)
+    if "ActualResult" not in existing.columns:
+        return
+    actual = existing["ActualResult"]
+    keep = actual.notna() & actual.astype(str).str.strip().ne("")
+    updated = existing[keep].copy()
+    updated.to_csv(LOG_PATH, index=False)
+    removed = len(existing) - len(updated)
+    if removed:
+        print(f"Cleared {removed} unresolved predictions from {LOG_PATH.relative_to(ROOT)}")
+
+
 def main() -> None:
     for p, hint in [
         (HIST_PATH,     "run fetch_historical_csvs.py first"),
@@ -65,6 +82,10 @@ def main() -> None:
     hist["MatchDate"] = pd.to_datetime(hist["MatchDate"], errors="coerce")
 
     fix = pd.read_csv(FIXTURES_PATH)
+    _clear_open_predictions()
+    if fix.empty:
+        print("No upcoming fixtures to predict. Open predictions were cleared.")
+        return
 
     # ── 1. Ensemble predictions ────────────────────────────────────────────
     with open(MODEL_PATH, "rb") as f:
@@ -102,9 +123,9 @@ def main() -> None:
                 if feat_cols_in_preds:
                     X_nn = preds[feat_cols_in_preds].fillna(0).values
                     proba_nn = predict_nn(X_nn, nn_model, scaler)  # (n, 3) [A, D, H]
-                    nn_log["PredAwayWin"] = proba_nn[:, 0]
-                    nn_log["PredDraw"]    = proba_nn[:, 1]
-                    nn_log["PredHomeWin"] = proba_nn[:, 2]
+                    nn_log["PredAwayWin"] = (proba_nn[:, 0] * 100).round(1)
+                    nn_log["PredDraw"]    = (proba_nn[:, 1] * 100).round(1)
+                    nn_log["PredHomeWin"] = (proba_nn[:, 2] * 100).round(1)
 
                     def _pred_result_nn(row: pd.Series) -> str:
                         m = max(row["PredHomeWin"], row["PredDraw"], row["PredAwayWin"])

@@ -1,20 +1,31 @@
-"""Download SP1.csv files for every La Liga season from football-data.co.uk
-and merge them into data_files/combined_historical_data.csv.
+"""Download historical Ligue-1 match data from football-data.co.uk.
+
+Saves individual season CSVs to data_files/raw/FR1_XXXX.csv and a combined
+file to data_files/combined_historical_data.csv.
 
 Usage:
     python fetch_historical_csvs.py
+
+Source: https://www.football-data.co.uk/french.php
+Column reference: https://www.football-data.co.uk/notes.txt
 """
 
 from __future__ import annotations
 
 import io
+import sys
 from pathlib import Path
 
 import pandas as pd
 import requests
 
-# ── Seasons to download ────────────────────────────────────────────────────
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
+# ── Season codes for football-data.co.uk ────────────────────────────────────
+# Format: {YYMM: "YYYY-YY"}  (e.g. "1516" → "2015-16")
 SEASONS: dict[str, str] = {
     "1516": "2015-16",
     "1617": "2016-17",
@@ -29,9 +40,12 @@ SEASONS: dict[str, str] = {
     "2526": "2025-26",
 }
 
-BASE_URL = "https://www.football-data.co.uk/mmz4281/{code}/SP1.csv"
+# Ligue-1 uses FR1.csv (not SP1.csv which is La Liga)
+BASE_URL = "https://www.football-data.co.uk/mmz4281/{code}/FR1.csv"
 
+# Columns to keep (subset of the full CSV — keeps file sizes manageable)
 COLUMN_MAP: dict[str, str] = {
+    "Div":    "Div",
     "Date":   "MatchDate",
     "HomeTeam": "HomeTeam",
     "AwayTeam": "AwayTeam",
@@ -41,7 +55,7 @@ COLUMN_MAP: dict[str, str] = {
     "HTHG":   "HalfTimeHomeGoals",
     "HTAG":   "HalfTimeAwayGoals",
     "HTR":    "HalfTimeResult",
-    "Referee": "Referee",
+    "Referee":"Referee",
     "HS":     "HomeShots",
     "AS":     "AwayShots",
     "HST":    "HomeShotsOnTarget",
@@ -54,59 +68,59 @@ COLUMN_MAP: dict[str, str] = {
     "AY":     "AwayYellowCards",
     "HR":     "HomeRedCards",
     "AR":     "AwayRedCards",
-    # Bet365 odds
+    # Betting odds
     "B365H":  "Bet365_HomeWinOdds",
     "B365D":  "Bet365_DrawOdds",
     "B365A":  "Bet365_AwayWinOdds",
-    # BetWin
     "BWH":    "BW_HomeWinOdds",
     "BWD":    "BW_DrawOdds",
     "BWA":    "BW_AwayWinOdds",
-    # Pinnacle
     "PSH":    "Pinnacle_HomeWinOdds",
     "PSD":    "Pinnacle_DrawOdds",
     "PSA":    "Pinnacle_AwayWinOdds",
+    # Closing odds, when football-data.co.uk provides them
+    "B365CH": "Bet365_CloseHomeWinOdds",
+    "B365CD": "Bet365_CloseDrawOdds",
+    "B365CA": "Bet365_CloseAwayWinOdds",
+    "PSCH":   "Pinnacle_CloseHomeWinOdds",
+    "PSCD":   "Pinnacle_CloseDrawOdds",
+    "PSCA":   "Pinnacle_CloseAwayWinOdds",
 }
 
 
 def download_season(season_code: str, season_label: str) -> pd.DataFrame:
-    """Download one season CSV and return a normalised DataFrame."""
+    """Download a single Ligue-1 season CSV from football-data.co.uk."""
     url = BASE_URL.format(code=season_code)
     try:
-        resp = requests.get(url, timeout=20)
+        resp = requests.get(url, timeout=15)
         resp.raise_for_status()
-        df = pd.read_csv(
-            io.StringIO(resp.text),
-            encoding="latin-1",
-            on_bad_lines="skip",
-        )
-        df = df.rename(columns={k: v for k, v in COLUMN_MAP.items() if k in df.columns}).copy()
+        df = pd.read_csv(io.StringIO(resp.text), encoding="latin-1", on_bad_lines="skip")
+        # Keep only columns we care about
+        keep = {k: v for k, v in COLUMN_MAP.items() if k in df.columns}
+        df = df[list(keep.keys())].rename(columns=keep)
         df["Season"] = season_label
-        df["MatchDate"] = pd.to_datetime(df["MatchDate"], format="mixed", dayfirst=True, errors="coerce")
-        # Drop completely empty rows
-        df = df.dropna(subset=["HomeTeam", "AwayTeam"])
-        print(f"  ✓ {season_label}: {len(df)} matches")
+        df["MatchDate"] = pd.to_datetime(df["MatchDate"], dayfirst=True, errors="coerce")
         return df
-    except Exception as exc:
-        print(f"  ✗ {season_label}: {exc}")
+    except Exception as e:
+        print(f"  ✗ {season_label}: {e}")
         return pd.DataFrame()
 
 
 def build_historical_dataset() -> pd.DataFrame:
-    """Download all seasons, combine, and save to CSV."""
+    """Download all Ligue-1 seasons and combine into one CSV."""
     Path("data_files/raw").mkdir(parents=True, exist_ok=True)
 
     frames: list[pd.DataFrame] = []
     for code, label in SEASONS.items():
-        print(f"Downloading {label}…")
+        print(f"Downloading {label} (FR1_{code}.csv)...")
         df = download_season(code, label)
         if not df.empty:
-            raw_path = f"data_files/raw/SP1_{code}.csv"
-            df.to_csv(raw_path, index=False)
+            df.to_csv(f"data_files/raw/FR1_{code}.csv", index=False)
             frames.append(df)
+            print(f"  ✓ {len(df)} matches")
 
     if not frames:
-        print("No data downloaded. Check your internet connection.")
+        print("\n✗ No seasons downloaded. Check your internet connection.")
         return pd.DataFrame()
 
     combined = pd.concat(frames, ignore_index=True)
@@ -114,7 +128,7 @@ def build_historical_dataset() -> pd.DataFrame:
 
     out_path = "data_files/combined_historical_data.csv"
     combined.to_csv(out_path, index=False)
-    print(f"\n✓ Combined: {len(combined)} matches across {len(frames)} seasons → {out_path}")
+    print(f"\n✓ Combined dataset: {len(combined)} matches across {len(frames)} seasons → {out_path}")
     return combined
 
 

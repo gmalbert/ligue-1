@@ -1,8 +1,8 @@
-"""Compute team-level xG proxy stats for La Liga Linea.
+"""Compute team-level xG proxy stats for Ligue Odds.
 
 Primary source: data_files/combined_historical_data.csv
     football-data.co.uk CSVs include shots on target (HST/AST) which are
-    used as a reliable xG proxy (La Liga SOT->goal conversion ~31pct).
+    used as a reliable xG proxy (Ligue Odds SOT->goal conversion ~31pct).
 
 FBref is protected by Cloudflare JS challenge and cannot be scraped with
 standard HTTP libraries. Understat is fully client-side rendered. This

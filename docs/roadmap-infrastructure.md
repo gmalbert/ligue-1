@@ -1,7 +1,24 @@
-# Technical Infrastructure Roadmap — La Liga Linea
+# Technical Infrastructure Roadmap — Ligue Odds
 
 ## Status
-- ⚪ All infrastructure: pending implementation
+- ✅ Nightly automation, keep-alive workflow, offline training, caching, `.env`, and prediction/backtest generation are implemented.
+- 🟡 Partial: logging and testing remain light; the keep-alive workflow still references the old La Liga app URL.
+- ⚪ Outstanding: SQLite migration, API layer, and formal pytest suite.
+- Reviewed: 2026-05-28
+
+## Current Implementation Status
+
+| # | Infrastructure Item | Status |
+|---|---|---|
+| 1 | GitHub Actions nightly pipeline | ✅ Implemented in `.github/workflows/nightly.yml` |
+| 2 | Keep-alive workflow | 🟡 Implemented in `.github/workflows/keep-alive.yml`, but URL still points to the old La Liga app |
+| 3 | Automated local pipeline script | ✅ Implemented in `automation/nightly_pipeline.py` |
+| 4 | Model training script | ✅ Implemented in `train_models.py` |
+| 5 | Logging system | ⚪ Not implemented as a shared rotating logger |
+| 6 | Streamlit caching | ✅ Implemented with `@st.cache_data` and `@st.cache_resource` in `utils.py` |
+| 7 | SQLite migration | ⚪ Not implemented |
+| 8 | Testing framework | ⚪ No `tests/` suite currently present |
+| 9 | Environment variables | ✅ Implemented with `.env.example`, `python-dotenv`, and `.gitignore` entries |
 
 ## Current Architecture (Starting Point)
 - **Framework:** Streamlit
@@ -578,19 +595,19 @@ __pycache__/
 ## Infrastructure Timeline
 
 **Phase 1 (Week 1):**
-- `.env` + python-dotenv for secrets
-- Caching patterns (`@st.cache_data`, `@st.cache_resource`)
-- Logging system
+- ✅ `.env` + python-dotenv for secrets
+- ✅ Caching patterns (`@st.cache_data`, `@st.cache_resource`)
+- ⚪ Logging system
 
 **Phase 2 (Week 2):**
-- GitHub Actions nightly pipeline
-- Keep-alive workflow
-- `train_models.py` offline training
+- ✅ GitHub Actions nightly pipeline
+- 🟡 Keep-alive workflow
+- ✅ `train_models.py` offline training
 
 **Phase 3 (Month 1):**
-- Testing framework (`pytest`)
-- CI tests in GitHub Actions
+- ⚪ Testing framework (`pytest`)
+- ⚪ CI tests in GitHub Actions
 
 **Phase 4 (Month 2):**
-- SQLite migration
-- API layer (FastAPI, optional)
+- ⚪ SQLite migration
+- ⚪ API layer (FastAPI, optional)

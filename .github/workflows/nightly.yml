@@ -41,13 +41,53 @@ jobs:
       - name: Fetch xG proxy from historical data
         run: python fetch_fbref_xg.py
 
-      - name: Fetch Copa del Rey fixtures
+      - name: Fetch Coupe de France fixtures
         run: python fetch_copa_fixtures.py
 
       - name: Fetch bookmaker odds
         env:
+          ODDS_PROVIDER: ${{ secrets.ODDS_PROVIDER }}
+          ODDS_API_IO_KEY: ${{ secrets.ODDS_API_IO_KEY }}
+          ODDS_API_IO_BOOKMAKERS: ${{ secrets.ODDS_API_IO_BOOKMAKERS }}
+          ODDS_API_IO_LEAGUE: ${{ secrets.ODDS_API_IO_LEAGUE }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python fetch_odds.py
+
+      - name: Fetch market odds snapshots
+        env:
+          ODDS_PROVIDER: ${{ secrets.ODDS_PROVIDER }}
+          ODDS_API_IO_KEY: ${{ secrets.ODDS_API_IO_KEY }}
+          ODDS_API_IO_BOOKMAKERS: ${{ secrets.ODDS_API_IO_BOOKMAKERS }}
+          ODDS_API_IO_LEAGUE: ${{ secrets.ODDS_API_IO_LEAGUE }}
+        run: python fetch_market_odds.py
+
+      - name: Fetch API-Football xG/stat enrichment
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_FOOTBALL_DAILY_LIMIT: 100
+          API_FOOTBALL_DAILY_RESERVE: 10
+          API_FOOTBALL_FALLBACK_SEASON: 2024
+        run: python fetch_xg_data.py
+        continue-on-error: true
+
+      - name: Fetch API-Football injuries and lineups
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_FOOTBALL_DAILY_LIMIT: 100
+          API_FOOTBALL_DAILY_RESERVE: 10
+          API_FOOTBALL_FALLBACK_SEASON: 2024
+        run: python fetch_lineups_injuries.py
+        continue-on-error: true
+
+      - name: Fetch API-Football squad strength
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_FOOTBALL_DAILY_LIMIT: 100
+          API_FOOTBALL_DAILY_RESERVE: 10
+          API_FOOTBALL_FALLBACK_SEASON: 2024
+          API_FOOTBALL_REQUEST_DELAY_SEC: 7
+        run: python fetch_squad_strength.py
+        continue-on-error: true
 
       - name: Fetch weather forecast for upcoming fixtures
         run: python fetch_weather_data.py
@@ -56,6 +96,9 @@ jobs:
 
       - name: Prepare model-ready features
         run: python prepare_model_data.py
+
+      - name: Build enriched feature store
+        run: python build_enriched_features.py
 
       - name: Train ensemble, Poisson, and neural network models
         run: python train_models.py
@@ -74,6 +117,16 @@ jobs:
 
       - name: Validate prediction log
         run: python track_predictions.py --validate
+
+      - name: Precompute Streamlit app cache
+        run: python automation/precompute_app_cache.py
+
+      # ── Export best bets for Sports Picks Grid aggregator ───────────────
+      - name: Export best bets for Sports Picks Grid
+        run: python scripts/export_best_bets.py
+        continue-on-error: true
+        env:
+          PYTHONPATH: ${{ github.workspace }}
 
       - name: Commit updated data, models, and predictions
         run: |

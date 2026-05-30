@@ -1,4 +1,4 @@
-"""Shared utilities for La Liga Linea.
+"""Shared utilities for Ligue Odds.
 
 Includes: data loading, feature engineering, model training/loading,
 standings computation, prediction risk scoring, and display helpers.
@@ -16,6 +16,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from pandas.io.formats.style import Styler
 import streamlit as st
 from sklearn.ensemble import (
     GradientBoostingClassifier,
@@ -33,30 +34,65 @@ warnings.filterwarnings("ignore")
 
 MODEL_PATH   = "models/ensemble_model.pkl"
 METRICS_PATH = "models/metrics.json"
+APP_CACHE_DIR = Path("data_files/app_cache")
 
 FEATURE_COLS: list[str] = [
     "HomeGoals_Avg_L5",
     "HomeConceded_Avg_L5",
+    "HomeShots_Avg_L5",
+    "HomeSOT_Avg_L5",
     "HomeWinRate_L10",
     "HomeMomentum_L3",
     "HomeRestDays",
+    "HomeVenueGoals_Avg_L5",
+    "HomeVenueConceded_Avg_L5",
+    "HomeVenueWinRate_L10",
+    "HomeElo",
     "AwayGoals_Avg_L5",
     "AwayConceded_Avg_L5",
+    "AwayShots_Avg_L5",
+    "AwaySOT_Avg_L5",
     "AwayWinRate_L10",
     "AwayMomentum_L3",
     "AwayRestDays",
+    "AwayVenueGoals_Avg_L5",
+    "AwayVenueConceded_Avg_L5",
+    "AwayVenueWinRate_L10",
+    "AwayElo",
+    "EloDiff",
     "ImpliedProb_HomeWin",
     "ImpliedProb_Draw",
     "ImpliedProb_AwayWin",
+    "MarketHomeEdge",
+    "MarketAwayEdge",
+    "MarketEntropy",
+    "HomeCopaCongestion",
+    "AwayCopaCongestion",
 ]
 
 # Alphabetical LabelEncoder order: A=0, D=1, H=2
 RESULT_MAP  = {"A": 0, "D": 1, "H": 2}
 RESULT_RMAP = {0: "A", 1: "D", 2: "H"}
 
-# La Liga average goal rates (2015-16 → 2023-24)
-LA_LIGA_AVG_HOME_GOALS = 1.45
-LA_LIGA_AVG_AWAY_GOALS = 1.12
+# Ligue-1 average goal rates (2015-16 → 2023-24)
+LA_LIGA_AVG_HOME_GOALS = 1.42
+LA_LIGA_AVG_AWAY_GOALS = 1.15
+
+
+def prediction_value_to_probability(value: object) -> float:
+    """Normalize a stored prediction value to 0..1.
+
+    Older/generated prediction logs store percentages as 0..100, while some
+    model paths can emit probabilities as 0..1. The UI should be tolerant of
+    both shapes.
+    """
+    try:
+        val = float(value)
+    except (TypeError, ValueError):
+        return 0.0
+    if np.isnan(val):
+        return 0.0
+    return val / 100 if val > 1 else val
 
 
 # ── Display Helpers ────────────────────────────────────────────────────────
@@ -125,7 +161,7 @@ def load_upcoming_fixtures(csv_path: str) -> pd.DataFrame:
 
 def calculate_la_liga_features(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Vectorized feature engineering for historical match data.
+    Vectorized feature engineering for historical Ligue-1 match data.
     Uses shift(1) per team to prevent data leakage.
     """
     df = df.copy().sort_values("MatchDate").reset_index(drop=True)
@@ -215,9 +251,18 @@ def _team_stats_for_upcoming(hist_df: pd.DataFrame, team: str) -> dict:
     _default = {
         "goals_avg_l5":    LA_LIGA_AVG_HOME_GOALS,
         "conceded_avg_l5": LA_LIGA_AVG_AWAY_GOALS,
+        "shots_avg_l5":    11.0,
+        "sot_avg_l5":      4.0,
         "win_rate_l10":    0.33,
         "momentum_l3":     3.0,
         "rest_days":       7,
+        "home_goals_avg_l5": LA_LIGA_AVG_HOME_GOALS,
+        "home_conceded_avg_l5": LA_LIGA_AVG_AWAY_GOALS,
+        "home_win_rate_l10": 0.40,
+        "away_goals_avg_l5": LA_LIGA_AVG_AWAY_GOALS,
+        "away_conceded_avg_l5": LA_LIGA_AVG_HOME_GOALS,
+        "away_win_rate_l10": 0.28,
+        "elo":             1500.0,
     }
 
     home_m = hist_df[hist_df["HomeTeam"] == team].copy()
@@ -229,20 +274,24 @@ def _team_stats_for_upcoming(hist_df: pd.DataFrame, team: str) -> dict:
     home_m = home_m.assign(
         GF=pd.to_numeric(home_m["FullTimeHomeGoals"], errors="coerce").fillna(0),
         GA=pd.to_numeric(home_m["FullTimeAwayGoals"], errors="coerce").fillna(0),
+        Shots=pd.to_numeric(home_m.get("HomeShots", pd.Series(np.nan, index=home_m.index)), errors="coerce"),
+        SOT=pd.to_numeric(home_m.get("HomeShotsOnTarget", pd.Series(np.nan, index=home_m.index)), errors="coerce"),
         Won=(home_m["FullTimeResult"] == "H").astype(int),
         Pts=home_m["FullTimeResult"].map({"H": 3, "D": 1, "A": 0}).fillna(0),
     )
     away_m = away_m.assign(
         GF=pd.to_numeric(away_m["FullTimeAwayGoals"], errors="coerce").fillna(0),
         GA=pd.to_numeric(away_m["FullTimeHomeGoals"], errors="coerce").fillna(0),
+        Shots=pd.to_numeric(away_m.get("AwayShots", pd.Series(np.nan, index=away_m.index)), errors="coerce"),
+        SOT=pd.to_numeric(away_m.get("AwayShotsOnTarget", pd.Series(np.nan, index=away_m.index)), errors="coerce"),
         Won=(away_m["FullTimeResult"] == "A").astype(int),
         Pts=away_m["FullTimeResult"].map({"A": 3, "D": 1, "H": 0}).fillna(0),
     )
 
     all_m = (
         pd.concat([
-            home_m[["MatchDate", "GF", "GA", "Won", "Pts"]],
-            away_m[["MatchDate", "GF", "GA", "Won", "Pts"]],
+            home_m[["MatchDate", "GF", "GA", "Shots", "SOT", "Won", "Pts"]],
+            away_m[["MatchDate", "GF", "GA", "Shots", "SOT", "Won", "Pts"]],
         ])
         .sort_values("MatchDate")
         .reset_index(drop=True)
@@ -258,10 +307,40 @@ def _team_stats_for_upcoming(hist_df: pd.DataFrame, team: str) -> dict:
     return {
         "goals_avg_l5":    float(last5["GF"].mean())   if len(last5)  else _default["goals_avg_l5"],
         "conceded_avg_l5": float(last5["GA"].mean())   if len(last5)  else _default["conceded_avg_l5"],
+        "shots_avg_l5":    float(last5["Shots"].mean()) if len(last5) and last5["Shots"].notna().any() else _default["shots_avg_l5"],
+        "sot_avg_l5":      float(last5["SOT"].mean())   if len(last5) and last5["SOT"].notna().any() else _default["sot_avg_l5"],
         "win_rate_l10":    float(last10["Won"].mean())  if len(last10) else _default["win_rate_l10"],
         "momentum_l3":     float(last3["Pts"].sum())    if len(last3)  else _default["momentum_l3"],
         "rest_days":       rest,
+        "home_goals_avg_l5": float(home_m.tail(5)["GF"].mean()) if len(home_m) else _default["home_goals_avg_l5"],
+        "home_conceded_avg_l5": float(home_m.tail(5)["GA"].mean()) if len(home_m) else _default["home_conceded_avg_l5"],
+        "home_win_rate_l10": float(home_m.tail(10)["Won"].mean()) if len(home_m) else _default["home_win_rate_l10"],
+        "away_goals_avg_l5": float(away_m.tail(5)["GF"].mean()) if len(away_m) else _default["away_goals_avg_l5"],
+        "away_conceded_avg_l5": float(away_m.tail(5)["GA"].mean()) if len(away_m) else _default["away_conceded_avg_l5"],
+        "away_win_rate_l10": float(away_m.tail(10)["Won"].mean()) if len(away_m) else _default["away_win_rate_l10"],
+        "elo": _default["elo"],
     }
+
+
+def _current_elo_ratings(hist_df: pd.DataFrame) -> dict[str, float]:
+    ratings: dict[str, float] = {}
+    if hist_df.empty:
+        return ratings
+    rows = hist_df.sort_values("MatchDate")
+    for _, row in rows.iterrows():
+        home = str(row.get("HomeTeam", ""))
+        away = str(row.get("AwayTeam", ""))
+        if not home or not away:
+            continue
+        h_elo = ratings.setdefault(home, 1500.0)
+        a_elo = ratings.setdefault(away, 1500.0)
+        expected_home = 1 / (1 + 10 ** ((a_elo - (h_elo + 65.0)) / 400))
+        result = row.get("FullTimeResult")
+        actual_home = 1.0 if result == "H" else (0.5 if result == "D" else 0.0)
+        delta = 30.0 * (actual_home - expected_home)
+        ratings[home] = h_elo + delta
+        ratings[away] = a_elo - delta
+    return ratings
 
 
 # ── Model ──────────────────────────────────────────────────────────────────
@@ -348,6 +427,7 @@ def predict_for_upcoming(
         return pd.DataFrame()
 
     rows: list[dict] = []
+    elo_ratings = _current_elo_ratings(hist_df)
     for _, fix in upcoming_df.iterrows():
         home_raw = str(fix.get("HomeTeam", ""))
         away_raw = str(fix.get("AwayTeam", ""))
@@ -361,21 +441,41 @@ def predict_for_upcoming(
 
         h = _team_stats_for_upcoming(hist_df, home)
         a = _team_stats_for_upcoming(hist_df, away)
+        home_elo = elo_ratings.get(home, 1500.0)
+        away_elo = elo_ratings.get(away, 1500.0)
 
         feat_vec = {
             "HomeGoals_Avg_L5":    h["goals_avg_l5"],
             "HomeConceded_Avg_L5": h["conceded_avg_l5"],
+            "HomeShots_Avg_L5":    h["shots_avg_l5"],
+            "HomeSOT_Avg_L5":      h["sot_avg_l5"],
             "HomeWinRate_L10":     h["win_rate_l10"],
             "HomeMomentum_L3":     h["momentum_l3"],
             "HomeRestDays":        h["rest_days"],
+            "HomeVenueGoals_Avg_L5": h["home_goals_avg_l5"],
+            "HomeVenueConceded_Avg_L5": h["home_conceded_avg_l5"],
+            "HomeVenueWinRate_L10": h["home_win_rate_l10"],
+            "HomeElo":             home_elo,
             "AwayGoals_Avg_L5":    a["goals_avg_l5"],
             "AwayConceded_Avg_L5": a["conceded_avg_l5"],
+            "AwayShots_Avg_L5":    a["shots_avg_l5"],
+            "AwaySOT_Avg_L5":      a["sot_avg_l5"],
             "AwayWinRate_L10":     a["win_rate_l10"],
             "AwayMomentum_L3":     a["momentum_l3"],
             "AwayRestDays":        a["rest_days"],
+            "AwayVenueGoals_Avg_L5": a["away_goals_avg_l5"],
+            "AwayVenueConceded_Avg_L5": a["away_conceded_avg_l5"],
+            "AwayVenueWinRate_L10": a["away_win_rate_l10"],
+            "AwayElo":             away_elo,
+            "EloDiff":             home_elo + 65.0 - away_elo,
             "ImpliedProb_HomeWin": 0.45,
             "ImpliedProb_Draw":    0.27,
             "ImpliedProb_AwayWin": 0.28,
+            "MarketHomeEdge":      0.17,
+            "MarketAwayEdge":      -0.17,
+            "MarketEntropy":       float(-np.sum(np.array([0.45, 0.27, 0.28]) * np.log(np.array([0.45, 0.27, 0.28])))),
+            "HomeCopaCongestion":  0,
+            "AwayCopaCongestion":  0,
         }
 
         X = np.array([[feat_vec.get(f, 0.0) for f in feature_names]])
@@ -408,6 +508,7 @@ def predict_for_upcoming(
             "_ph": p_home,
             "_pd": p_draw,
             "_pa": p_away,
+            **feat_vec,
         })
 
     return pd.DataFrame(rows)
@@ -523,12 +624,27 @@ def generate_match_commentary(
 
 # ── Standings ─────────────────────────────────────────────────────────────
 
+# Alias for backward compatibility
+compute_la_liga_standings = None  # will be reassigned below
+
 @st.cache_data(ttl=3600)
-def compute_la_liga_standings(
+def compute_league_standings(
     df: pd.DataFrame,
-    season_start: str = "2025-08-01",
+    season_start: str = "2024-08-01",
 ) -> pd.DataFrame:
-    current = df[df["MatchDate"] >= pd.Timestamp(season_start)].copy()
+    season_start_ts = pd.Timestamp(season_start)
+    cache_path = APP_CACHE_DIR / "standings.csv"
+    if cache_path.exists():
+        try:
+            cached = pd.read_csv(cache_path)
+            if "SeasonStart" in cached.columns:
+                cached = cached[cached["SeasonStart"] == season_start_ts.strftime("%Y-%m-%d")]
+            if not cached.empty:
+                return cached.drop(columns=["Season", "SeasonStart"], errors="ignore").reset_index(drop=True)
+        except Exception:
+            pass
+
+    current = df[df["MatchDate"] >= season_start_ts].copy()
     if current.empty:
         return pd.DataFrame()
 
@@ -580,6 +696,17 @@ def compute_la_liga_standings(
 
 @st.cache_data(ttl=3600)
 def compute_league_stats(csv_path: str, season_year: int) -> dict | None:
+    cache_path = APP_CACHE_DIR / "league_stats.json"
+    if cache_path.exists():
+        try:
+            with open(cache_path) as f:
+                cached = json.load(f)
+            stats = cached.get(str(season_year))
+            if stats:
+                return stats
+        except Exception:
+            pass
+
     if not path.exists(csv_path):
         return None
     df = pd.read_csv(csv_path, low_memory=False)
@@ -628,7 +755,7 @@ def get_dataframe_height(
     return min(h, max_height)
 
 
-def render_table(df_or_styled, *, hide_index: bool = True, use_container_width: bool = True, height: int | None = None, **kwargs) -> None:
+def render_table(df_or_styled, *, hide_index: bool = True, width: str = 'stretch', height: int | str | None = None, **kwargs) -> None:
     """Render a DataFrame or Styler.
 
     Night mode  → st.dataframe() (interactive canvas, dark theme)
@@ -636,12 +763,14 @@ def render_table(df_or_styled, *, hide_index: bool = True, use_container_width: 
     """
     dark = st.session_state.get("dark_mode", True)
     if dark:
-        st.dataframe(df_or_styled, hide_index=hide_index,
-                     use_container_width=use_container_width, height=height, **kwargs)
+        dataframe_kwargs = {"hide_index": hide_index, "width": width, **kwargs}
+        if height is not None:
+            dataframe_kwargs["height"] = height
+        st.dataframe(df_or_styled, **dataframe_kwargs)
         return
 
     # Day mode: render as HTML so CSS can control all cell colours
-    if isinstance(df_or_styled, pd.io.formats.style.Styler):
+    if isinstance(df_or_styled, Styler):
         try:
             html_str = df_or_styled.hide(axis="index").to_html()
         except TypeError:
@@ -673,3 +802,8 @@ def next_match_countdown(upcoming_df: pd.DataFrame) -> str | None:
         return f"⏱️ Next: **{home} vs {away}**\n{d}d {h}h {m}m"
     except Exception:
         return None
+
+
+# Backward-compatible aliases
+compute_la_liga_standings = compute_league_standings
+calculate_league_features = calculate_la_liga_features

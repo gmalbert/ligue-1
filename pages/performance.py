@@ -9,7 +9,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from utils import render_table
+from utils import prediction_value_to_probability, render_table
 from themes import plotly_theme
 
 LOG_PATH      = "data_files/predictions_log.csv"
@@ -23,10 +23,22 @@ if path.exists(METRICS_PATH):
     with open(METRICS_PATH) as f:
         m = json.load(f)
     mc1, mc2, mc3, mc4 = st.columns(4)
-    mc1.metric("Accuracy",   f"{m.get('accuracy', 0):.1%}")
-    mc2.metric("F1 (macro)", f"{m.get('f1_macro', 0):.3f}")
-    mc3.metric("Log Loss",   f"{m.get('log_loss', 0):.3f}")
-    mc4.metric("Train rows", f"{m.get('n_train', '?'):,}")
+    mc1.metric("Holdout Accuracy", f"{m.get('accuracy', 0):.1%}")
+    mc2.metric("Market Baseline", f"{m.get('market_baseline_accuracy', 0):.1%}")
+    mc3.metric("Log Loss Edge", f"{m.get('market_log_loss_delta', 0):+.3f}")
+    mc4.metric("Brier Score", f"{m.get('brier_score', 0):.3f}")
+    mc5, mc6, mc7, mc8 = st.columns(4)
+    mc5.metric("Calibration Error", f"{m.get('calibration_error', 0):.3f}")
+    mc6.metric("Draw Recall", f"{m.get('draw_recall', 0):.1%}")
+    mc7.metric("ROI", f"{m.get('roi_pct', 0):+.1f}%")
+    clv = m.get("closing_line_value_pct")
+    mc8.metric("CLV", "N/A" if clv is None else f"{clv:+.2f}%")
+    st.caption(
+        f"Holdout season: {m.get('holdout_season', '?')} · "
+        f"{m.get('test_start', '?')} to {m.get('test_end', '?')} · "
+        f"Market blend weight: {m.get('market_blend_weight', 0):.2f} · "
+        f"Macro F1: {m.get('f1_macro', 0):.3f} · ROC AUC: {m.get('roc_auc_ovr_macro', 0) or 0:.3f}"
+    )
 
 st.divider()
 
@@ -41,6 +53,9 @@ log = pd.read_csv(LOG_PATH)
 log["MatchDate"] = pd.to_datetime(log["MatchDate"], errors="coerce")
 if "Correct" in log.columns:
     log["Correct"] = pd.to_numeric(log["Correct"], errors="coerce")
+for pred_col in ["PredHomeWin", "PredDraw", "PredAwayWin"]:
+    if pred_col in log.columns:
+        log[pred_col] = log[pred_col].apply(prediction_value_to_probability)
 
 # Focus only on resolved (ActualResult known)
 resolved = log[log["ActualResult"].notna() & (log["ActualResult"] != "")].copy()
@@ -126,20 +141,35 @@ if path.exists(BACKTEST_PATH):
 
     bc1, bc2, bc3, bc4 = st.columns(4)
     bc1.metric("Backtest Accuracy",  f"{bt.get('accuracy', 0):.1%}")
-    bc2.metric("Brier Score",        f"{bt.get('brier_score', 0):.4f}")
+    bc2.metric("Market Accuracy",    f"{bt.get('market_accuracy', 0):.1%}")
     bc3.metric("Bets Placed",        bt.get("n_bets_placed", 0))
     bc4.metric("Flat-Stake ROI",     f"{bt.get('roi_pct', 0):+.1f}%")
+    bc5, bc6, bc7, bc8 = st.columns(4)
+    bc5.metric("Log Loss Edge", f"{bt.get('market_log_loss_delta', 0):+.3f}")
+    bc6.metric("Calibration Error", f"{bt.get('calibration_error', 0):.3f}")
+    bc7.metric("Draw Recall", f"{bt.get('draw_recall', 0):.1%}")
+    clv = bt.get("closing_line_value_pct")
+    bc8.metric("CLV", "N/A" if clv is None else f"{clv:+.2f}%")
+    st.caption(
+        f"Holdout season: {bt.get('holdout_season', '?')} · "
+        f"Brier score: {bt.get('brier_score', 0):.4f} · "
+        f"Market Brier: {bt.get('market_brier_score', 0):.4f}"
+    )
 
     with st.expander("ℹ️ How the backtest works"):
         st.markdown(
             """
             **Methodology:**
-            - The ensemble model is run on all historical matches it was _not_ trained on (20% test split).
+            - The ensemble model is evaluated on the latest full season holdout, not rows used for training.
+            - Accuracy is exact 3-way classification accuracy: home win, draw, or away win.
+            - Log Loss Edge is market log loss minus model log loss; positive means the model is better.
+            - Calibration error checks whether confidence lines up with actual win rate.
             - A simulated flat-stake bet is placed when the model's implied probability **exceeds** the
               Bet365 market's implied probability by more than **5 percentage points** (the edge threshold).
             - ROI is computed as `(total returns − total staked) / total staked`.
+            - CLV compares the taken price against closing odds when closing odds are available.
             - **Bet365 odds** are sourced from football-data.co.uk (`B365H/D/A` columns).
-            - This is a simplified backtest — no walk-forward validation, no Kelly sizing.
+            - No bet is placed when the model has no edge over the market.
             """
         )
 else:

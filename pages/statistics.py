@@ -1,4 +1,4 @@
-"""Statistics page — xG rankings, team form, H2H, Copa del Rey congestion, feature importance."""
+"""Statistics page — xG rankings, team form, H2H, Coupe de France congestion, feature importance."""
 
 from __future__ import annotations
 import json
@@ -14,6 +14,8 @@ from themes import plotly_theme
 HIST_PATH     = "data_files/combined_historical_data.csv"
 METRICS_PATH  = "models/metrics.json"
 BACKTEST_PATH = "models/backtest_results.json"
+FEATURE_IMPORTANCE_PATH = "data_files/app_cache/feature_importance.csv"
+TEAM_FORM_PATH = "data_files/app_cache/team_form.csv"
 
 st.title("📊 Statistics")
 
@@ -26,7 +28,21 @@ hist_df = load_historical_data(HIST_PATH)
 
 # ── Feature Importance ────────────────────────────────────────────────────
 st.subheader("🧠 Model Feature Importance")
-if path.exists(METRICS_PATH):
+if path.exists(FEATURE_IMPORTANCE_PATH):
+    fi_df = pd.read_csv(FEATURE_IMPORTANCE_PATH)
+    fig = px.bar(
+        fi_df,
+        x="Importance",
+        y="Feature",
+        orientation="h",
+        title="XGBoost Feature Importances (Gain)",
+        color="Importance",
+        color_continuous_scale="reds",
+    )
+    fig.update_layout(coloraxis_showscale=False, yaxis_title=None)
+    fig.update_layout(**plotly_theme())
+    st.plotly_chart(fig, width='stretch')
+elif path.exists(METRICS_PATH):
     with open(METRICS_PATH) as f:
         m = json.load(f)
 
@@ -79,9 +95,19 @@ if path.exists(BACKTEST_PATH):
         bt = json.load(f)
     bc1, bc2, bc3, bc4 = st.columns(4)
     bc1.metric("Backtest Accuracy",  f"{bt.get('accuracy', 0):.1%}")
-    bc2.metric("Brier Score",        f"{bt.get('brier_score', 0):.4f}")
+    bc2.metric("Market Accuracy",    f"{bt.get('market_accuracy', 0):.1%}")
     bc3.metric("Bets Placed",        bt.get("n_bets_placed", 0))
     bc4.metric("Flat-Stake ROI",     f"{bt.get('roi_pct', 0):+.1f}%")
+    bc5, bc6, bc7, bc8 = st.columns(4)
+    bc5.metric("Log Loss Edge", f"{bt.get('market_log_loss_delta', 0):+.3f}")
+    bc6.metric("Calibration Error", f"{bt.get('calibration_error', 0):.3f}")
+    bc7.metric("Draw Recall", f"{bt.get('draw_recall', 0):.1%}")
+    clv = bt.get("closing_line_value_pct")
+    bc8.metric("CLV", "N/A" if clv is None else f"{clv:+.2f}%")
+    st.caption(
+        f"Holdout season: {bt.get('holdout_season', '?')} · "
+        f"Brier score: {bt.get('brier_score', 0):.4f}"
+    )
     st.caption("Full details on the **📈 Performance** page.")
 else:
     st.info("Backtest results not yet available — refreshed nightly.")
@@ -106,40 +132,43 @@ st.divider()
 
 # ── Team Form ─────────────────────────────────────────────────────────────
 st.subheader("📈 Recent Team Form (Last 5 Matches)")
-
+icons = {"W": "🟢", "D": "🟡", "L": "🔴"}
 all_teams = sorted(
     set(hist_df["HomeTeam"].dropna()) | set(hist_df["AwayTeam"].dropna())
 )
 
-form_rows = []
-icons = {"W": "🟢", "D": "🟡", "L": "🔴"}
-
-for team in all_teams:
-    home_m = hist_df[hist_df["HomeTeam"] == team][["MatchDate", "FullTimeResult"]].assign(
-        Won=lambda d: (d["FullTimeResult"] == "H"),
-        Drew=lambda d: (d["FullTimeResult"] == "D"),
+if path.exists(TEAM_FORM_PATH):
+    form_df = pd.read_csv(TEAM_FORM_PATH)
+    form_df["Form"] = form_df["Form"].astype(str).apply(
+        lambda form: " ".join(icons.get(c, c) for c in form)
     )
-    away_m = hist_df[hist_df["AwayTeam"] == team][["MatchDate", "FullTimeResult"]].assign(
-        Won=lambda d: (d["FullTimeResult"] == "A"),
-        Drew=lambda d: (d["FullTimeResult"] == "D"),
-    )
-    all_m = (
-        pd.concat([home_m, away_m])
-        .sort_values("MatchDate")
-        .tail(5)
-    )
-    form_str  = "".join("W" if r["Won"] else ("D" if r["Drew"] else "L") for _, r in all_m.iterrows())
-    form_disp = " ".join(icons.get(c, c) for c in form_str)
-    pts_l5    = sum(3 if c == "W" else (1 if c == "D" else 0) for c in form_str)
+else:
+    form_rows = []
+    for team in all_teams:
+        home_m = hist_df[hist_df["HomeTeam"] == team][["MatchDate", "FullTimeResult"]].assign(
+            Won=lambda d: (d["FullTimeResult"] == "H"),
+            Drew=lambda d: (d["FullTimeResult"] == "D"),
+        )
+        away_m = hist_df[hist_df["AwayTeam"] == team][["MatchDate", "FullTimeResult"]].assign(
+            Won=lambda d: (d["FullTimeResult"] == "A"),
+            Drew=lambda d: (d["FullTimeResult"] == "D"),
+        )
+        all_m = (
+            pd.concat([home_m, away_m])
+            .sort_values("MatchDate")
+            .tail(5)
+        )
+        form_str = "".join("W" if r["Won"] else ("D" if r["Drew"] else "L") for _, r in all_m.iterrows())
+        form_disp = " ".join(icons.get(c, c) for c in form_str)
+        pts_l5 = sum(3 if c == "W" else (1 if c == "D" else 0) for c in form_str)
+        form_rows.append({"Team": team, "Form": form_disp, "Pts (L5)": pts_l5})
 
-    form_rows.append({"Team": team, "Form": form_disp, "Pts (L5)": pts_l5, "_form_str": form_str})
-
-form_df = (
-    pd.DataFrame(form_rows)
-    .sort_values("Pts (L5)", ascending=False)
-    .reset_index(drop=True)
-)
-form_df.insert(0, "#", form_df.index + 1)
+    form_df = (
+        pd.DataFrame(form_rows)
+        .sort_values("Pts (L5)", ascending=False)
+        .reset_index(drop=True)
+    )
+    form_df.insert(0, "#", form_df.index + 1)
 render_table(
     form_df[["#", "Team", "Form", "Pts (L5)"]],
     hide_index=True,
@@ -193,8 +222,8 @@ if st.button("🔍 Analyse H2H", width='stretch'):
 st.divider()
 
 
-# ── Copa del Rey Congestion ────────────────────────────────────────────────
-st.subheader("🏆 Copa del Rey Congestion Flag")
+# ── Coupe de France Congestion ─────────────────────────────────────────────
+st.subheader("🏆 Coupe de France Congestion Flag")
 copa_path = "data_files/raw/copa_fixtures.csv"
 if path.exists(copa_path):
     copa_df = pd.read_csv(copa_path)
@@ -203,10 +232,10 @@ if path.exists(copa_path):
         copa_df["MatchDate"] >= (pd.Timestamp.now() - pd.Timedelta(days=7))
     ]
     if recent_copa.empty:
-        st.success("No teams played Copa del Rey in the last 7 days.")
+        st.success("No teams played Coupe de France in the last 7 days.")
     else:
         flagged = recent_copa["TeamName"].nunique() if "TeamName" in recent_copa.columns else "?"
-        st.warning(f"⚠️ {flagged} team(s) played Copa del Rey in the last 7 days.")
+        st.warning(f"⚠️ {flagged} team(s) played Coupe de France in the last 7 days.")
         render_table(recent_copa, hide_index=True, width='stretch', height=get_dataframe_height(recent_copa))
 else:
-    st.info("Copa del Rey data not yet available — refreshed nightly.")
+    st.info("Coupe de France data not yet available — refreshed nightly.")

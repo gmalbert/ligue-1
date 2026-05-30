@@ -1,0 +1,13 @@
+FixtureId,MatchDate,HomeTeam,AwayTeam,Home_xG,Away_xG,HomeShots,AwayShots,HomeShotsOnTarget,AwayShotsOnTarget,XGSource,FetchedAt
+1214026,2025-05-04,Lyon,Lens,1.04,0.73,18.0,8.0,4.0,3.0,api-football,2026-05-30T01:53:53+00:00
+1214029,2025-05-04,Brest,Montpellier,1.1,0.56,16.0,6.0,5.0,1.0,api-football,2026-05-30T01:53:53+00:00
+1214034,2025-05-04,Auxerre,Le Havre,0.24,1.54,4.0,11.0,1.0,5.0,api-football,2026-05-30T01:53:53+00:00
+1214027,2025-05-04,Lille,Marseille,0.46,1.32,5.0,13.0,1.0,6.0,api-football,2026-05-30T01:53:53+00:00
+1214037,2025-05-10,Angers,Strasbourg,0.75,0.99,5.0,15.0,2.0,3.0,api-football,2026-05-30T01:53:53+00:00
+1214040,2025-05-10,Montpellier,Paris Saint Germain,0.61,1.5,9.0,10.0,4.0,8.0,api-football,2026-05-30T01:53:53+00:00
+1214043,2025-05-10,Monaco,Lyon,1.16,0.39,11.0,9.0,5.0,4.0,api-football,2026-05-30T01:53:53+00:00
+1214035,2025-05-10,Reims,Saint Etienne,1.91,0.66,19.0,9.0,3.0,4.0,api-football,2026-05-30T01:53:53+00:00
+1214039,2025-05-10,Rennes,Nice,1.18,1.05,10.0,14.0,4.0,6.0,api-football,2026-05-30T01:53:53+00:00
+1214041,2025-05-10,Toulouse,Lens,1.01,0.79,9.0,12.0,6.0,2.0,api-football,2026-05-30T01:53:53+00:00
+1214042,2025-05-10,Brest,Lille,1.2,2.06,12.0,18.0,4.0,2.0,api-football,2026-05-30T01:53:53+00:00
+1214036,2025-05-10,Auxerre,Nantes,0.43,0.67,9.0,7.0,3.0,2.0,api-football,2026-05-30T01:53:53+00:00

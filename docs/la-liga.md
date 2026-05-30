@@ -2,6 +2,13 @@
 
 **Tier: A** | Season: August–May | DraftKings: Full markets
 
+## Review Status
+
+- 🟡 This document is retained as expansion research, but it is no longer the active implementation target for this repository.
+- ✅ The current app has been ported to Ligue 1 as **Ligue Odds**.
+- ⚪ If La Liga support is revived later, the remaining work should be tracked separately from the Ligue 1 roadmaps.
+- Reviewed: 2026-05-28
+
 ## Data Sources
 
 - `football-data.org` (free tier — fixtures, results, standings, odds)

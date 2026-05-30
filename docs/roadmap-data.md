@@ -1,11 +1,29 @@
-# Data Enhancement Roadmap — La Liga Linea
+# Data Enhancement Roadmap — Ligue Odds
 
 ## Status
-- ⚪ All data sources: pending integration
+- ✅ Core Ligue 1 data pipelines are implemented.
+- 🟡 Partial/adapted: true FBref/Understat scraping has been replaced by a shot-on-target xG proxy; football-data.org is used for fixtures/results, while standings are computed locally.
+- ⚪ Outstanding: injury data, KNN imputation, and historical weather features in model training.
+- Reviewed: 2026-05-28
+
+## Current Implementation Status
+
+| # | Data Addition | Status |
+|---|---|---|
+| 1 | football-data.org core pipeline | 🟡 Implemented for upcoming Ligue 1 fixtures/results with `FL1`; standings are currently computed from local historical CSV data |
+| 2 | football-data.co.uk historical CSVs | ✅ Implemented for Ligue 1 `FR1.csv` seasons in `fetch_historical_csvs.py` |
+| 3 | FBref xG scraper | 🟡 Implemented as `fetch_fbref_xg.py`, but currently generates shot-on-target xG proxy files instead of scraping FBref |
+| 4 | Betting odds | ✅ Implemented in `fetch_odds.py` with vig-removed implied probabilities |
+| 5 | Weather data | 🟡 Implemented for upcoming fixture forecasts in `fetch_weather_data.py`; historical weather model features remain outstanding |
+| 6 | Cup fixtures | ✅ Adapted to Coupe de France via ESPN in `fetch_copa_fixtures.py` |
+| 7 | Implied probability features | ✅ Implemented in `prepare_model_data.py` |
+| 8 | Injury data | ⚪ Not implemented |
+| 9 | Missing data KNN imputation | ⚪ Not implemented |
+| 10 | Team name normalization | ✅ Implemented in `team_name_mapping.py` |
 
 ## Current Data Sources (Starting Point)
-- Historical match results: football-data.co.uk (PD, 2015–2025)
-- Upcoming fixtures: football-data.org API v4 / ESPN API
+- Historical match results: football-data.co.uk (FR1, 2015–2025)
+- Upcoming fixtures: football-data.org API v4 (`FL1`)
 - Basic match stats: goals, shots, shots on target, corners, fouls, cards
 
 ---
@@ -693,21 +711,21 @@ def normalize_team_name(name: str) -> str:
 ## Implementation Priority
 
 **Phase 1 (Week 1):**
-1. `fetch_historical_csvs.py` — build 10-season La Liga dataset
-2. `team_name_mapping.py` — normalize all team names
-3. `prepare_model_data.py` — core feature engineering
+1. ✅ `fetch_historical_csvs.py` — build 10-season Ligue 1 dataset
+2. ✅ `team_name_mapping.py` — normalize all team names
+3. ✅ `prepare_model_data.py` — core feature engineering
 
 **Phase 2 (Week 2):**
-4. `fetch_fd_data.py` — live fixtures + standings from football-data.org
-5. `extract_betting_features()` — implied probabilities from historical odds
-6. `fetch_upcoming_fixtures.py` — upcoming PD fixtures
+4. 🟡 `fetch_fd_data.py` — not present; upcoming fixtures/results are handled by `fetch_upcoming_fixtures.py`
+5. ✅ `extract_betting_features()` — implied probabilities from historical odds are implemented in `prepare_model_data.py`
+6. ✅ `fetch_upcoming_fixtures.py` — upcoming `FL1` fixtures
 
 **Phase 3 (Month 1):**
-7. `fetch_fbref_xg.py` — real xG data to replace proxy
-8. `fetch_copa_fixtures.py` — Copa del Rey congestion flag
-9. `smart_imputation()` — KNN imputation for missing values
+7. 🟡 `fetch_fbref_xg.py` — xG proxy implemented; real FBref/Understat xG still outstanding
+8. ✅ `fetch_copa_fixtures.py` — Coupe de France congestion flag
+9. ⚪ `smart_imputation()` — KNN imputation for missing values
 
 **Phase 4 (Month 2):**
-10. `fetch_odds.py` — live The Odds API integration
-11. `scrape_injuries.py` — injury counts
-12. `fetch_weather_data.py` — weather features
+10. ✅ `fetch_odds.py` — live The Odds API integration
+11. ⚪ `scrape_injuries.py` — injury counts
+12. 🟡 `fetch_weather_data.py` — upcoming weather forecasts implemented; training features outstanding

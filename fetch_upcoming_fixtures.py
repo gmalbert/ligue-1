@@ -1,4 +1,4 @@
-"""Fetch upcoming La Liga fixtures from football-data.org (competition PD).
+"""Fetch upcoming Ligue-1 fixtures from football-data.org (competition FL1).
 
 Saves: data_files/upcoming_fixtures.csv
 
@@ -6,7 +6,7 @@ Usage:
     python fetch_upcoming_fixtures.py
 
 Requires:
-    FOOTBALL_DATA_KEY in .env (free tier covers PD at 10 req/min)
+    FOOTBALL_DATA_KEY in .env (free tier covers FL1 at 10 req/min)
 """
 
 from __future__ import annotations
@@ -20,6 +20,8 @@ import pytz
 import requests
 from dotenv import load_dotenv
 
+from team_name_mapping import normalize_dataframe_teams
+
 load_dotenv()
 
 FOOTBALL_DATA_KEY = os.getenv("FOOTBALL_DATA_KEY", "")
@@ -27,11 +29,12 @@ BASE_URL = "https://api.football-data.org/v4"
 HEADERS = {"X-Auth-Token": FOOTBALL_DATA_KEY}
 
 OUT_PATH = "data_files/upcoming_fixtures.csv"
+OUTPUT_COLUMNS = ["Date", "Time", "Matchday", "HomeTeam", "AwayTeam", "Status"]
 
 
 def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
     """
-    Fetch SCHEDULED La Liga matches from football-data.org.
+    Fetch SCHEDULED Ligue-1 matches from football-data.org.
     Returns a DataFrame and saves to upcoming_fixtures.csv.
     """
     if not FOOTBALL_DATA_KEY:
@@ -44,7 +47,7 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
         params["season"] = season
 
     resp = requests.get(
-        f"{BASE_URL}/competitions/PD/matches",
+        f"{BASE_URL}/competitions/FL1/matches",
         headers=HEADERS,
         params=params,
         timeout=15,
@@ -66,14 +69,18 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
             "Status":    m["status"],
         })
 
-    if not rows:
-        print("No upcoming fixtures found (off-season?).")
-        return pd.DataFrame()
+    Path("data_files").mkdir(parents=True, exist_ok=True)
 
-    df = pd.DataFrame(rows)
+    if not rows:
+        df = pd.DataFrame(columns=OUTPUT_COLUMNS)
+        df.to_csv(OUT_PATH, index=False)
+        print(f"No upcoming fixtures found (off-season?). Cleared {OUT_PATH}")
+        return df
+
+    df = pd.DataFrame(rows, columns=OUTPUT_COLUMNS)
+    df = normalize_dataframe_teams(df)
     df = df.sort_values("Date").reset_index(drop=True)
 
-    Path("data_files").mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_PATH, index=False)
     print(f"✓ Saved {len(df)} upcoming fixtures → {OUT_PATH}")
     return df
@@ -81,13 +88,13 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
 
 def fetch_recent_results(n_matchdays: int = 3) -> pd.DataFrame:
     """
-    Fetch the most recently FINISHED La Liga matches (for predictions log enrichment).
+    Fetch the most recently FINISHED Ligue-1 matches (for predictions log enrichment).
     """
     if not FOOTBALL_DATA_KEY:
         return pd.DataFrame()
 
     resp = requests.get(
-        f"{BASE_URL}/competitions/PD/matches",
+        f"{BASE_URL}/competitions/FL1/matches",
         headers=HEADERS,
         params={"status": "FINISHED"},
         timeout=15,

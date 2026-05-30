@@ -1,7 +1,9 @@
-# Quick Wins Roadmap — La Liga Linea
+# Quick Wins Roadmap — Ligue Odds
 
 ## Status
-- ⚪ All quick wins: pending implementation
+- ✅ 9 of 10 quick wins are implemented in the current Ligue Odds app.
+- ⚪ Outstanding: sidebar refresh button.
+- Reviewed: 2026-05-28
 
 ## Overview
 
@@ -193,7 +195,7 @@ def add_team_filter(df: pd.DataFrame, team_col_home: str = "HomeTeam",
 
 # Usage in _tab_predictions():
 # display_df = add_team_filter(display_df)
-# st.dataframe(display_df, use_container_width=True, hide_index=True)
+# st.dataframe(display_df, width='stretch', hide_index=True)
 ```
 
 ---
@@ -296,7 +298,7 @@ def show_feature_importance_chart(
         coloraxis_showscale=False,
         margin={"l": 0, "r": 0, "t": 40, "b": 0},
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 
 # Usage (inside _tab_statistics or predictions tab):
@@ -314,7 +316,7 @@ Already included in [roadmap-layout.md](roadmap-layout.md) sidebar section. Extr
 ```python
 # In la_liga_linea.py sidebar section
 
-if st.sidebar.button("🔄 Refresh All Data", use_container_width=True):
+if st.sidebar.button("🔄 Refresh All Data", width='stretch'):
     # Clear the Streamlit cache so next load re-fetches everything
     st.cache_data.clear()
     st.sidebar.success("Cache cleared — reload page to refresh.")
@@ -386,13 +388,13 @@ def render_predictions_with_progress_bars(predictions_df: pd.DataFrame) -> None:
     """
     required = ["HomeTeam", "AwayTeam", "Date", "PredHomeWin", "PredDraw", "PredAwayWin"]
     if not all(c in predictions_df.columns for c in required):
-        st.dataframe(predictions_df, hide_index=True, use_container_width=True)
+        st.dataframe(predictions_df, hide_index=True, width='stretch')
         return
 
     st.dataframe(
         predictions_df,
         hide_index=True,
-        use_container_width=True,
+        width='stretch',
         column_config={
             "PredHomeWin": st.column_config.ProgressColumn(
                 label="Home Win",
@@ -426,14 +428,14 @@ def render_predictions_with_progress_bars(predictions_df: pd.DataFrame) -> None:
 
 | # | Feature | Time | Status |
 |---|---|---|---|
-| 1 | Match commentary generator | 5 min | ⚪ |
-| 2 | Color-coded confidence rows | 3 min | ⚪ |
-| 3 | CSV download button | 2 min | ⚪ |
-| 4 | Last-updated timestamp | 2 min | ⚪ |
-| 5 | Team filter dropdown | 3 min | ⚪ |
-| 6 | Date range filter | 3 min | ⚪ |
-| 7 | Feature importance chart | 5 min | ⚪ |
-| 8 | Sidebar refresh button | 2 min | ⚪ |
-| 9 | Match countdown | 3 min | ⚪ |
-| 10 | Progress bar columns | 5 min | ⚪ |
-| | **Total** | **~33 min** | |
+| 1 | Match commentary generator | 5 min | ✅ Implemented in `utils.generate_match_commentary()` and `pages/predictions_tab.py` |
+| 2 | Color-coded confidence rows | 3 min | ✅ Implemented with `utils.color_risk_rows()` |
+| 3 | CSV download button | 2 min | ✅ Implemented on Predictions and Raw Data |
+| 4 | Last-updated timestamp | 2 min | ✅ Implemented for fixtures and predictions |
+| 5 | Team filter dropdown | 3 min | ✅ Implemented on Predictions, Markets, and Raw Data |
+| 6 | Date range filter | 3 min | ✅ Implemented on Predictions |
+| 7 | Feature importance chart | 5 min | ✅ Implemented on Statistics |
+| 8 | Sidebar refresh button | 2 min | ⚪ Not implemented |
+| 9 | Match countdown | 3 min | ✅ Implemented in sidebar |
+| 10 | Progress bar columns | 5 min | ✅ Implemented in Predictions |
+| | **Total** | **~33 min** | **9/10 complete** |

@@ -129,4 +129,4 @@ styled = recent[show_cols].rename(columns={
     "FullTimeAwayGoals": "AG", "FullTimeResult": "FTR",
 }).style.map(_outcome_style, subset=["Outcome"])
 
-render_table(styled, hide_index=True, use_container_width=True)
+render_table(styled, hide_index=True, width='stretch')

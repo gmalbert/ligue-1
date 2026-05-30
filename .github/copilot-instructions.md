@@ -44,7 +44,7 @@
 - `fetch_historical_csvs.py` — downloads SP1.csv for seasons 2015-16 → present
 - `fetch_upcoming_fixtures.py` — football-data.org PD competition, status=SCHEDULED
 - `fetch_fbref_xg.py` — scrapes FBref La Liga team xG (comp ID 12)
-- `fetch_odds.py` — The Odds API, sport key `soccer_spain_la_liga`
+- `fetch_odds.py` — odds-api.io or The Odds API, Ligue 1 odds
 - `fetch_copa_fixtures.py` — Copa del Rey fixtures from football-data.org
 
 ---
@@ -55,7 +55,7 @@
 - **football-data.org competition code:** `PD` (Primera División)
 - **football-data.co.uk file:** `SP1.csv` for each season
 - **FBref La Liga competition ID:** `12`
-- **The Odds API sport key:** `soccer_spain_la_liga`
+- **The Odds API sport key:** `soccer_france_ligue_one`
 - **ESPN API URL:** `https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard`
 
 ### football-data.co.uk column names (raw CSV)
@@ -96,7 +96,7 @@ The app has two themes controlled by `st.session_state["dark_mode"]` (bool, defa
 **Never use `st.dataframe()` directly.** Use `render_table()` from `utils.py` instead:
 ```python
 from utils import render_table
-render_table(df, hide_index=True, use_container_width=True, height=400)
+render_table(df, hide_index=True, width='stretch', height=400)
 ```
 - Night mode → delegates to `st.dataframe()` (interactive canvas)
 - Day mode → renders an HTML table via `st.markdown(unsafe_allow_html=True)` with `.lt-tbl` CSS class, because the canvas renderer ignores CSS and always shows a dark background

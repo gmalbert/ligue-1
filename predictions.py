@@ -1,18 +1,19 @@
-"""La Liga Linea — Streamlit app entry point.
+"""Ligue Odds — Streamlit app entry point.
 
 Run with:
     streamlit run predictions.py
 """
 
-import os
 from os import path
+from datetime import datetime
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 # ── Page config — must be first Streamlit call ─────────────────────────────
 st.set_page_config(
-    page_title="La Liga Linea",
-    page_icon="🇪🇸",
+    page_title="Ligue Odds",
+    page_icon="⚽",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -21,45 +22,66 @@ from footer import add_betting_oracle_footer  # noqa: E402
 from themes import apply_theme  # noqa: E402
 from utils import load_upcoming_fixtures, next_match_countdown  # noqa: E402
 
-# ── Mode must be set before apply_theme() ─────────────────────────────────
-# Auto-detect from browser clock via ?hour= query param (injected by JS below).
-# Only auto-set when the user hasn't manually toggled this session.
-_hour_param = st.query_params.get("hour", None)
-if not st.session_state.get("dark_mode_manual", False):
-    if _hour_param is not None:
-        try:
-            _h = int(_hour_param)
-            st.session_state["dark_mode"] = not (6 <= _h < 20)
-        except ValueError:
-            st.session_state.setdefault("dark_mode", True)
-    else:
-        st.session_state.setdefault("dark_mode", True)
+_logo = path.join("data_files", "logo.png")
 
-# Always inject JS so a stale ?hour from a previous session is updated on
-# every page load. JS only does a location.replace() when the value changes.
-st.iframe(
+# ── Mode must be set before apply_theme() ─────────────────────────────────
+# Browser-local time is sent to Streamlit via a query param. First paint uses
+# night mode until the browser reports its hour, then the page reruns.
+_hour_param = st.query_params.get("browser_hour", None)
+try:
+    _browser_hour = int(_hour_param) if _hour_param is not None else None
+except ValueError:
+    _browser_hour = None
+
+_theme_hour = _browser_hour if _browser_hour is not None else datetime.now().hour
+st.session_state["dark_mode"] = not (6 <= _theme_hour < 20)
+
+components.html(
     """
     <script>
     const h = new Date().getHours();
     const url = new URL(window.parent.location.href);
-    const existing = url.searchParams.get('hour');
+    const existing = url.searchParams.get('browser_hour');
     if (existing === null || parseInt(existing, 10) !== h) {
-        url.searchParams.set('hour', h);
+        url.searchParams.set('browser_hour', h);
         window.parent.location.replace(url.toString());
     }
     </script>
     """,
-    height=10,
+    height=0,
+)
+
+# ── Navigation ─────────────────────────────────────────────────────────────
+pg = st.navigation(
+    {
+        "⚽ Ligue 1": [
+            st.Page(
+                "pages/predictions_tab.py",
+                title="Predictions",
+                icon="🎯",
+                default=True,
+            ),
+            st.Page("pages/fixtures.py",       title="Fixtures & Standings", icon="🗓️"),
+            st.Page("pages/statistics.py",      title="Statistics",           icon="📊"),
+            st.Page("pages/team_deep_dive.py",  title="Team Deep Dive",       icon="🔬"),
+            st.Page("pages/raw_data.py",        title="Raw Data",             icon="📁"),
+        ],
+        "💰 Betting": [
+            st.Page("pages/markets.py",     title="Markets",    icon="📈"),
+            st.Page("pages/best_bets.py",   title="Best Bets",  icon="💰"),
+            st.Page("pages/performance.py", title="Performance", icon="📈"),
+        ],
+    }
 )
 
 # ── Sidebar ────────────────────────────────────────────────────────────────
-_logo = path.join("data_files", "logo.png")
-if path.exists(_logo):
+if pg.url_path and path.exists(_logo):
     st.sidebar.image(_logo, width=220)
 else:
-    st.sidebar.markdown("## 🇪🇸 La Liga Linea")
+    st.sidebar.markdown("## Ligue Odds")
 
-st.sidebar.markdown("**La Liga Predictions & Analysis**")
+if pg.url_path:
+    st.sidebar.markdown("**Ligue 1 predictions & analysis**")
 st.sidebar.divider()
 
 # Next-match countdown
@@ -81,44 +103,12 @@ st.session_state["selected_season"] = st.sidebar.selectbox(
     index=_seasons.index(st.session_state.get("selected_season", _seasons[0])),
 )
 
-st.sidebar.divider()
-
-# Night / Day toggle
-_mode_label = "☀️ Switch to Day" if st.session_state["dark_mode"] else "🌙 Switch to Night"
-if st.sidebar.button(_mode_label, width='stretch'):
-    st.session_state["dark_mode"] = not st.session_state["dark_mode"]
-    st.session_state["dark_mode_manual"] = True  # suppress auto-override for this session
-    st.rerun()
-
 apply_theme()
 
 st.sidebar.divider()
 
-st.sidebar.caption("Data: football-data.org · FBref · The Odds API")
-st.sidebar.caption("© Betting Oracle")
-
-# ── Navigation ─────────────────────────────────────────────────────────────
-pg = st.navigation(
-    {
-        "⚽ La Liga": [
-            st.Page(
-                "pages/predictions_tab.py",
-                title="Predictions",
-                icon="🎯",
-                default=True,
-            ),
-            st.Page("pages/fixtures.py",       title="Fixtures & Standings", icon="🗓️"),
-            st.Page("pages/statistics.py",      title="Statistics",           icon="📊"),
-            st.Page("pages/team_deep_dive.py",  title="Team Deep Dive",       icon="🔬"),
-            st.Page("pages/raw_data.py",        title="Raw Data",             icon="📁"),
-        ],
-        "💰 Betting": [
-            st.Page("pages/markets.py",     title="Markets",    icon="📈"),
-            st.Page("pages/best_bets.py",   title="Best Bets",  icon="💰"),
-            st.Page("pages/performance.py", title="Performance", icon="📈"),
-        ],
-    }
-)
+# st.sidebar.caption("Data: football-data.org · FBref · The Odds API")
+# st.sidebar.caption("© Betting Oracle")
 
 pg.run()
 

@@ -1,4 +1,4 @@
-"""Fetch weather data for upcoming La Liga fixtures.
+"""Fetch weather data for upcoming Ligue-1 fixtures.
 
 Uses the Open-Meteo API (free, no API key required).
 For each upcoming fixture, looks up the stadium coordinates and fetches
@@ -12,7 +12,6 @@ Usage:
 
 Called by: automation/nightly_pipeline.py
 """
-
 from __future__ import annotations
 
 import time
@@ -21,42 +20,41 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from team_name_mapping import normalize_team_name
+
 # ── Stadium Coordinates ────────────────────────────────────────────────────
-# (latitude, longitude) for each La Liga club's home stadium
+# (latitude, longitude) for each Ligue-1 club's home stadium
 STADIUM_COORDS: dict[str, tuple[float, float]] = {
-    "Alaves":         (42.8466,  -2.6838),   # Mendizorrotza
-    "Almeria":        (36.8376,  -2.4593),   # Power Horse Stadium
-    "Ath Bilbao":     (43.2644,  -2.9494),   # San Mamés
-    "Ath Madrid":     (40.4361,  -3.5995),   # Estadio Metropolitano
-    "Atletico":       (40.4361,  -3.5995),   # alias
-    "Barcelona":      (41.3809,   2.1228),   # Spotify Camp Nou (Estadi Olímpic during works)
-    "Betis":          (37.3564,  -5.9823),   # Estadio Benito Villamarín
-    "Cadiz":          (36.5303,  -6.2970),   # Estadio Ramón de Carranza
-    "Celta":          (42.2116,  -8.7392),   # Abanca-Balaídos
-    "Espanol":        (41.3471,   2.0751),   # RCDE Stadium
-    "Getafe":         (40.3257,  -3.7184),   # Coliseum Alfonso Pérez
-    "Girona":         (41.9649,   2.8250),   # Estadi Montilivi
-    "Granada":        (37.1524,  -3.6075),   # Estadio Nuevo Los Cármenes
-    "Las Palmas":     (28.1000, -15.4200),   # Gran Canaria Stadium
-    "Leganes":        (40.3570,  -3.7694),   # Estadio Municipal de Butarque
-    "Mallorca":       (39.5896,   2.6537),   # Visit Mallorca Estadi
-    "Osasuna":        (42.7969,  -1.6370),   # El Sadar
-    "Oviedo":         (43.3532,  -5.8615),   # Carlos Tartiere
-    "Rayo Vallecano": (40.3914,  -3.6540),   # Estadio de Vallecas
-    "Rayo":           (40.3914,  -3.6540),   # alias
-    "Real Madrid":    (40.4531,  -3.6883),   # Santiago Bernabéu
-    "Sevilla":        (37.3840,  -5.9706),   # Ramón Sánchez-Pizjuán
-    "Sociedad":       (43.2998,  -1.9735),   # Reale Arena
-    "Vallecano":      (40.3914,  -3.6540),   # alias
-    "Valencia":       (39.4748,  -0.3584),   # Estadio Mestalla
-    "Valladolid":     (41.6408,  -4.7420),   # Nuevo Estadio José Zorrilla
-    "Villarreal":     (39.9445,  -0.1034),   # Estadio de la Cerámica
+    "Paris SG":                  (48.8414,  2.2530),   # Parc des Princes
+    "Marseille":                 (43.2698,  5.3958),   # Stade Vélodrome
+    "Lyon":                      (45.7652,  4.9820),   # Parc Olympique Lyonnais
+    "Monaco":                    (43.7275,  7.4156),   # Stade Louis II
+    "Lille":                     (50.6119,  3.1304),   # Stade Pierre-Mauroy
+    "Nice":                      (43.7051,  7.1926),   # Allianz Riviera
+    "Lens":                      (50.4329,  2.8153),   # Stade Bollaert-Delelis
+    "Rennes":                    (48.1075, -1.7128),   # Roazhon Park
+    "Bordeaux":                  (44.8978, -0.5612),   # Matmut Atlantique
+    "Montpellier":               (43.6225,  3.8121),   # Stade de la Mosson
+    "Reims":                     (49.2468,  4.0250),   # Stade Auguste-Delaune
+    "Nantes":                    (47.2561, -1.5247),   # Stade de la Beaujoire
+    "Toulouse":                  (43.5833,  1.4342),   # Stadium de Toulouse
+    "Strasbourg":                (48.5601,  7.7551),   # Stade de la Meinau
+    "Brest":                     (48.3890, -4.4618),   # Stade Francis-Le Blé
+    "Angers":                    (47.4606, -0.5311),   # Stade Raymond Kopa
+    "Lorient":                   (47.7482, -3.3680),   # Stade du Moustoir
+    "St Etienne":                (45.4608,  4.3900),   # Stade Geoffroy-Guichard
+    "Le Havre":                  (49.4979,  0.1619),   # Stade Océane
+    "Clermont":                  (45.8000,  3.1167),   # Stade Gabriel-Montpied
+    "Metz":                      (49.1099,  6.1603),   # Stade Saint-Symphorien
+    "Auxerre":                   (47.7978,  3.5683),   # Stade de l'Abbé-Deschamps
+    "Troyes":                    (48.2978,  4.0744),   # Stade de l'Aube
 }
 
 # ── Helpers ────────────────────────────────────────────────────────────────
 
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 DAILY_PARAMS  = "temperature_2m_max,precipitation_sum,windspeed_10m_max,weathercode"
+OUTPUT_COLUMNS = ["Date", "HomeTeam", "WeatherDesc", "TempMaxC", "PrecipMM", "WindKmh"]
 
 
 def _get_coords(team: str) -> tuple[float, float] | None:
@@ -99,7 +97,7 @@ def fetch_fixture_weather(home_team: str, match_date: str) -> dict:
         "latitude":         lat,
         "longitude":        lon,
         "daily":            DAILY_PARAMS,
-        "timezone":         "Europe/Madrid",
+        "timezone":         "Europe/Paris",
         "start_date":       match_date,
         "end_date":         match_date,
     }
@@ -131,7 +129,9 @@ def fetch_all_weather(
 
     df = pd.read_csv(fixtures_path)
     if df.empty:
-        print("  No upcoming fixtures to fetch weather for.")
+        Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame(columns=OUTPUT_COLUMNS).to_csv(out_path, index=False)
+        print(f"  No upcoming fixtures to fetch weather for. Cleared {out_path}")
         return
 
     date_col = next((c for c in ["Date", "MatchDate", "date"] if c in df.columns), None)
@@ -146,7 +146,7 @@ def fetch_all_weather(
 
     for _, row in df.iterrows():
         match_date = str(row[date_col])[:10]          # YYYY-MM-DD
-        home_team  = str(row[home_col])
+        home_team  = normalize_team_name(str(row[home_col]))
         weather    = fetch_fixture_weather(home_team, match_date)
         rows.append({
             "Date":      match_date,
@@ -155,7 +155,7 @@ def fetch_all_weather(
         })
         time.sleep(0.05)   # polite rate limiting (Open-Meteo allows 10k/day free)
 
-    out_df = pd.DataFrame(rows)
+    out_df = pd.DataFrame(rows, columns=OUTPUT_COLUMNS)
     out_df.to_csv(out_path, index=False)
     print(f"  Saved {len(out_df)} rows → {out_path}")
 

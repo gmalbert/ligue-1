@@ -1,7 +1,23 @@
-# Model Improvements Roadmap — La Liga Linea
+# Model Improvements Roadmap — Ligue Odds
 
 ## Status
-- ⚪ All models: pending implementation
+- ✅ Ensemble, Poisson, neural network, hyperparameter search, feature engineering, and backtesting are implemented.
+- 🟡 Partial: Poisson is trained/saved but not exposed as a selectable prediction mode in the UI.
+- ⚪ Outstanding: LSTM momentum model and standalone model-comparison report.
+- Reviewed: 2026-05-28
+
+## Current Implementation Status
+
+| Area | Status |
+|---|---|
+| Ensemble classifier | ✅ Implemented in `models/ensemble_predictor.py` and trained by `train_models.py` |
+| Poisson model | 🟡 Implemented in `models/poisson_predictor.py`; strengths are saved by `train_models.py`, but UI integration remains outstanding |
+| Neural network | ✅ Implemented in `models/nn_predictor.py` and trained by `train_models.py` |
+| LSTM momentum model | ⚪ Not implemented |
+| Hyperparameter optimization | ✅ Implemented via `train_models.py --optimize` and `RandomizedSearchCV` |
+| Feature engineering with lagged rolling windows | ✅ Implemented in `prepare_model_data.py` and `utils.py` |
+| Historical backtesting | ✅ Implemented in `backtest.py` and surfaced in Statistics/Performance |
+| Model comparison framework | ⚪ Not implemented as a standalone `compare_models.py` report |
 
 ## Current Target Variables
 - **Primary:** 1X2 match result (Home Win / Draw / Away Win)
@@ -579,9 +595,9 @@ def backtest_model(df: pd.DataFrame, predictions: np.ndarray) -> dict:
 
 ## Recommended Next Steps
 
-1. **Implement ensemble model** — retrain on La Liga data (PD, 2015–2025)
-2. **Add Poisson model** — unlocks over/under + scoreline markets
-3. **Hyperparameter tuning** — run nightly via GitHub Actions
-4. **Neural network** — add once ensemble is stable
-5. **LSTM** — add for Teams with high temporal momentum (Real Madrid, Barcelona)
-6. **Backtesting dashboard** — validate against closing lines before going live
+1. ✅ **Implement ensemble model** — complete for Ligue 1 data.
+2. 🟡 **Add Poisson model** — model is implemented; UI/market integration remains.
+3. ✅ **Hyperparameter tuning** — available through `train_models.py --optimize`.
+4. ✅ **Neural network** — implemented and wired into the nightly training path.
+5. ⚪ **LSTM** — still outstanding.
+6. ✅ **Backtesting dashboard** — implemented through `backtest.py`, Statistics, and Performance.

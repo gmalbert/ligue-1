@@ -1,7 +1,25 @@
-# Feature Roadmap — La Liga Linea
+# Feature Roadmap — Ligue Odds
 
 ## Status
-- ⚪ All features: pending implementation
+- ✅ Core app features are implemented for Ligue Odds.
+- 🟡 Partial/adapted: Team Deep Dive, xG, and cup congestion are live but differ from the original La Liga examples.
+- ⚪ Outstanding: live scores and PDF export.
+- Reviewed: 2026-05-28
+
+## Current Implementation Status
+
+| # | Feature | Status |
+|---|---|---|
+| 1 | Upcoming fixtures | ✅ Implemented in `pages/fixtures.py` with Ligue 1 fixtures, ET kickoff display, and matchday cards |
+| 2 | Season stats banner | ✅ Implemented in `pages/fixtures.py` via `utils.compute_league_stats()` |
+| 3 | Current standings | ✅ Implemented in `pages/fixtures.py` via `utils.compute_league_standings()` |
+| 4 | Upcoming predictions | ✅ Implemented in `pages/predictions_tab.py` from pre-generated prediction logs |
+| 5 | Statistics tab | ✅ Implemented with xG proxy rankings, form, H2H, cup congestion, feature importance, and backtest summary |
+| 6 | Team deep dive | 🟡 Implemented for KPIs, home/away split, and last 10 results; xG-per-team and cup-load details remain outstanding |
+| 7 | Prediction performance tracker | ✅ Implemented with logging, validation, and `pages/performance.py` |
+| 8 | Cup congestion flag | ✅ Adapted to Coupe de France via `fetch_copa_fixtures.py` and `prepare_model_data.py` |
+| 9 | Live score integration | ⚪ Not implemented |
+| 10 | PDF report export | ⚪ Not implemented |
 
 ---
 
@@ -499,22 +517,22 @@ st.download_button(
 ## Implementation Timeline
 
 **Phase 1 (Week 1-2):**
-- Upcoming Fixtures Tab
-- Season Stats Banner
-- Current Standings
-- Upcoming Predictions Tab
+- ✅ Upcoming Fixtures Tab
+- ✅ Season Stats Banner
+- ✅ Current Standings
+- ✅ Upcoming Predictions Tab
 
 **Phase 2 (Week 3-4):**
-- Statistics Tab (form + H2H)
-- Team Deep Dive Tab
-- Copa del Rey Congestion Flag
+- ✅ Statistics Tab (form + H2H)
+- 🟡 Team Deep Dive Tab
+- ✅ Coupe de France Congestion Flag
 
 **Phase 3 (Month 2):**
-- Prediction Performance Tracker
-- Live Score Integration
-- PDF Export
+- ✅ Prediction Performance Tracker
+- ⚪ Live Score Integration
+- ⚪ PDF Export
 
 **Phase 4 (Month 3):**
-- Markets Page (odds, EV)
-- Best Bets Page
-- Mobile optimization
+- ✅ Markets Page (odds, EV)
+- ✅ Best Bets Page
+- 🟡 Mobile optimization

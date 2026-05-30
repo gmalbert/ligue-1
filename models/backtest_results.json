@@ -1,0 +1,21 @@
+{
+  "n_matches": 305,
+  "n_bets_placed": 121,
+  "accuracy": 0.4721,
+  "brier_score": 0.6102,
+  "roi_pct": -17.27,
+  "profit_units": -20.9,
+  "win_rate_bets": 0.1901,
+  "market_accuracy": 0.4721,
+  "market_brier_score": 0.6102,
+  "log_loss": 1.0179,
+  "market_log_loss": 1.0179,
+  "calibration_error": 0.0486,
+  "draw_recall": 0.0,
+  "f1_macro": 0.3095,
+  "market_accuracy_delta": 0.0,
+  "market_log_loss_delta": 0.0,
+  "closing_line_value_pct": 0.34,
+  "holdout_season": "2025-26",
+  "evaluation": "last_full_season_holdout"
+}

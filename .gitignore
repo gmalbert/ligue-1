@@ -7,11 +7,18 @@ __pycache__/
 dist/
 build/
 .eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
 
 # Environment
 .env
 venv/
 .venv/
+venv_mac/
 env/
 
 # Secrets
@@ -19,9 +26,15 @@ env/
 
 # Models (large binaries — regenerate with train_models.py)
 models/*.pkl
+models/*.pt
+models/*.pth
 
-# Logs
+# Generated local runtime state
 logs/
+*.log
+data_files/api_usage/
+data_files/SP1_*.csv
+fetch_weather_data_updated.py
 
 # OS
 .DS_Store
@@ -30,4 +43,5 @@ Thumbs.db
 # IDE
 .vscode/settings.json
 .idea/
+.kilo/
 *.code-workspace

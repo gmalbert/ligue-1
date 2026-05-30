@@ -26,7 +26,7 @@ st.title("🗓️ Fixtures & Standings")
 season_year = int(st.session_state.get("selected_season", "2025-26").split("-")[0]) + 1
 stats = compute_league_stats(HIST_PATH, season_year)
 if stats and stats["n"] > 0:
-    with st.expander(f"📈 La Liga {season_year - 1}-{str(season_year)[2:]} Stats — {stats['n']} matches played", expanded=False):
+    with st.expander(f"📈 Ligue 1 {season_year - 1}-{str(season_year)[2:]} Stats — {stats['n']} matches played", expanded=False):
         s1, s2, s3, s4, s5, s6 = st.columns(6)
         s1.metric("Home Win %",   f"{stats['home_win_pct']:.0%}")
         s2.metric("Draw %",       f"{stats['draw_pct']:.0%}")
@@ -44,7 +44,7 @@ if path.exists(HIST_PATH):
     standings = compute_la_liga_standings(hist_df, season_start=season_start)
 
     if not standings.empty:
-        st.subheader(f"📊 La Liga Table — {season_year - 1}-{str(season_year)[2:]}")
+        st.subheader(f"📊 Ligue 1 Table — {season_year - 1}-{str(season_year)[2:]}")
         render_table(standings, hide_index=True, width='stretch',
                      height=get_dataframe_height(standings, max_height=760))
         st.divider()
@@ -55,7 +55,7 @@ else:
 
 
 # ── Upcoming fixtures ──────────────────────────────────────────────────────
-st.subheader("🗓️ Upcoming La Liga Fixtures")
+st.subheader("🗓️ Upcoming Ligue 1 Fixtures")
 st.caption("*Times in Eastern Time (ET)*")
 
 if not path.exists(FIXTURES_PATH):
@@ -103,7 +103,7 @@ for _, fix in upcoming.iterrows():
         c1.markdown(f"### 🏠 {home}")
         c2.markdown("### VS")
         c3.markdown(f"### ✈️ {away}")
-        st.caption(f"Matchday {mday} · 🌱 Natural Grass · 🇪🇸 La Liga")
+        st.caption(f"Matchday {mday} · 🌱 Natural Grass · 🇫🇷 Ligue 1")
 
         # Weather info
         if weather_df is not None:
