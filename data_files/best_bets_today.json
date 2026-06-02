@@ -1,25 +1,10 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-04-30T02:04:28.055214+00:00",
+    "generated_at": "2026-06-02T01:42:17.121933+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "No Ligue1 predictions for 2026-06-02"
   },
-  "bets": [
-    {
-      "game_date": "2026-04-29",
-      "game_time": null,
-      "game": "Chelsea @ Arsenal",
-      "home_team": "Arsenal",
-      "away_team": "Chelsea",
-      "bet_type": "Match Result",
-      "pick": "Home Win",
-      "confidence": 0.58,
-      "edge": 0.1038,
-      "tier": "Elite",
-      "odds": 110,
-      "line": null,
-      "league": "Ligue 1"
-    }
-  ]
+  "bets": []
 }
