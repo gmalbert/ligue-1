@@ -68,9 +68,9 @@
     {
       "season": "2018-19",
       "matches": 380,
-      "accuracy": 0.4789,
+      "accuracy": 0.4816,
       "market_accuracy": 0.4842,
-      "log_loss": 1.0591,
+      "log_loss": 1.0577,
       "market_log_loss": 1.0033
     },
     {
@@ -78,31 +78,31 @@
       "matches": 279,
       "accuracy": 0.4516,
       "market_accuracy": 0.5233,
-      "log_loss": 1.0659,
+      "log_loss": 1.0661,
       "market_log_loss": 0.9913
     },
     {
       "season": "2020-21",
       "matches": 380,
-      "accuracy": 0.4737,
+      "accuracy": 0.4684,
       "market_accuracy": 0.5105,
-      "log_loss": 1.0557,
+      "log_loss": 1.0566,
       "market_log_loss": 1.0003
     },
     {
       "season": "2021-22",
       "matches": 380,
-      "accuracy": 0.4947,
+      "accuracy": 0.4974,
       "market_accuracy": 0.5,
-      "log_loss": 1.0204,
+      "log_loss": 1.0192,
       "market_log_loss": 1.0003
     },
     {
       "season": "2022-23",
       "matches": 380,
-      "accuracy": 0.5184,
+      "accuracy": 0.5132,
       "market_accuracy": 0.55,
-      "log_loss": 0.9917,
+      "log_loss": 0.9906,
       "market_log_loss": 0.9696
     },
     {
@@ -110,15 +110,15 @@
       "matches": 306,
       "accuracy": 0.4444,
       "market_accuracy": 0.5065,
-      "log_loss": 1.0747,
+      "log_loss": 1.0743,
       "market_log_loss": 1.0149
     },
     {
       "season": "2024-25",
       "matches": 306,
-      "accuracy": 0.5294,
+      "accuracy": 0.5327,
       "market_accuracy": 0.5425,
-      "log_loss": 1.0039,
+      "log_loss": 0.9997,
       "market_log_loss": 0.9585
     },
     {
@@ -126,7 +126,7 @@
       "matches": 305,
       "accuracy": 0.4689,
       "market_accuracy": 0.4721,
-      "log_loss": 1.0428,
+      "log_loss": 1.0431,
       "market_log_loss": 1.0179
     }
   ]
