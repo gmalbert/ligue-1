@@ -1,0 +1,13 @@
+{
+  "fetched_at": "2026-06-10T00:29:12+00:00",
+  "path": "fixtures",
+  "params": {
+    "league": 61,
+    "season": 2024,
+    "from": "2025-05-01",
+    "to": "2025-06-15"
+  },
+  "error": {
+    "access": "Your account is suspended, check on https://dashboard.api-football.com."
+  }
+}
