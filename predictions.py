@@ -8,7 +8,6 @@ from os import path
 from datetime import datetime
 
 import streamlit as st
-import streamlit.components.v1 as components
 
 # ── Page config — must be first Streamlit call ─────────────────────────────
 st.set_page_config(
@@ -36,7 +35,7 @@ except ValueError:
 _theme_hour = _browser_hour if _browser_hour is not None else datetime.now().hour
 st.session_state["dark_mode"] = not (6 <= _theme_hour < 20)
 
-components.html(
+st.iframe(
     """
     <script>
     const h = new Date().getHours();
@@ -48,7 +47,8 @@ components.html(
     }
     </script>
     """,
-    height=0,
+    height=1,
+    tab_index=-1,
 )
 
 # ── Navigation ─────────────────────────────────────────────────────────────
