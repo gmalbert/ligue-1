@@ -21,6 +21,7 @@ INJURIES_PATH = Path("data_files/raw/injuries.csv")
 LINEUPS_PATH = Path("data_files/raw/lineups.csv")
 AVAILABILITY_FEATURES_PATH = Path("data_files/model_features/availability_features.csv")
 FIXTURE_MAP_PATH = Path("data_files/raw/api_football_upcoming_fixtures.csv")
+FETCH_LOG_PATH = Path("data_files/api_usage/api_football_availability_fetch_log.csv")
 
 INJURY_COLUMNS = [
     "FixtureId",
@@ -56,6 +57,7 @@ FEATURE_COLUMNS = [
     "AwayLineupContinuity",
     "AvailabilityFetchedAt",
 ]
+FETCH_LOG_COLUMNS = ["FixtureId", "Kind", "FetchedAt", "ResponseRows"]
 
 
 def _season() -> int:
@@ -90,6 +92,10 @@ def _max_fixtures() -> int:
     return int(os.getenv("API_FOOTBALL_AVAILABILITY_FIXTURE_LIMIT", "8"))
 
 
+def _cache_hours() -> int:
+    return int(os.getenv("API_FOOTBALL_AVAILABILITY_CACHE_HOURS", "24"))
+
+
 def _ensure_file(path: Path, columns: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if not path.exists():
@@ -99,6 +105,15 @@ def _ensure_file(path: Path, columns: list[str]) -> None:
 def _load(path: Path, columns: list[str]) -> pd.DataFrame:
     _ensure_file(path, columns)
     return pd.read_csv(path)
+
+
+def _fresh_logged_fixture_ids(fetch_log: pd.DataFrame, kind: str) -> set[str]:
+    if fetch_log.empty:
+        return set()
+    log = fetch_log[fetch_log["Kind"].astype(str).eq(kind)].copy()
+    log["FetchedAt"] = pd.to_datetime(log["FetchedAt"], utc=True, errors="coerce")
+    cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=_cache_hours())
+    return set(log[log["FetchedAt"].ge(cutoff)]["FixtureId"].astype(str))
 
 
 def _fixture_row(item: dict[str, Any]) -> dict[str, Any]:
@@ -222,26 +237,42 @@ def build_availability_features(fixtures: pd.DataFrame | None = None) -> pd.Data
 def fetch_lineups_injuries() -> pd.DataFrame:
     injuries = _load(INJURIES_PATH, INJURY_COLUMNS)
     lineups = _load(LINEUPS_PATH, LINEUP_COLUMNS)
+    fetch_log = _load(FETCH_LOG_PATH, FETCH_LOG_COLUMNS)
     fixtures = _fetch_upcoming_fixtures()
     fetched_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
     new_injuries: list[dict[str, Any]] = []
     new_lineups: list[dict[str, Any]] = []
-    cached_injury_ids = set(injuries.get("FixtureId", pd.Series(dtype=str)).astype(str))
-    cached_lineup_ids = set(lineups.get("FixtureId", pd.Series(dtype=str)).astype(str))
+    new_log_rows: list[dict[str, Any]] = []
+    cached_injury_ids = set(injuries.get("FixtureId", pd.Series(dtype=str)).astype(str)) | _fresh_logged_fixture_ids(fetch_log, "injuries")
+    cached_lineup_ids = set(lineups.get("FixtureId", pd.Series(dtype=str)).astype(str)) | _fresh_logged_fixture_ids(fetch_log, "lineups")
 
     for _, fixture in fixtures.iterrows():
         fixture_id = str(fixture["FixtureId"])
         try:
             if fixture_id not in cached_injury_ids:
                 body = api_get("injuries", {"fixture": fixture_id})
-                new_injuries.extend(_injury_rows(fixture, body.get("response", []), fetched_at))
+                response = body.get("response", [])
+                new_injuries.extend(_injury_rows(fixture, response, fetched_at))
+                new_log_rows.append({
+                    "FixtureId": fixture_id,
+                    "Kind": "injuries",
+                    "FetchedAt": fetched_at,
+                    "ResponseRows": len(response),
+                })
 
             kickoff = pd.to_datetime(fixture.get("KickoffUTC"), utc=True, errors="coerce")
             close_to_kickoff = pd.notna(kickoff) and kickoff <= pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=_lineup_window_hours())
             if close_to_kickoff and fixture_id not in cached_lineup_ids:
                 body = api_get("fixtures/lineups", {"fixture": fixture_id})
-                new_lineups.extend(_lineup_rows(fixture, body.get("response", []), fetched_at))
+                response = body.get("response", [])
+                new_lineups.extend(_lineup_rows(fixture, response, fetched_at))
+                new_log_rows.append({
+                    "FixtureId": fixture_id,
+                    "Kind": "lineups",
+                    "FetchedAt": fetched_at,
+                    "ResponseRows": len(response),
+                })
         except ApiFootballQuotaError:
             print("API-Football quota guard stopped injuries/lineups refresh.")
             break
@@ -254,6 +285,14 @@ def fetch_lineups_injuries() -> pd.DataFrame:
         lineups = pd.concat([lineups, pd.DataFrame(new_lineups)], ignore_index=True)
         lineups = lineups.drop_duplicates(subset=["FixtureId", "Team", "PlayerId", "Role"], keep="last")
         lineups.to_csv(LINEUPS_PATH, index=False)
+    if new_log_rows:
+        fetch_log = pd.concat([fetch_log, pd.DataFrame(new_log_rows)], ignore_index=True)
+        fetch_log["FetchedAt"] = pd.to_datetime(fetch_log["FetchedAt"], utc=True, errors="coerce")
+        cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=14)
+        fetch_log = fetch_log[fetch_log["FetchedAt"].ge(cutoff)]
+        fetch_log["FetchedAt"] = fetch_log["FetchedAt"].dt.strftime("%Y-%m-%dT%H:%M:%S%z")
+        fetch_log = fetch_log.drop_duplicates(subset=["FixtureId", "Kind"], keep="last")
+        fetch_log.to_csv(FETCH_LOG_PATH, index=False)
 
     features = build_availability_features(fixtures)
     status = quota_status()

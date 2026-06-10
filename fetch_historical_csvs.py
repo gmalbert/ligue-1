@@ -17,7 +17,8 @@ import sys
 from pathlib import Path
 
 import pandas as pd
-import requests
+
+from fetch_utils import request_with_retry
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -92,8 +93,7 @@ def download_season(season_code: str, season_label: str) -> pd.DataFrame:
     """Download a single Ligue-1 season CSV from football-data.co.uk."""
     url = BASE_URL.format(code=season_code)
     try:
-        resp = requests.get(url, timeout=15)
-        resp.raise_for_status()
+        resp = request_with_retry(url)
         df = pd.read_csv(io.StringIO(resp.text), encoding="latin-1", on_bad_lines="skip")
         # Keep only columns we care about
         keep = {k: v for k, v in COLUMN_MAP.items() if k in df.columns}

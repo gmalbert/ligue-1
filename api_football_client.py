@@ -9,7 +9,8 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import datetime, timezone
+import hashlib
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -28,6 +29,8 @@ API_KEY = (
 DAILY_LIMIT = int(os.getenv("API_FOOTBALL_DAILY_LIMIT", "100"))
 DAILY_RESERVE = int(os.getenv("API_FOOTBALL_DAILY_RESERVE", "10"))
 USAGE_PATH = Path(os.getenv("API_FOOTBALL_USAGE_PATH", "data_files/api_usage/api_football_usage.json"))
+CACHE_DIR = Path(os.getenv("API_FOOTBALL_CACHE_DIR", "data_files/api_cache/api_football"))
+CACHE_TTL_HOURS = float(os.getenv("API_FOOTBALL_CACHE_TTL_HOURS", "12"))
 
 
 class ApiFootballQuotaError(RuntimeError):
@@ -64,6 +67,64 @@ def _write_usage(data: dict[str, Any]) -> None:
     USAGE_PATH.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
+def _cache_path(path: str, params: dict[str, Any] | None) -> Path:
+    payload = {
+        "base_url": BASE_URL.rstrip("/"),
+        "path": path.strip("/"),
+        "params": params or {},
+    }
+    raw = json.dumps(payload, sort_keys=True, default=str, separators=(",", ":"))
+    digest = hashlib.sha256(raw.encode("utf-8")).hexdigest()
+    safe_path = path.strip("/").replace("/", "_") or "root"
+    return CACHE_DIR / f"{safe_path}_{digest}.json"
+
+
+def _read_cache(path: str, params: dict[str, Any] | None, ttl_hours: float) -> dict[str, Any] | None:
+    if ttl_hours <= 0:
+        return None
+    cache_file = _cache_path(path, params)
+    if not cache_file.exists():
+        return None
+    try:
+        cached = json.loads(cache_file.read_text(encoding="utf-8"))
+        fetched_at = datetime.fromisoformat(str(cached.get("fetched_at")))
+    except (OSError, json.JSONDecodeError, ValueError, TypeError):
+        return None
+    if fetched_at.tzinfo is None:
+        fetched_at = fetched_at.replace(tzinfo=timezone.utc)
+    if fetched_at + timedelta(hours=ttl_hours) < datetime.now(timezone.utc):
+        return None
+    error = cached.get("error")
+    if error:
+        raise RuntimeError(f"API-Football returned provider errors: {error}")
+    body = cached.get("body")
+    return body if isinstance(body, dict) else None
+
+
+def _write_cache(path: str, params: dict[str, Any] | None, body: dict[str, Any]) -> None:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_file = _cache_path(path, params)
+    payload = {
+        "fetched_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "path": path.strip("/"),
+        "params": params or {},
+        "body": body,
+    }
+    cache_file.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+
+
+def _write_error_cache(path: str, params: dict[str, Any] | None, error: Any) -> None:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_file = _cache_path(path, params)
+    payload = {
+        "fetched_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "path": path.strip("/"),
+        "params": params or {},
+        "error": error,
+    }
+    cache_file.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+
+
 def quota_status() -> dict[str, int | str]:
     usage = _read_usage()
     usable_limit = max(0, DAILY_LIMIT - DAILY_RESERVE)
@@ -91,10 +152,22 @@ def _consume_quota(units: int = 1) -> None:
     _write_usage(usage)
 
 
-def api_get(path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
+def api_get(
+    path: str,
+    params: dict[str, Any] | None = None,
+    *,
+    cache_ttl_hours: float | None = None,
+    force: bool = False,
+) -> dict[str, Any]:
     """GET an API-Football endpoint and return the parsed response body."""
     if not API_KEY:
         raise EnvironmentError("API_FOOTBALL_KEY is not set in .env.")
+
+    ttl_hours = CACHE_TTL_HOURS if cache_ttl_hours is None else cache_ttl_hours
+    if not force:
+        cached = _read_cache(path, params, ttl_hours)
+        if cached is not None:
+            return cached
 
     _consume_quota(1)
     url = f"{BASE_URL.rstrip('/')}/{path.lstrip('/')}"
@@ -119,5 +192,9 @@ def api_get(path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
     body = resp.json()
     errors = body.get("errors") if isinstance(body, dict) else None
     if errors:
+        if ttl_hours > 0:
+            _write_error_cache(path, params, errors)
         raise RuntimeError(f"API-Football returned provider errors: {errors}")
+    if isinstance(body, dict) and ttl_hours > 0:
+        _write_cache(path, params, body)
     return body

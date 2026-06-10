@@ -37,6 +37,7 @@ jobs:
         env:
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: python fetch_upcoming_fixtures.py
+        continue-on-error: true
 
       - name: Fetch xG proxy from historical data
         run: python fetch_fbref_xg.py

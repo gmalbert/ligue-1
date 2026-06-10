@@ -18,8 +18,8 @@ import time
 from pathlib import Path
 
 import pandas as pd
-import requests
 
+from fetch_utils import request_with_retry
 from team_name_mapping import normalize_team_name
 
 # ── Stadium Coordinates ────────────────────────────────────────────────────
@@ -102,8 +102,7 @@ def fetch_fixture_weather(home_team: str, match_date: str) -> dict:
         "end_date":         match_date,
     }
     try:
-        resp = requests.get(FORECAST_URL, params=params, timeout=10)
-        resp.raise_for_status()
+        resp = request_with_retry(FORECAST_URL, params=params, timeout=10)
         data = resp.json().get("daily", {})
         code = data.get("weathercode", [None])[0]
         return {

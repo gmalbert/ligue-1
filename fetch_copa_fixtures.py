@@ -22,8 +22,8 @@ from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
-import requests
 
+from fetch_utils import request_with_retry
 from team_name_mapping import normalize_team_name
 
 # ESPN Coupe de France league slug
@@ -48,11 +48,10 @@ def fetch_copa_month(year: int, month: int) -> list[dict]:
     date_str = f"{year}{month:02d}"
     url = f"{ESPN_BASE}/{COPA_SLUG}/scoreboard"
     try:
-        resp = requests.get(url, params={"dates": date_str}, timeout=15)
+        resp = request_with_retry(url, params={"dates": date_str})
         if resp.status_code == 404:
             # League slug may vary; return empty and let caller handle
             return []
-        resp.raise_for_status()
         return resp.json().get("events", [])
     except Exception as exc:
         print(f"  Warning: {year}-{month:02d} — {exc}")

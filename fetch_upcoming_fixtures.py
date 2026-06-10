@@ -17,9 +17,9 @@ from pathlib import Path
 
 import pandas as pd
 import pytz
-import requests
 from dotenv import load_dotenv
 
+from fetch_utils import request_with_retry
 from team_name_mapping import normalize_dataframe_teams
 
 load_dotenv()
@@ -46,14 +46,20 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
     if season:
         params["season"] = season
 
-    resp = requests.get(
-        f"{BASE_URL}/competitions/FL1/matches",
-        headers=HEADERS,
-        params=params,
-        timeout=15,
-    )
-    resp.raise_for_status()
-    matches = resp.json().get("matches", [])
+    try:
+        resp = request_with_retry(
+            f"{BASE_URL}/competitions/FL1/matches",
+            headers=HEADERS,
+            params=params,
+        )
+        matches = resp.json().get("matches", [])
+    except Exception as e:
+        print(f"✗ Failed to fetch upcoming fixtures: {e}")
+        print(f"  Creating empty fixtures file to allow pipeline to continue")
+        Path("data_files").mkdir(parents=True, exist_ok=True)
+        df = pd.DataFrame(columns=OUTPUT_COLUMNS)
+        df.to_csv(OUT_PATH, index=False)
+        return df
 
     et = pytz.timezone("America/New_York")
     rows = []
@@ -93,14 +99,16 @@ def fetch_recent_results(n_matchdays: int = 3) -> pd.DataFrame:
     if not FOOTBALL_DATA_KEY:
         return pd.DataFrame()
 
-    resp = requests.get(
-        f"{BASE_URL}/competitions/FL1/matches",
-        headers=HEADERS,
-        params={"status": "FINISHED"},
-        timeout=15,
-    )
-    resp.raise_for_status()
-    matches = resp.json().get("matches", [])
+    try:
+        resp = request_with_retry(
+            f"{BASE_URL}/competitions/FL1/matches",
+            headers=HEADERS,
+            params={"status": "FINISHED"},
+        )
+        matches = resp.json().get("matches", [])
+    except Exception as e:
+        print(f"✗ Failed to fetch recent results: {e}")
+        return pd.DataFrame()
 
     rows = []
     for m in matches:

@@ -22,6 +22,7 @@ import pandas as pd
 import requests
 from dotenv import load_dotenv
 
+from fetch_utils import request_with_retry
 from team_name_mapping import normalize_dataframe_teams
 
 load_dotenv()
@@ -108,12 +109,12 @@ def _parse_csv_env(value: str) -> list[str]:
     return [part.strip() for part in value.split(",") if part.strip()]
 
 
-def _request_json(url: str, params: dict[str, Any], timeout: int = 20) -> tuple[Any, requests.Response]:
+def _request_json(url: str, params: dict[str, Any], timeout: int = 20) -> tuple[Any, Any]:
     try:
-        resp = requests.get(url, params=params, headers={"Accept": "application/json"}, timeout=timeout)
-    except requests.RequestException as exc:
+        resp = request_with_retry(url, params=params, timeout=timeout)
+    except Exception as exc:
         raise RuntimeError(
-            f"Odds provider request failed before a response was received ({type(exc).__name__})."
+            f"Odds provider request failed ({type(exc).__name__})."
         ) from None
 
     if not resp.ok:
