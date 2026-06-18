@@ -4,8 +4,8 @@
   "params": {
     "league": 61,
     "season": 2025,
-    "status": "FT",
-    "last": 24
+    "from": "2026-06-18",
+    "to": "2026-07-02"
   },
   "error": {
     "plan": "Free plans do not have access to this season, try from 2022 to 2024."
