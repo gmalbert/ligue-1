@@ -3,11 +3,11 @@
   "path": "fixtures",
   "params": {
     "league": 61,
-    "season": 2024,
+    "season": 2026,
     "status": "FT",
     "last": 24
   },
   "error": {
-    "plan": "Free plans do not have access to the Last parameter."
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
   }
 }
