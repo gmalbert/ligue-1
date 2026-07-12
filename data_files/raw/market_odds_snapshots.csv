@@ -586,14 +586,14 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,1X2,,Away,4.6,0.217391
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1.25,Home,2.2,0.454545
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1.25,Away,1.55,0.645161
-2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1,Home,1.9,0.526316
-2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1,Away,1.71,0.584795
+2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1.0,Home,1.9,0.526316
+2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1.0,Away,1.71,0.584795
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.75,Home,1.68,0.595238
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.75,Away,1.95,0.512821
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.5,Home,1.55,0.645161
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.5,Away,2.2,0.454545
-2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3,Over,1.58,0.632911
-2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3,Under,2.1,0.47619
+2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.0,Over,1.58,0.632911
+2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.0,Under,2.1,0.47619
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.25,Over,1.8,0.555556
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.25,Under,1.83,0.546448
 2026-07-11T07:36:02+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.5,Over,2.0,0.5
@@ -620,8 +620,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,1X2,,Away,5.0,0.2
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1.25,Home,2.2,0.454545
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1.25,Away,1.54,0.649351
-2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1,Home,1.9,0.526316
-2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1,Away,1.71,0.584795
+2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1.0,Home,1.9,0.526316
+2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1.0,Away,1.71,0.584795
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.75,Home,1.66,0.60241
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.75,Away,2.0,0.5
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.5,Home,1.52,0.657895
@@ -630,8 +630,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.5,Under,2.15,0.465116
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.75,Over,1.68,0.595238
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.75,Under,1.95,0.512821
-2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3,Over,1.9,0.526316
-2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3,Under,1.71,0.584795
+2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3.0,Over,1.9,0.526316
+2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3.0,Under,1.71,0.584795
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3.25,Over,2.15,0.465116
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3.25,Under,1.55,0.645161
 2026-07-11T07:36:02+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,BTTS,,Yes,1.62,0.617284
@@ -679,8 +679,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.5,Under,1.95,0.512821
 2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.75,Over,1.86,0.537634
 2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.75,Under,1.76,0.568182
-2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,3,Over,2.15,0.465116
-2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,3,Under,1.55,0.645161
+2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,3.0,Over,2.15,0.465116
+2026-07-11T07:36:02+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,3.0,Under,1.55,0.645161
 2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,BetMGM BR,1X2,,Home,3.4,0.294118
 2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,BetMGM BR,1X2,,Draw,3.6,0.277778
 2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,BetMGM BR,1X2,,Away,2.0,0.5
@@ -711,8 +711,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.5,Under,2.0,0.5
 2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.75,Over,1.83,0.546448
 2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.75,Under,1.8,0.555556
-2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,3,Over,2.1,0.47619
-2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,3,Under,1.58,0.632911
+2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,3.0,Over,2.1,0.47619
+2026-07-11T07:36:02+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,3.0,Under,1.58,0.632911
 2026-07-11T07:36:02+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,BetMGM BR,1X2,,Home,2.75,0.363636
 2026-07-11T07:36:02+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,BetMGM BR,1X2,,Draw,3.25,0.307692
 2026-07-11T07:36:02+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,BetMGM BR,1X2,,Away,2.5,0.4
@@ -774,3 +774,148 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-07-11T07:36:02+00:00,odds-api.io,72036122,2026-08-23,Paris SG,Rennes,BetMGM BR,Totals,5.5,Under,1.1,0.909091
 2026-07-11T07:36:02+00:00,odds-api.io,72036122,2026-08-23,Paris SG,Rennes,BetMGM BR,BTTS,,Yes,1.47,0.680272
 2026-07-11T07:36:02+00:00,odds-api.io,72036122,2026-08-23,Paris SG,Rennes,BetMGM BR,BTTS,,No,2.48,0.403226
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,1X2,,Home,1.6,0.625
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,1X2,,Draw,4.3,0.232558
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,1X2,,Away,4.6,0.217391
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1.25,Home,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1.25,Away,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1,Home,1.9,0.526316
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-1,Away,1.71,0.584795
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.75,Home,1.68,0.595238
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.75,Away,1.95,0.512821
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.5,Home,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Spread,-0.5,Away,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3,Over,1.58,0.632911
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3,Under,2.1,0.47619
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.25,Over,1.8,0.555556
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.25,Under,1.83,0.546448
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.5,Over,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.5,Under,1.66,0.60241
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.75,Over,2.25,0.444444
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,Totals,3.75,Under,1.51,0.662252
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,BTTS,,Yes,1.45,0.689655
+2026-07-12T07:46:36+00:00,odds-api.io,72036118,2026-08-21,Marseille,Strasbourg,DraftKings,BTTS,,No,2.55,0.392157
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,1X2,,Home,1.58,0.632911
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,1X2,,Draw,4.2,0.238095
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,1X2,,Away,5.0,0.2
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1.25,Home,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1.25,Away,1.54,0.649351
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1,Home,1.9,0.526316
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-1,Away,1.71,0.584795
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.75,Home,1.66,0.60241
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.75,Away,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.5,Home,1.52,0.657895
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Spread,-0.5,Away,2.25,0.444444
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.5,Over,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.5,Under,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.75,Over,1.68,0.595238
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,2.75,Under,1.95,0.512821
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3,Over,1.9,0.526316
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3,Under,1.71,0.584795
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3.25,Over,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,Totals,3.25,Under,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,BTTS,,Yes,1.62,0.617284
+2026-07-12T07:46:36+00:00,odds-api.io,72036116,2026-08-22,Racing Club De Lens,Auxerre,DraftKings,BTTS,,No,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,1X2,,Home,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,1X2,,Draw,3.45,0.289855
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,1X2,,Away,3.15,0.31746
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,-0.75,Home,2.4,0.416667
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,-0.75,Away,1.45,0.689655
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,-0.5,Home,2.05,0.487805
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,-0.5,Away,1.62,0.617284
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,-0.25,Home,1.8,0.555556
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,-0.25,Away,1.83,0.546448
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,,Home,1.54,0.649351
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Spread,,Away,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.25,Over,1.51,0.662252
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.25,Under,2.25,0.444444
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.5,Over,1.68,0.595238
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.5,Under,1.95,0.512821
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.75,Over,1.86,0.537634
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,2.75,Under,1.76,0.568182
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,3,Over,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,Totals,3,Under,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,BTTS,,Yes,1.57,0.636943
+2026-07-12T07:46:36+00:00,odds-api.io,72036120,2026-08-22,Nice,Lorient,DraftKings,BTTS,,No,2.25,0.444444
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,1X2,,Home,3.3,0.30303
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,1X2,,Draw,3.7,0.27027
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,1X2,,Away,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,,Home,2.35,0.425532
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,,Away,1.47,0.680272
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,0.25,Home,1.95,0.512821
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,0.25,Away,1.68,0.595238
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,0.5,Home,1.74,0.574713
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,0.5,Away,1.9,0.526316
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,0.75,Home,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Spread,0.75,Away,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.25,Over,1.47,0.680272
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.25,Under,2.35,0.425532
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.5,Over,1.64,0.609756
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.5,Under,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.75,Over,1.83,0.546448
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,2.75,Under,1.8,0.555556
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,3,Over,2.1,0.47619
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,Totals,3,Under,1.58,0.632911
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,BTTS,,Yes,1.58,0.632911
+2026-07-12T07:46:36+00:00,odds-api.io,72036124,2026-08-22,Toulouse,Olympique Lyon,DraftKings,BTTS,,No,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,1X2,,Home,2.7,0.37037
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,1X2,,Draw,3.4,0.294118
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,1X2,,Away,2.5,0.4
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Spread,,Home,1.86,0.537634
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Spread,,Away,1.74,0.574713
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Spread,0.25,Home,1.64,0.609756
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Spread,0.25,Away,2.05,0.487805
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Spread,0.5,Home,1.48,0.675676
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Spread,0.5,Away,2.3,0.434783
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,2.5,Over,1.62,0.617284
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,2.5,Under,2.05,0.487805
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,2.75,Over,1.76,0.568182
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,2.75,Under,1.86,0.537634
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,3,Over,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,3,Under,1.64,0.609756
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,3.25,Over,2.25,0.444444
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,Totals,3.25,Under,1.51,0.662252
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,BTTS,,Yes,1.5,0.666667
+2026-07-12T07:46:36+00:00,odds-api.io,72036126,2026-08-22,ESTAC Troyes,Paris FC,DraftKings,BTTS,,No,2.45,0.408163
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,1X2,,Home,4.9,0.204082
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,1X2,,Draw,3.75,0.266667
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,1X2,,Away,1.66,0.60241
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,0.5,Home,2.05,0.487805
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,0.5,Away,1.6,0.625
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,0.75,Home,1.83,0.546448
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,0.75,Away,1.8,0.555556
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,1,Home,1.57,0.636943
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,1,Away,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,1.25,Home,1.43,0.699301
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Spread,1.25,Away,2.5,0.4
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2,Over,1.43,0.699301
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2,Under,2.45,0.408163
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2.25,Over,1.64,0.609756
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2.25,Under,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2.5,Over,1.86,0.537634
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2.5,Under,1.76,0.568182
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2.75,Over,2.1,0.47619
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,Totals,2.75,Under,1.58,0.632911
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,BTTS,,Yes,1.86,0.537634
+2026-07-12T07:46:36+00:00,odds-api.io,72036110,2026-08-23,Angers,Lille,DraftKings,BTTS,,No,1.83,0.546448
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,1X2,,Home,3.25,0.307692
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,1X2,,Draw,3.85,0.25974
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,1X2,,Away,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,,Home,2.35,0.425532
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,,Away,1.48,0.675676
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,0.25,Home,1.95,0.512821
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,0.25,Away,1.68,0.595238
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,0.5,Home,1.74,0.574713
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,0.5,Away,1.9,0.526316
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,0.75,Home,1.55,0.645161
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Spread,0.75,Away,2.15,0.465116
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,2.5,Over,1.52,0.657895
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,2.5,Under,2.2,0.454545
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,2.75,Over,1.66,0.60241
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,2.75,Under,2.0,0.5
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,3,Over,1.86,0.537634
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,3,Under,1.76,0.568182
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,3.25,Over,2.1,0.47619
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,Totals,3.25,Under,1.58,0.632911
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,BTTS,,Yes,1.5,0.666667
+2026-07-12T07:46:36+00:00,odds-api.io,72036112,2026-08-23,Le Havre,Monaco,DraftKings,BTTS,,No,2.4,0.416667
