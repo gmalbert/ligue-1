@@ -6,7 +6,8 @@ Usage:
     python fetch_odds.py
 
 Requires:
-    ODDS_PROVIDER in .env (optional: odds_api_io or the_odds_api)
+    ODDS_PROVIDER in .env (optional: therundown, odds_api_io, or the_odds_api)
+    THERUNDOWN_API_KEY in .env for TheRundown
     ODDS_API_IO_KEY in .env for odds-api.io
     ODDS_API_KEY in .env for The Odds API
 """
@@ -24,6 +25,7 @@ from dotenv import load_dotenv
 
 from fetch_utils import request_with_retry
 from team_name_mapping import normalize_dataframe_teams
+import fetch_rundown
 
 load_dotenv()
 
@@ -347,20 +349,50 @@ def fetch_odds_api_io_odds() -> pd.DataFrame:
     return df
 
 
+def fetch_therundown_odds() -> pd.DataFrame:
+    """Fetch upcoming Ligue 1 1X2 odds from TheRundown."""
+    raw = pd.DataFrame(fetch_rundown.market_rows(fetch_rundown.fetch_events()))
+    raw = raw[
+        raw["Market"].eq("1X2")
+        & raw["Outcome"].isin(["Home", "Draw", "Away"])
+    ] if not raw.empty else raw
+    if raw.empty:
+        df = _write_odds(pd.DataFrame())
+    else:
+        prices = raw.pivot_table(
+            index=["Date", "HomeTeam", "AwayTeam", "Bookmaker"],
+            columns="Outcome",
+            values="Odds",
+            aggfunc="first",
+        ).reset_index()
+        prices.columns.name = None
+        prices = prices.rename(columns={
+            "Home": "HomeWinOdds", "Draw": "DrawOdds", "Away": "AwayWinOdds",
+        })
+        prices = prices.dropna(subset=["HomeWinOdds", "DrawOdds", "AwayWinOdds"])
+        df = _write_odds(prices)
+    print(f"Fetched odds for {len(df)} bookmaker-event rows from TheRundown -> {OUT_PATH}")
+    return df
+
+
 def fetch_upcoming_odds() -> pd.DataFrame:
     """Fetch upcoming Ligue-1 match odds from the configured provider."""
     provider = ODDS_PROVIDER
     if not provider:
-        provider = "odds_api_io" if ODDS_API_IO_KEY else "the_odds_api"
+        provider = "therundown" if os.getenv("THERUNDOWN_API_KEY") else (
+            "odds_api_io" if ODDS_API_IO_KEY else "the_odds_api"
+        )
     provider = provider.replace(".", "_")
 
     try:
+        if provider in {"therundown", "the_rundown", "the-rundown", "rundown"}:
+            return fetch_therundown_odds()
         if provider in {"odds_api_io", "odds-api-io", "oddsapiio"}:
             return fetch_odds_api_io_odds()
         if provider in {"the_odds_api", "the-odds-api", "theoddsapi"}:
             return fetch_the_odds_api_odds()
         raise ValueError(
-            "Unsupported ODDS_PROVIDER. Use odds_api_io or the_odds_api."
+            "Unsupported ODDS_PROVIDER. Use therundown, odds_api_io, or the_odds_api."
         )
     except Exception:
         _clear_stale_odds()

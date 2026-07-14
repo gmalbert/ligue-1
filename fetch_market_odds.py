@@ -1,4 +1,4 @@
-"""Fetch append-only market odds snapshots from odds-api.io.
+"""Fetch append-only market odds snapshots from the configured odds provider.
 
 This complements fetch_odds.py. The existing odds.csv remains the simple app
 view for current 1X2 odds, while this script preserves timestamped snapshots
@@ -364,21 +364,29 @@ def build_market_features(snapshot_path: Path = SNAPSHOT_PATH) -> pd.DataFrame:
 
 def fetch_market_odds() -> pd.DataFrame:
     _ensure_file(SNAPSHOT_PATH, SNAPSHOT_COLUMNS)
-    league = fetch_odds._discover_odds_api_io_league()
-    bookmakers = fetch_odds._odds_api_io_bookmakers()
-    events = fetch_odds._fetch_odds_api_io_events(league)
     snapshot_time = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    provider = fetch_odds.ODDS_PROVIDER.replace(".", "_")
+    if provider in {"therundown", "the_rundown", "the-rundown", "rundown"}:
+        import fetch_rundown
 
-    rows: list[dict[str, Any]] = []
-    for event in events:
-        event_id = event.get("id")
-        if not event_id:
-            continue
-        odds, _ = fetch_odds._odds_api_io_get(
-            "odds",
-            {"eventId": event_id, "bookmakers": ",".join(bookmakers)},
-        )
-        rows.extend(_extract_market_rows(odds, event, snapshot_time))
+        events = fetch_rundown.fetch_events()
+        rows = fetch_rundown.market_rows(events, snapshot_time)
+        for row in rows:
+            row["ImpliedProbability"] = round(_decimal_to_prob(row["Odds"]) or 0, 6)
+    else:
+        league = fetch_odds._discover_odds_api_io_league()
+        bookmakers = fetch_odds._odds_api_io_bookmakers()
+        events = fetch_odds._fetch_odds_api_io_events(league)
+        rows: list[dict[str, Any]] = []
+        for event in events:
+            event_id = event.get("id")
+            if not event_id:
+                continue
+            odds, _ = fetch_odds._odds_api_io_get(
+                "odds",
+                {"eventId": event_id, "bookmakers": ",".join(bookmakers)},
+            )
+            rows.extend(_extract_market_rows(odds, event, snapshot_time))
 
     new_df = pd.DataFrame(rows, columns=SNAPSHOT_COLUMNS)
     if not new_df.empty:

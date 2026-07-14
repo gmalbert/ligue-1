@@ -23,6 +23,8 @@ Ligue Odds predicts the likely outcome of upcoming Ligue 1 matches (Home Win, Dr
 | [Models Roadmap](roadmap-models.md) | ML model stack: ensemble, Poisson, neural network, LSTM, calibration |
 | [Data Roadmap](roadmap-data.md) | Data sources, feature engineering, injury/weather/odds pipelines |
 | [Data Enrichment Implementation](data-enrichment-implementation.md) | What was added for odds snapshots, API-Football, quota guards, and remaining gaps |
+| [TheRundown Odds Integration Guide](rundown-odds-integration-guide.md) | Reusable TheRundown V2 migration, configuration, parsing, and CI/CD setup |
+| [Derived BTTS Features Guide](derived-btts-features-guide.md) | Direct-market BTTS handling and labelled Poisson fallback features |
 | [Layout Roadmap](roadmap-layout.md) | Streamlit page structure, sidebar, theming, multi-page navigation |
 | [Infrastructure Roadmap](roadmap-infrastructure.md) | Automation, GitHub Actions, caching, logging, testing |
 | [Quick Wins](roadmap-quick-wins.md) | Easy short-effort improvements with immediate impact |
@@ -76,6 +78,7 @@ ligue-1/
 ├── fetch_upcoming_fixtures.py    # Pull upcoming FL1 fixtures
 ├── fetch_fbref_xg.py             # Build xG proxy files from historical shots
 ├── fetch_odds.py                 # Pull market lines from odds-api.io or The Odds API
+├── fetch_rundown.py              # TheRundown V2 client and normalized market rows
 ├── fetch_market_odds.py          # Append market snapshots and consensus features
 ├── fetch_xg_data.py              # API-Football match statistics/xG when available
 ├── fetch_lineups_injuries.py     # API-Football injuries and lineup cache
@@ -126,6 +129,8 @@ ligue-1/
 │   ├── roadmap-layout.md
 │   ├── roadmap-infrastructure.md
 │   ├── roadmap-quick-wins.md
+│   ├── rundown-odds-integration-guide.md
+│   ├── derived-btts-features-guide.md
 │   └── outstanding-issues-and-features.md
 ├── .github/workflows/
 │   ├── keep-alive.yml

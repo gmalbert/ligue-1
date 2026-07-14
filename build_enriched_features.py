@@ -11,6 +11,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from models.poisson_predictor import compute_team_strengths, predict_match_poisson
 from team_name_mapping import normalize_dataframe_teams, normalize_team_name
 
 MODEL_READY_PATH = Path("data_files/model_ready_data.csv")
@@ -128,6 +129,46 @@ def _join_team_features(base: pd.DataFrame, team_df: pd.DataFrame, prefix: str, 
     return base.merge(renamed, on=team_col, how="left")
 
 
+def _add_btts_features(base: pd.DataFrame) -> pd.DataFrame:
+    """Add direct-market or clearly labelled Poisson BTTS probabilities.
+
+    The direct market values remain in BTTSYesProb and BTTSNoProb.  The
+    BTTSFeature* columns use them when available, otherwise use the existing
+    Poisson score model as an explicit fallback.
+    """
+    out = base.copy()
+    historical = _read(MODEL_READY_PATH)
+    if historical.empty:
+        out["ModelBTTSYesProb"] = pd.NA
+        out["ModelBTTSNoProb"] = pd.NA
+    else:
+        historical = normalize_dataframe_teams(historical)
+        strengths = compute_team_strengths(historical)
+        model_yes: list[float | None] = []
+        for _, match in out.iterrows():
+            prediction = predict_match_poisson(
+                str(match.get("HomeTeam", "")),
+                str(match.get("AwayTeam", "")),
+                strengths,
+            )
+            model_yes.append(prediction["BTTSProb"])
+        out["ModelBTTSYesProb"] = model_yes
+        out["ModelBTTSNoProb"] = (1 - out["ModelBTTSYesProb"]).round(4)
+
+    def _market_column(name: str) -> pd.Series:
+        if name in out:
+            return pd.to_numeric(out[name], errors="coerce")
+        return pd.Series(float("nan"), index=out.index)
+
+    market_yes = _market_column("BTTSYesProb")
+    market_no = _market_column("BTTSNoProb")
+    out["BTTSFeatureYesProb"] = market_yes.fillna(out["ModelBTTSYesProb"])
+    out["BTTSFeatureNoProb"] = market_no.fillna(out["ModelBTTSNoProb"])
+    out["BTTSFeatureSource"] = "poisson_model"
+    out.loc[market_yes.notna() & market_no.notna(), "BTTSFeatureSource"] = "market"
+    return out
+
+
 def build_enriched_features() -> pd.DataFrame:
     base = _base_matches()
     keys = ["Date", "HomeTeam", "AwayTeam"]
@@ -157,6 +198,8 @@ def build_enriched_features() -> pd.DataFrame:
         squad["Team"] = squad["Team"].map(normalize_team_name)
         base = _join_team_features(base, squad, "Home", "HomeTeam")
         base = _join_team_features(base, squad, "Away", "AwayTeam")
+
+    base = _add_btts_features(base)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     base.to_csv(OUT_PATH, index=False)

@@ -47,7 +47,10 @@ jobs:
 
       - name: Fetch bookmaker odds
         env:
-          ODDS_PROVIDER: ${{ secrets.ODDS_PROVIDER }}
+          ODDS_PROVIDER: therundown
+          THERUNDOWN_API_KEY: ${{ secrets.THERUNDOWN_API_KEY }}
+          THERUNDOWN_AFFILIATE_IDS: 19,22
+          THERUNDOWN_MARKET_IDS: 1,2,3
           ODDS_API_IO_KEY: ${{ secrets.ODDS_API_IO_KEY }}
           ODDS_API_IO_BOOKMAKERS: ${{ secrets.ODDS_API_IO_BOOKMAKERS }}
           ODDS_API_IO_LEAGUE: ${{ secrets.ODDS_API_IO_LEAGUE }}
@@ -56,7 +59,10 @@ jobs:
 
       - name: Fetch market odds snapshots
         env:
-          ODDS_PROVIDER: ${{ secrets.ODDS_PROVIDER }}
+          ODDS_PROVIDER: therundown
+          THERUNDOWN_API_KEY: ${{ secrets.THERUNDOWN_API_KEY }}
+          THERUNDOWN_AFFILIATE_IDS: 19,22
+          THERUNDOWN_MARKET_IDS: 1,2,3
           ODDS_API_IO_KEY: ${{ secrets.ODDS_API_IO_KEY }}
           ODDS_API_IO_BOOKMAKERS: ${{ secrets.ODDS_API_IO_BOOKMAKERS }}
           ODDS_API_IO_LEAGUE: ${{ secrets.ODDS_API_IO_LEAGUE }}
