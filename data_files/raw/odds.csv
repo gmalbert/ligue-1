@@ -1,5 +1,5 @@
 Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_HomeWin,ImpliedProb_Draw,ImpliedProb_AwayWin,BookmakerMargin
-2026-08-22,Le Mans,Brest,DraftKings,2.45,3.4,2.75,0.3829,0.2759,0.3411,6.59
+2026-08-22,Le Mans,Brest,DraftKings,2.45,3.4,2.7,0.3805,0.2742,0.3453,7.27
 2026-08-22,Lens,Auxerre,BetMGM,1.625,4.2,5.0,0.5841,0.226,0.1898,5.35
 2026-08-22,Lens,Auxerre,DraftKings,1.5882352941176472,4.2,5.0,0.5897,0.223,0.1873,6.77
 2026-08-22,Nice,Lorient,BetMGM,2.2,3.6,3.1,0.4309,0.2633,0.3058,5.49
@@ -7,4 +7,4 @@ Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_Ho
 2026-08-22,Toulouse,Lyon,BetMGM,3.4,3.6,2.05,0.2775,0.2621,0.4603,5.97
 2026-08-22,Toulouse,Lyon,DraftKings,3.3,3.7,2.0,0.2823,0.2518,0.4659,7.33
 2026-08-22,Troyes,Paris FC,BetMGM,2.7,3.5,2.45,0.348,0.2685,0.3835,6.42
-2026-08-22,Troyes,Paris FC,DraftKings,2.7,3.4,2.5,0.3479,0.2763,0.3758,6.45
+2026-08-22,Troyes,Paris FC,DraftKings,2.7,3.45,2.45,0.3467,0.2713,0.382,6.84
