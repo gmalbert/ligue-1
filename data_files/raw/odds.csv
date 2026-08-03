@@ -1,6 +1,7 @@
 Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_HomeWin,ImpliedProb_Draw,ImpliedProb_AwayWin,BookmakerMargin
 2026-08-21,Marseille,Strasbourg,BetMGM,1.6666666666666665,4.33,4.4,0.567,0.2182,0.2148,5.82
 2026-08-21,Marseille,Strasbourg,DraftKings,1.6451612903225805,4.3,4.5,0.572,0.2189,0.2091,6.26
+2026-08-22,Le Mans,Brest,BetMGM,2.45,3.5,2.7,0.3835,0.2685,0.348,6.42
 2026-08-22,Le Mans,Brest,DraftKings,2.45,3.4,2.7,0.3805,0.2742,0.3453,7.27
 2026-08-22,Lens,Auxerre,BetMGM,1.625,4.2,5.0,0.5841,0.226,0.1898,5.35
 2026-08-22,Lens,Auxerre,DraftKings,1.606060606060606,4.1,4.9,0.5816,0.2278,0.1906,7.06
