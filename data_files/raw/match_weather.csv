@@ -1,13 +1,13 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-08-21,Marseille,Clear,28.4,0.0,35.8
+2026-08-21,Marseille,Rainy,30.5,0.6,23.6
 2026-08-22,Racing Club de Lens,N/A,,,
 2026-08-22,Le Mans FC,N/A,,,
 2026-08-22,ES Troyes AC,N/A,,,
-2026-08-22,Nice,Partly cloudy,31.3,0.0,10.9
-2026-08-22,Toulouse,Rainy,25.8,0.3,22.4
-2026-08-23,Angers,N/A,,,
-2026-08-23,Le Havre,N/A,,,
-2026-08-23,Paris SG,N/A,,,
+2026-08-22,Nice,Rainy,27.1,4.8,12.4
+2026-08-22,Toulouse,Rainy,29.4,0.6,14.7
+2026-08-23,Angers,Partly cloudy,31.2,0.0,25.5
+2026-08-23,Le Havre,Partly cloudy,24.6,0.0,23.5
+2026-08-23,Paris SG,Partly cloudy,26.0,0.0,19.4
 2026-08-28,Lille,N/A,,,
 2026-08-29,Strasbourg,N/A,,,
 2026-08-29,Lorient,N/A,,,
