@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-08-22T07:15:22+00:00",
+  "fetched_at": "2026-08-22T07:15:24+00:00",
   "path": "fixtures",
   "params": {
     "league": 61,
     "season": 2026,
-    "status": "FT",
-    "last": 24
+    "from": "2026-08-22",
+    "to": "2026-09-05"
   },
   "error": {
     "plan": "Free plans do not have access to this season, try from 2022 to 2024."

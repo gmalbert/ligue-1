@@ -1,31 +1,30 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-08-21,Marseille,Thunderstorm,27.0,28.9,20.9
 2026-08-22,Racing Club de Lens,N/A,,,
 2026-08-22,Le Mans FC,N/A,,,
 2026-08-22,ES Troyes AC,N/A,,,
-2026-08-22,Nice,Partly cloudy,30.1,0.0,11.9
-2026-08-22,Toulouse,Foggy,26.7,0.0,10.1
-2026-08-23,Angers,Partly cloudy,25.9,0.0,19.1
-2026-08-23,Le Havre,Partly cloudy,22.8,0.0,16.9
-2026-08-23,Paris SG,Partly cloudy,23.4,0.0,13.8
-2026-08-28,Lille,Rainy,20.9,4.8,23.8
-2026-08-29,Strasbourg,Rainy,24.3,0.6,18.0
-2026-08-29,Lorient,Rainy,19.7,1.8,26.0
-2026-08-29,Lyon,Partly cloudy,23.3,0.0,9.9
-2026-08-29,Auxerre,Rainy,23.1,0.6,24.6
-2026-08-29,Brest,Rainy,18.9,1.5,30.0
+2026-08-22,Nice,Partly cloudy,29.1,0.0,10.0
+2026-08-22,Toulouse,Partly cloudy,27.2,0.0,9.8
+2026-08-23,Angers,Partly cloudy,26.0,0.0,17.2
+2026-08-23,Le Havre,Partly cloudy,23.0,0.0,19.7
+2026-08-23,Paris SG,Partly cloudy,24.1,0.0,17.1
+2026-08-28,Lille,Thunderstorm,20.0,15.3,25.3
+2026-08-29,Strasbourg,Rainy,20.5,3.0,23.8
+2026-08-29,Lorient,Rainy,21.0,0.6,28.0
+2026-08-29,Lyon,Showers,24.2,2.25,20.2
+2026-08-29,Auxerre,Rainy,20.3,1.35,25.9
+2026-08-29,Brest,Rainy,19.8,5.4,28.1
 2026-08-30,Paris FC,N/A,,,
 2026-08-30,Stade Rennais FC 1901,N/A,,,
-2026-08-30,Monaco,Partly cloudy,27.3,0.0,11.7
-2026-09-03,Toulouse,N/A,,,
-2026-09-04,Lyon,N/A,,,
+2026-08-30,Monaco,Clear,27.4,0.0,10.2
+2026-09-03,Toulouse,Rainy,21.8,8.1,18.3
+2026-09-04,Lyon,Partly cloudy,21.7,0.0,16.3
 2026-09-04,Paris SG,N/A,,,
 2026-09-05,Racing Club de Lens,N/A,,,
-2026-09-05,Le Havre,Rainy,19.1,4.65,19.4
-2026-09-05,Nice,Partly cloudy,29.9,0.0,13.4
+2026-09-05,Le Havre,N/A,,,
+2026-09-05,Nice,N/A,,,
 2026-09-06,ES Troyes AC,N/A,,,
-2026-09-06,Angers,N/A,,,
-2026-09-06,Marseille,N/A,,,
+2026-09-06,Angers,Rainy,25.6,3.3,28.7
+2026-09-06,Marseille,Partly cloudy,28.4,0.0,44.8
 2026-09-11,Stade Rennais FC 1901,N/A,,,
 2026-09-12,Strasbourg,N/A,,,
 2026-09-12,Lorient,N/A,,,
