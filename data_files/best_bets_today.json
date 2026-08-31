@@ -1,70 +1,10 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-08-30T08:09:54.685639+00:00",
+    "generated_at": "2026-08-31T08:14:37.015172+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "No Ligue1 predictions for 2026-08-31"
   },
-  "bets": [
-    {
-      "game_date": "2026-08-30",
-      "game_time": null,
-      "game": "Nice @ Paris FC",
-      "home_team": "Paris FC",
-      "away_team": "Nice",
-      "bet_type": "Match Result",
-      "pick": "Draw",
-      "confidence": 0.447,
-      "edge": 0.1529,
-      "tier": "Elite",
-      "odds": 240,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-08-30",
-      "game_time": null,
-      "game": "Nice @ Paris FC",
-      "home_team": "Paris FC",
-      "away_team": "Nice",
-      "bet_type": "Match Result",
-      "pick": "Draw",
-      "confidence": 0.447,
-      "edge": 0.1529,
-      "tier": "Elite",
-      "odds": 240,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-08-30",
-      "game_time": null,
-      "game": "Marseille @ Monaco",
-      "home_team": "Monaco",
-      "away_team": "Marseille",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.656,
-      "edge": 0.3112,
-      "tier": "Elite",
-      "odds": 190,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-08-30",
-      "game_time": null,
-      "game": "Marseille @ Monaco",
-      "home_team": "Monaco",
-      "away_team": "Marseille",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.656,
-      "edge": 0.317,
-      "tier": "Elite",
-      "odds": 195,
-      "line": null,
-      "league": "Ligue 1"
-    }
-  ]
+  "bets": []
 }
