@@ -1,28 +1,27 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-09-03,Toulouse,Partly cloudy,30.9,0.0,10.9
-2026-09-04,Lyon,Partly cloudy,33.9,0.0,7.8
-2026-09-04,Paris SG,Partly cloudy,28.0,0.0,16.3
+2026-09-04,Lyon,Partly cloudy,33.8,0.0,5.4
+2026-09-04,Paris SG,Partly cloudy,27.0,0.0,17.7
 2026-09-05,Racing Club de Lens,N/A,,,
-2026-09-05,Le Havre,Partly cloudy,21.2,0.0,11.2
-2026-09-05,Nice,Partly cloudy,27.7,0.0,10.1
+2026-09-05,Le Havre,Rainy,21.0,0.0,11.0
+2026-09-05,Nice,Partly cloudy,28.7,0.0,10.0
 2026-09-06,ES Troyes AC,N/A,,,
-2026-09-06,Angers,Partly cloudy,33.6,0.0,16.9
-2026-09-06,Marseille,Partly cloudy,30.1,0.0,11.3
+2026-09-06,Angers,Partly cloudy,32.8,0.1,13.0
+2026-09-06,Marseille,Partly cloudy,30.0,0.0,13.0
 2026-09-11,Stade Rennais FC 1901,N/A,,,
-2026-09-12,Strasbourg,Rainy,18.7,8.4,18.4
-2026-09-12,Lorient,Partly cloudy,21.3,0.0,19.0
-2026-09-12,Auxerre,Rainy,21.9,1.8,24.7
-2026-09-12,Le Havre,Showers,18.0,22.5,28.0
+2026-09-12,Strasbourg,Partly cloudy,21.4,0.0,10.8
+2026-09-12,Lorient,Partly cloudy,19.9,0.0,17.6
+2026-09-12,Auxerre,Partly cloudy,22.9,0.0,11.4
+2026-09-12,Le Havre,N/A,,,
 2026-09-12,Paris FC,N/A,,,
 2026-09-13,Lille,N/A,,,
 2026-09-13,Le Mans FC,N/A,,,
 2026-09-13,Brest,N/A,,,
-2026-09-18,Monaco,N/A,,,
+2026-09-18,Monaco,Rainy,23.8,1.65,11.0
 2026-09-19,Paris FC,N/A,,,
 2026-09-19,Le Mans FC,N/A,,,
-2026-09-19,Toulouse,N/A,,,
-2026-09-19,Angers,N/A,,,
-2026-09-19,Lyon,N/A,,,
+2026-09-19,Toulouse,Rainy,24.9,0.6,24.7
+2026-09-19,Angers,Partly cloudy,24.6,0.0,29.8
+2026-09-19,Lyon,Partly cloudy,26.6,0.0,5.8
 2026-09-20,Auxerre,N/A,,,
 2026-09-20,Nice,N/A,,,
 2026-09-20,Marseille,N/A,,,
@@ -53,15 +52,15 @@ Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
 2026-10-25,Angers,N/A,,,
 2026-10-25,Auxerre,N/A,,,
 2026-10-25,Paris SG,N/A,,,
-2026-10-30,Lille,N/A,,,
-2026-10-30,Lyon,N/A,,,
-2026-10-30,Lorient,N/A,,,
-2026-10-30,Paris FC,N/A,,,
-2026-10-30,ES Troyes AC,N/A,,,
 2026-10-30,Le Havre,N/A,,,
-2026-10-30,Marseille,N/A,,,
-2026-10-30,Nice,N/A,,,
-2026-10-30,Strasbourg,N/A,,,
+2026-10-30,Lille,N/A,,,
+2026-10-31,Nice,N/A,,,
+2026-10-31,Lyon,N/A,,,
+2026-10-31,Lorient,N/A,,,
+2026-10-31,ES Troyes AC,N/A,,,
+2026-11-01,Strasbourg,N/A,,,
+2026-11-01,Paris FC,N/A,,,
+2026-11-01,Marseille,N/A,,,
 2026-11-06,Le Mans FC,N/A,,,
 2026-11-06,Brest,N/A,,,
 2026-11-06,Le Havre,N/A,,,
