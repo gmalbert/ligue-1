@@ -1,28 +1,25 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-09-05,Racing Club de Lens,N/A,,,
-2026-09-05,Le Havre,Partly cloudy,20.8,0.0,11.4
-2026-09-05,Nice,Partly cloudy,28.8,0.0,10.0
 2026-09-06,ES Troyes AC,N/A,,,
-2026-09-06,Angers,Partly cloudy,33.5,0.0,14.5
-2026-09-06,Marseille,Partly cloudy,31.4,0.0,15.1
+2026-09-06,Angers,Partly cloudy,32.6,0.0,10.7
+2026-09-06,Marseille,Partly cloudy,31.4,0.0,17.0
 2026-09-11,Stade Rennais FC 1901,N/A,,,
-2026-09-12,Strasbourg,Rainy,18.5,6.15,16.2
-2026-09-12,Lorient,Partly cloudy,19.4,0.0,13.2
-2026-09-12,Auxerre,Showers,20.0,2.25,19.6
-2026-09-12,Le Havre,Rainy,18.9,16.8,16.5
+2026-09-12,Strasbourg,Partly cloudy,21.9,0.0,8.7
+2026-09-12,Lorient,Partly cloudy,19.0,0.0,16.3
+2026-09-12,Auxerre,Partly cloudy,22.4,0.0,14.9
+2026-09-12,Le Havre,Foggy,20.5,0.0,15.1
 2026-09-12,Paris FC,N/A,,,
-2026-09-13,Lille,Rainy,16.5,3.9,15.7
+2026-09-13,Lille,Rainy,18.3,7.8,16.5
 2026-09-13,Le Mans FC,N/A,,,
-2026-09-13,Brest,Rainy,19.5,11.1,26.8
-2026-09-18,Monaco,Showers,24.2,6.9,11.8
+2026-09-13,Brest,Rainy,20.8,4.2,19.4
+2026-09-18,Monaco,Partly cloudy,25.7,0.0,10.7
 2026-09-19,Paris FC,N/A,,,
 2026-09-19,Le Mans FC,N/A,,,
-2026-09-19,Toulouse,Partly cloudy,22.2,0.0,7.9
-2026-09-19,Angers,N/A,,,
-2026-09-19,Lyon,N/A,,,
-2026-09-20,Auxerre,N/A,,,
-2026-09-20,Nice,Partly cloudy,22.1,0.0,11.2
-2026-09-20,Marseille,Partly cloudy,22.1,0.0,16.2
+2026-09-19,Toulouse,Partly cloudy,22.2,0.0,10.8
+2026-09-19,Angers,Partly cloudy,19.7,0.0,16.0
+2026-09-19,Lyon,Rainy,20.7,0.6,11.7
+2026-09-20,Auxerre,Partly cloudy,25.4,0.0,25.0
+2026-09-20,Nice,Partly cloudy,25.9,0.0,12.6
+2026-09-20,Marseille,Partly cloudy,24.7,0.0,21.9
 2026-10-09,Racing Club de Lens,N/A,,,
 2026-10-10,Lille,N/A,,,
 2026-10-10,Brest,N/A,,,
@@ -59,33 +56,33 @@ Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
 2026-11-01,Strasbourg,N/A,,,
 2026-11-01,Paris FC,N/A,,,
 2026-11-01,Marseille,N/A,,,
-2026-11-06,Le Mans FC,N/A,,,
-2026-11-06,Brest,N/A,,,
-2026-11-06,Le Havre,N/A,,,
-2026-11-06,Angers,N/A,,,
-2026-11-06,Paris SG,N/A,,,
-2026-11-06,Stade Rennais FC 1901,N/A,,,
-2026-11-06,Auxerre,N/A,,,
 2026-11-06,Toulouse,N/A,,,
-2026-11-07,Racing Club de Lens,N/A,,,
-2026-11-20,Monaco,N/A,,,
+2026-11-07,Auxerre,N/A,,,
+2026-11-07,Paris SG,N/A,,,
+2026-11-08,Stade Rennais FC 1901,N/A,,,
+2026-11-08,Le Mans FC,N/A,,,
+2026-11-08,Brest,N/A,,,
+2026-11-08,Le Havre,N/A,,,
+2026-11-08,Angers,N/A,,,
+2026-11-08,Racing Club de Lens,N/A,,,
 2026-11-20,ES Troyes AC,N/A,,,
-2026-11-20,Racing Club de Lens,N/A,,,
-2026-11-20,Lille,N/A,,,
-2026-11-20,Paris FC,N/A,,,
-2026-11-20,Lorient,N/A,,,
-2026-11-20,Strasbourg,N/A,,,
-2026-11-20,Nice,N/A,,,
-2026-11-20,Marseille,N/A,,,
+2026-11-21,Nice,N/A,,,
+2026-11-21,Monaco,N/A,,,
+2026-11-21,Racing Club de Lens,N/A,,,
+2026-11-21,Lille,N/A,,,
+2026-11-21,Strasbourg,N/A,,,
+2026-11-22,Paris FC,N/A,,,
+2026-11-22,Lorient,N/A,,,
+2026-11-22,Marseille,N/A,,,
 2026-11-27,Brest,N/A,,,
-2026-11-27,Le Mans FC,N/A,,,
-2026-11-27,Toulouse,N/A,,,
-2026-11-27,Auxerre,N/A,,,
-2026-11-27,Nice,N/A,,,
-2026-11-27,Angers,N/A,,,
-2026-11-27,Le Havre,N/A,,,
-2026-11-27,Paris SG,N/A,,,
-2026-11-27,Lyon,N/A,,,
+2026-11-28,Angers,N/A,,,
+2026-11-28,Le Mans FC,N/A,,,
+2026-11-28,Nice,N/A,,,
+2026-11-28,Le Havre,N/A,,,
+2026-11-28,Paris SG,N/A,,,
+2026-11-29,Auxerre,N/A,,,
+2026-11-29,Toulouse,N/A,,,
+2026-11-29,Lyon,N/A,,,
 2026-12-04,ES Troyes AC,N/A,,,
 2026-12-04,Monaco,N/A,,,
 2026-12-04,Racing Club de Lens,N/A,,,
