@@ -1,40 +1,10 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-09-06T07:59:32.313492+00:00",
+    "generated_at": "2026-09-07T08:14:13.430815+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "No Ligue1 predictions for 2026-09-07"
   },
-  "bets": [
-    {
-      "game_date": "2026-09-06",
-      "game_time": null,
-      "game": "Paris FC @ Marseille",
-      "home_team": "Marseille",
-      "away_team": "Paris FC",
-      "bet_type": "Match Result",
-      "pick": "Draw",
-      "confidence": 0.518,
-      "edge": 0.2477,
-      "tier": "Elite",
-      "odds": 270,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-09-06",
-      "game_time": null,
-      "game": "Paris FC @ Marseille",
-      "home_team": "Marseille",
-      "away_team": "Paris FC",
-      "bet_type": "Match Result",
-      "pick": "Draw",
-      "confidence": 0.518,
-      "edge": 0.2513,
-      "tier": "Elite",
-      "odds": 275,
-      "line": null,
-      "league": "Ligue 1"
-    }
-  ]
+  "bets": []
 }
