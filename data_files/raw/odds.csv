@@ -1,17 +1,17 @@
 Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_HomeWin,ImpliedProb_Draw,ImpliedProb_AwayWin,BookmakerMargin
-2026-09-18,Monaco,Lens,BetMGM,2.15,3.7,3.1,0.4396,0.2555,0.3049,5.8
-2026-09-18,Monaco,Lens,DraftKings,2.15,3.7,3.15,0.4418,0.2567,0.3015,5.28
-2026-09-19,Angers,Troyes,BetMGM,2.2,3.3,3.3,0.4286,0.2857,0.2857,6.06
-2026-09-19,Angers,Troyes,DraftKings,2.2,3.35,3.25,0.4285,0.2814,0.2901,6.07
-2026-09-19,Le Mans,Lorient,BetMGM,2.88,3.4,2.38,0.3271,0.2771,0.3958,6.15
-2026-09-19,Le Mans,Lorient,DraftKings,2.9,3.35,2.4,0.3253,0.2816,0.3931,6.0
-2026-09-19,Lyon,Stade Rennes,BetMGM,2.1,3.75,3.2,0.4512,0.2527,0.2961,5.54
-2026-09-19,Lyon,Stade Rennes,DraftKings,2.1,3.8,3.15,0.4506,0.249,0.3004,5.68
+2026-09-18,Monaco,Lens,BetMGM,2.05,3.7,3.3,0.4597,0.2547,0.2856,6.11
+2026-09-18,Monaco,Lens,DraftKings,2.05,3.75,3.35,0.4633,0.2532,0.2835,5.3
+2026-09-19,Angers,Troyes,BetMGM,2.2,3.4,3.25,0.4303,0.2784,0.2913,5.64
+2026-09-19,Angers,Troyes,DraftKings,2.25,3.4,3.3,0.4267,0.2824,0.2909,4.16
+2026-09-19,Le Mans,Lorient,BetMGM,2.65,3.4,2.55,0.3548,0.2765,0.3687,6.36
+2026-09-19,Le Mans,Lorient,DraftKings,2.7,3.45,2.6,0.3545,0.2774,0.3681,4.48
+2026-09-19,Lyon,Stade Rennes,BetMGM,2.1,3.8,3.1,0.4484,0.2478,0.3038,6.19
+2026-09-19,Lyon,Stade Rennes,DraftKings,2.1,3.85,3.2,0.4542,0.2477,0.2981,4.84
 2026-09-19,Paris FC,Strasbourg,BetMGM,2.05,3.7,3.4,0.4636,0.2569,0.2795,5.22
-2026-09-19,Paris FC,Strasbourg,DraftKings,2.05,3.6,3.45,0.4622,0.2632,0.2746,5.54
+2026-09-19,Paris FC,Strasbourg,DraftKings,2.0,3.7,3.55,0.4753,0.2569,0.2678,5.2
 2026-09-19,Toulouse,Le Havre,BetMGM,1.847457627118644,3.6,4.2,0.512,0.2628,0.2252,5.72
-2026-09-19,Toulouse,Le Havre,DraftKings,1.8,3.65,4.3,0.5231,0.258,0.219,6.21
+2026-09-19,Toulouse,Le Havre,DraftKings,1.8333333333333335,3.7,4.4,0.523,0.2591,0.2179,4.3
 2026-09-20,Auxerre,Brest,BetMGM,2.7,3.5,2.5,0.3507,0.2705,0.3788,5.61
-2026-09-20,Auxerre,Brest,DraftKings,2.75,3.5,2.45,0.3439,0.2702,0.386,5.75
+2026-09-20,Auxerre,Brest,DraftKings,2.65,3.55,2.5,0.3563,0.266,0.3777,5.9
 2026-09-20,Marseille,Paris SG,BetMGM,6.0,5.25,1.4444444444444444,0.1588,0.1815,0.6597,4.95
 2026-09-20,Marseille,Paris SG,DraftKings,6.0,5.0,1.425531914893617,0.156,0.1872,0.6567,6.82
