@@ -1,10 +1,100 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-09-18T08:05:00.287280+00:00",
+    "generated_at": "2026-09-19T08:04:23.333927+00:00",
     "model_version": "1.0.0",
-    "season": "2026",
-    "notes": "No qualifying Ligue1 picks for 2026-09-18"
+    "season": "2026"
   },
-  "bets": []
+  "bets": [
+    {
+      "game_date": "2026-09-19",
+      "game_time": null,
+      "game": "Le Havre @ Toulouse",
+      "home_team": "Toulouse",
+      "away_team": "Le Havre",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.279,
+      "edge": 0.0616,
+      "tier": "Strong",
+      "odds": 360,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-09-19",
+      "game_time": null,
+      "game": "Le Havre @ Toulouse",
+      "home_team": "Toulouse",
+      "away_team": "Le Havre",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.279,
+      "edge": 0.0662,
+      "tier": "Strong",
+      "odds": 370,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-09-19",
+      "game_time": null,
+      "game": "Strasbourg @ Paris FC",
+      "home_team": "Paris FC",
+      "away_team": "Strasbourg",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.636,
+      "edge": 0.3657,
+      "tier": "Elite",
+      "odds": 270,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-09-19",
+      "game_time": null,
+      "game": "Strasbourg @ Paris FC",
+      "home_team": "Paris FC",
+      "away_team": "Strasbourg",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.636,
+      "edge": 0.3693,
+      "tier": "Elite",
+      "odds": 275,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-09-19",
+      "game_time": null,
+      "game": "Le Havre @ Toulouse",
+      "home_team": "Toulouse",
+      "away_team": "Le Havre",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.479,
+      "edge": 0.2616,
+      "tier": "Elite",
+      "odds": 360,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-09-19",
+      "game_time": null,
+      "game": "Le Havre @ Toulouse",
+      "home_team": "Toulouse",
+      "away_team": "Le Havre",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.479,
+      "edge": 0.2662,
+      "tier": "Elite",
+      "odds": 370,
+      "line": null,
+      "league": "Ligue 1"
+    }
+  ]
 }
