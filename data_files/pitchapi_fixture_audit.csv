@@ -1,0 +1,262 @@
+provider_match_id	status	home_team	away_team	kickoff_utc	candidate_count	kickoff_delta_hours	kickoff_comparison
+m_14JcCL	unmatched	Lens	Lyon	2026-10-09T18:45:00+00:00	0		unresolved
+m_2hLxyT	mapped	Lille	Le Havre	2026-10-10T15:15:00+00:00	1	0.0	exact
+m_3O9aDT	mapped	Lorient	Paris FC	2026-10-10T18:45:00+00:00	1	0.0	exact
+m_2uHH60	unmatched	Paris Saint-Germain	Le Mans	2026-10-10T18:45:00+00:00	0		unresolved
+m_4HKcRB	mapped	Monaco	Toulouse	2026-10-10T18:45:00+00:00	1	0.0	exact
+m_2LT2Nd	mapped	Brest	Angers	2026-10-10T18:45:00+00:00	1	0.0	exact
+m_480LDf	mapped	Nice	Strasbourg	2026-10-11T13:00:00+00:00	1	0.0	exact
+m_3PIYm0	unmatched	Rennes	Auxerre	2026-10-11T15:15:00+00:00	0		unresolved
+m_2U09kV	unmatched	Troyes	Marseille	2026-10-11T18:45:00+00:00	0		unresolved
+m_3pln58	unmatched	Le Mans	Toulouse	2026-10-16T18:45:00+00:00	0		unresolved
+m_4RbsRB	mapped	Strasbourg	Paris Saint-Germain	2026-10-17T15:15:00+00:00	1	0.0	exact
+m_1kZJPW	unmatched	Troyes	Lens	2026-10-17T18:45:00+00:00	0		unresolved
+m_1b4zha	mapped	Lille	Brest	2026-10-17T18:45:00+00:00	1	0.0	exact
+m_2RULhx	mapped	Angers	Marseille	2026-10-18T13:00:00+00:00	1	0.0	exact
+m_0iPVoc	unmatched	Paris FC	Rennes	2026-10-18T15:15:00+00:00	0		unresolved
+m_1uUPuf	mapped	Le Havre	Auxerre	2026-10-18T15:15:00+00:00	1	0.0	exact
+m_1ybaO4	mapped	Lorient	Monaco	2026-10-18T15:15:00+00:00	1	0.0	exact
+m_2VNJyu	mapped	Lyon	Nice	2026-10-18T18:45:00+00:00	1	0.0	exact
+m_1rlN1U	mapped	Brest	Nice	2026-10-23T18:45:00+00:00	1	0.0	exact
+m_2Atdht	unmatched	Toulouse	Troyes	2026-10-24T15:15:00+00:00	0		unresolved
+m_2L1RAf	unmatched	Lens	Paris FC	2026-10-24T18:45:00+00:00	0		unresolved
+m_4Z1eLV	mapped	Monaco	Lille	2026-10-25T14:00:00+00:00	1	0.0	exact
+m_1l9Fv2	unmatched	Rennes	Strasbourg	2026-10-25T16:15:00+00:00	0		unresolved
+m_43stYq	mapped	Angers	Lorient	2026-10-25T16:15:00+00:00	1	0.0	exact
+m_49KZ0T	unmatched	Auxerre	Le Mans	2026-10-25T16:15:00+00:00	0		unresolved
+m_0LOiqg	mapped	Marseille	Le Havre	2026-10-25T16:15:00+00:00	1	0.0	exact
+m_3DY8iO	mapped	Paris Saint-Germain	Lyon	2026-10-25T19:45:00+00:00	1	0.0	exact
+m_49qvGz	mapped	Le Havre	Paris Saint-Germain	2026-10-30T18:00:00+00:00	1	0.0	exact
+m_1bgQkd	unmatched	Lille	Lens	2026-10-30T20:05:00+00:00	0		unresolved
+m_08g6fR	unmatched	Nice	Rennes	2026-10-31T16:15:00+00:00	0		unresolved
+m_4XOc3a	unmatched	Troyes	Le Mans	2026-10-31T19:45:00+00:00	0		unresolved
+m_0xOQtL	mapped	Lorient	Brest	2026-10-31T19:45:00+00:00	1	0.0	exact
+m_1IGE7o	mapped	Lyon	Angers	2026-10-31T19:45:00+00:00	1	0.0	exact
+m_0h9fte	mapped	Strasbourg	Auxerre	2026-11-01T14:00:00+00:00	1	0.0	exact
+m_18Uw0k	mapped	Paris FC	Monaco	2026-11-01T16:15:00+00:00	1	0.0	exact
+m_22n8XS	mapped	Marseille	Toulouse	2026-11-01T19:45:00+00:00	1	0.0	exact
+m_2vsKSO	mapped	Toulouse	Strasbourg	2026-11-06T19:45:00+00:00	1	0.0	exact
+m_1ronn6	mapped	Auxerre	Paris FC	2026-11-07T16:15:00+00:00	1	0.0	exact
+m_264TKg	unmatched	Paris Saint-Germain	Troyes	2026-11-07T19:45:00+00:00	0		unresolved
+m_0mizTH	unmatched	Rennes	Lille	2026-11-08T14:00:00+00:00	0		unresolved
+m_1fpHlF	mapped	Angers	Nice	2026-11-08T16:15:00+00:00	1	0.0	exact
+m_16ULxt	mapped	Brest	Lyon	2026-11-08T16:15:00+00:00	1	0.0	exact
+m_0BcQYa	mapped	Le Havre	Lorient	2026-11-08T16:15:00+00:00	1	0.0	exact
+m_3osflk	unmatched	Le Mans	Monaco	2026-11-08T16:15:00+00:00	0		unresolved
+m_3xBldf	unmatched	Lens	Marseille	2026-11-08T19:45:00+00:00	0		unresolved
+m_3rtQqb	unmatched	Troyes	Le Havre	2026-11-20T19:45:00+00:00	0		unresolved
+m_3qap9x	mapped	Nice	Paris Saint-Germain	2026-11-21T16:15:00+00:00	1	0.0	exact
+m_47p1ca	mapped	Strasbourg	Brest	2026-11-21T19:45:00+00:00	1	0.0	exact
+m_1waD57	mapped	Lille	Lyon	2026-11-21T19:45:00+00:00	1	0.0	exact
+m_39zXtJ	unmatched	Lens	Toulouse	2026-11-21T19:45:00+00:00	0		unresolved
+m_3vBvLr	mapped	Monaco	Auxerre	2026-11-21T19:45:00+00:00	1	0.0	exact
+m_11vVyC	mapped	Paris FC	Angers	2026-11-22T14:00:00+00:00	1	0.0	exact
+m_1AvzJo	unmatched	Lorient	Rennes	2026-11-22T16:15:00+00:00	0		unresolved
+m_3pvUaB	unmatched	Marseille	Le Mans	2026-11-22T19:45:00+00:00	0		unresolved
+m_1oxRzF	mapped	Brest	Paris FC	2026-11-27T19:45:00+00:00	1	0.0	exact
+m_2KbgcS	unmatched	Angers	Lens	2026-11-28T16:15:00+00:00	0		unresolved
+m_1m7rKw	unmatched	Nice	Troyes	2026-11-28T19:45:00+00:00	0		unresolved
+m_1LWSAq	mapped	Paris Saint-Germain	Lorient	2026-11-28T19:45:00+00:00	1	0.0	exact
+m_4f73g7	mapped	Le Havre	Strasbourg	2026-11-28T19:45:00+00:00	1	0.0	exact
+m_2UeyHL	unmatched	Le Mans	Lille	2026-11-28T19:45:00+00:00	0		unresolved
+m_4g4g9c	mapped	Auxerre	Marseille	2026-11-29T14:00:00+00:00	1	0.0	exact
+m_2M85c1	unmatched	Toulouse	Rennes	2026-11-29T16:15:00+00:00	0		unresolved
+m_1UrggI	mapped	Lyon	Monaco	2026-11-29T19:45:00+00:00	1	0.0	exact
+m_2axaMF	unmatched	Strasbourg	Lorient	2026-12-05T16:00:00+00:00	0		unresolved
+m_4W2YYV	unmatched	Troyes	Lyon	2026-12-05T16:00:00+00:00	0		unresolved
+m_0mOmWm	unmatched	Lens	Le Havre	2026-12-05T16:00:00+00:00	0		unresolved
+m_3v8yI3	unmatched	Lille	Auxerre	2026-12-05T16:00:00+00:00	0		unresolved
+m_2QI0Cp	unmatched	Marseille	Nice	2026-12-05T16:00:00+00:00	0		unresolved
+m_3MY6tQ	unmatched	Toulouse	Paris Saint-Germain	2026-12-05T16:00:00+00:00	0		unresolved
+m_0ddwIc	unmatched	Monaco	Angers	2026-12-05T16:00:00+00:00	0		unresolved
+m_4BiPXT	unmatched	Paris FC	Le Mans	2026-12-05T16:00:00+00:00	0		unresolved
+m_4bGNFs	unmatched	Rennes	Brest	2026-12-05T16:00:00+00:00	0		unresolved
+m_146ffC	unmatched	Nice	Lens	2026-12-12T16:00:00+00:00	0		unresolved
+m_0b7SX2	unmatched	Angers	Strasbourg	2026-12-12T16:00:00+00:00	0		unresolved
+m_2CxXPa	unmatched	Auxerre	Toulouse	2026-12-12T16:00:00+00:00	0		unresolved
+m_3IWMkY	unmatched	Paris Saint-Germain	Paris FC	2026-12-12T16:00:00+00:00	0		unresolved
+m_46NjNS	unmatched	Rennes	Monaco	2026-12-12T16:00:00+00:00	0		unresolved
+m_1FFcXp	unmatched	Le Havre	Le Mans	2026-12-12T16:00:00+00:00	0		unresolved
+m_0haaqY	unmatched	Brest	Troyes	2026-12-12T16:00:00+00:00	0		unresolved
+m_4aNtHe	unmatched	Lorient	Lille	2026-12-12T16:00:00+00:00	0		unresolved
+m_2idWzA	mapped	Lyon	Marseille	2026-12-13T19:45:00+00:00	1	0.0	exact
+m_3pUo04	unmatched	Monaco	Nice	2027-01-02T16:00:00+00:00	0		unresolved
+m_2VkKEa	unmatched	Troyes	Rennes	2027-01-02T16:00:00+00:00	0		unresolved
+m_3M2rJJ	unmatched	Paris FC	Le Havre	2027-01-02T16:00:00+00:00	0		unresolved
+m_1vile4	unmatched	Lorient	Auxerre	2027-01-02T16:00:00+00:00	0		unresolved
+m_08b4IX	unmatched	Lille	Strasbourg	2027-01-02T16:00:00+00:00	0		unresolved
+m_2YFkl2	unmatched	Le Mans	Lyon	2027-01-02T16:00:00+00:00	0		unresolved
+m_0EOsXz	unmatched	Brest	Marseille	2027-01-02T16:00:00+00:00	0		unresolved
+m_35txD0	unmatched	Toulouse	Angers	2027-01-02T16:00:00+00:00	0		unresolved
+m_1zb4HL	unmatched	Lens	Paris Saint-Germain	2027-01-03T19:45:00+00:00	0		unresolved
+m_2ZAjyP	unmatched	Paris FC	Toulouse	2027-01-16T16:00:00+00:00	0		unresolved
+m_01lr9r	unmatched	Nice	Le Havre	2027-01-16T16:00:00+00:00	0		unresolved
+m_3WiPsI	unmatched	Monaco	Brest	2027-01-16T16:00:00+00:00	0		unresolved
+m_3YXEfX	unmatched	Marseille	Lille	2027-01-16T16:00:00+00:00	0		unresolved
+m_0Qm8QZ	unmatched	Lyon	Lorient	2027-01-16T16:00:00+00:00	0		unresolved
+m_0iQbwk	unmatched	Auxerre	Troyes	2027-01-16T16:00:00+00:00	0		unresolved
+m_3tE0l2	unmatched	Angers	Paris Saint-Germain	2027-01-16T16:00:00+00:00	0		unresolved
+m_3PoM0j	unmatched	Rennes	Lens	2027-01-16T16:00:00+00:00	0		unresolved
+m_15ypul	unmatched	Strasbourg	Le Mans	2027-01-16T16:00:00+00:00	0		unresolved
+m_4XdgmW	unmatched	Lorient	Marseille	2027-01-23T16:00:00+00:00	0		unresolved
+m_2XTnG4	unmatched	Le Havre	Rennes	2027-01-23T16:00:00+00:00	0		unresolved
+m_1QOiNm	unmatched	Le Mans	Angers	2027-01-23T16:00:00+00:00	0		unresolved
+m_0x2V6L	unmatched	Lens	Brest	2027-01-23T16:00:00+00:00	0		unresolved
+m_1SisMC	unmatched	Lille	Paris FC	2027-01-23T16:00:00+00:00	0		unresolved
+m_4bQma9	unmatched	Paris Saint-Germain	Auxerre	2027-01-23T16:00:00+00:00	0		unresolved
+m_1DLYoO	unmatched	Strasbourg	Lyon	2027-01-23T16:00:00+00:00	0		unresolved
+m_2HlKhh	unmatched	Toulouse	Nice	2027-01-23T16:00:00+00:00	0		unresolved
+m_0oWIRf	unmatched	Troyes	Monaco	2027-01-23T16:00:00+00:00	0		unresolved
+m_4csvOn	unmatched	Toulouse	Lens	2027-01-30T16:00:00+00:00	0		unresolved
+m_0tCKyT	unmatched	Angers	Le Havre	2027-01-30T16:00:00+00:00	0		unresolved
+m_06OJvR	unmatched	Brest	Strasbourg	2027-01-30T16:00:00+00:00	0		unresolved
+m_3gvplx	unmatched	Rennes	Lorient	2027-01-30T16:00:00+00:00	0		unresolved
+m_3NTjzA	unmatched	Le Mans	Nice	2027-01-30T16:00:00+00:00	0		unresolved
+m_2orHIF	unmatched	Lyon	Lille	2027-01-30T16:00:00+00:00	0		unresolved
+m_2ISF1C	unmatched	Monaco	Paris Saint-Germain	2027-01-30T16:00:00+00:00	0		unresolved
+m_15fqJH	unmatched	Marseille	Troyes	2027-01-30T16:00:00+00:00	0		unresolved
+m_2Jx0vu	unmatched	Paris FC	Auxerre	2027-01-30T16:00:00+00:00	0		unresolved
+m_0gNsjW	unmatched	Troyes	Lille	2027-02-06T16:00:00+00:00	0		unresolved
+m_04RLr7	unmatched	Strasbourg	Paris FC	2027-02-06T16:00:00+00:00	0		unresolved
+m_2Moxz7	unmatched	Rennes	Lyon	2027-02-06T16:00:00+00:00	0		unresolved
+m_3qYLVe	unmatched	Lorient	Le Mans	2027-02-06T16:00:00+00:00	0		unresolved
+m_1T8lFU	unmatched	Auxerre	Monaco	2027-02-06T16:00:00+00:00	0		unresolved
+m_0IfyNQ	unmatched	Lens	Angers	2027-02-06T16:00:00+00:00	0		unresolved
+m_1ulEif	unmatched	Le Havre	Toulouse	2027-02-06T16:00:00+00:00	0		unresolved
+m_07qDSV	unmatched	Nice	Brest	2027-02-06T16:00:00+00:00	0		unresolved
+m_3coiJR	mapped	Paris Saint-Germain	Marseille	2027-02-07T19:45:00+00:00	1	0.0	exact
+m_1Gw8sU	unmatched	Le Mans	Paris Saint-Germain	2027-02-13T16:00:00+00:00	0		unresolved
+m_2Zp4KF	unmatched	Auxerre	Strasbourg	2027-02-13T16:00:00+00:00	0		unresolved
+m_40z1qu	unmatched	Lille	Nice	2027-02-13T16:00:00+00:00	0		unresolved
+m_3EcXpI	unmatched	Paris FC	Troyes	2027-02-13T16:00:00+00:00	0		unresolved
+m_1V4wCu	unmatched	Marseille	Angers	2027-02-13T16:00:00+00:00	0		unresolved
+m_4d2qyY	unmatched	Lyon	Lens	2027-02-13T16:00:00+00:00	0		unresolved
+m_1wmEex	unmatched	Brest	Rennes	2027-02-13T16:00:00+00:00	0		unresolved
+m_3UttXk	unmatched	Lorient	Le Havre	2027-02-13T16:00:00+00:00	0		unresolved
+m_1yNbLl	unmatched	Toulouse	Monaco	2027-02-13T16:00:00+00:00	0		unresolved
+m_0XIpFe	unmatched	Angers	Paris FC	2027-02-20T16:00:00+00:00	0		unresolved
+m_0PaeGX	unmatched	Lens	Troyes	2027-02-20T16:00:00+00:00	0		unresolved
+m_3w8426	unmatched	Lille	Lorient	2027-02-20T16:00:00+00:00	0		unresolved
+m_1EPfoK	unmatched	Monaco	Le Mans	2027-02-20T16:00:00+00:00	0		unresolved
+m_0bshJH	unmatched	Nice	Auxerre	2027-02-20T16:00:00+00:00	0		unresolved
+m_38IaxK	unmatched	Paris Saint-Germain	Brest	2027-02-20T16:00:00+00:00	0		unresolved
+m_4fN9kp	unmatched	Rennes	Toulouse	2027-02-20T16:00:00+00:00	0		unresolved
+m_3D0tqV	unmatched	Le Havre	Lyon	2027-02-20T16:00:00+00:00	0		unresolved
+m_2G14Yh	unmatched	Strasbourg	Marseille	2027-02-20T16:00:00+00:00	0		unresolved
+m_2LB69e	unmatched	Strasbourg	Le Havre	2027-02-27T16:00:00+00:00	0		unresolved
+m_15nEty	unmatched	Auxerre	Lille	2027-02-27T16:00:00+00:00	0		unresolved
+m_0l0JYI	unmatched	Brest	Monaco	2027-02-27T16:00:00+00:00	0		unresolved
+m_28A3HH	unmatched	Le Mans	Paris FC	2027-02-27T16:00:00+00:00	0		unresolved
+m_00Vb1W	unmatched	Lorient	Angers	2027-02-27T16:00:00+00:00	0		unresolved
+m_4Qsyji	unmatched	Lyon	Toulouse	2027-02-27T16:00:00+00:00	0		unresolved
+m_19bl8J	unmatched	Marseille	Rennes	2027-02-27T16:00:00+00:00	0		unresolved
+m_0uyoUy	unmatched	Troyes	Nice	2027-02-27T16:00:00+00:00	0		unresolved
+m_008AHR	unmatched	Paris Saint-Germain	Lens	2027-02-28T19:45:00+00:00	0		unresolved
+m_4H6IAa	unmatched	Paris Saint-Germain	Rennes	2027-03-06T16:00:00+00:00	0		unresolved
+m_07NkjK	unmatched	Lens	Strasbourg	2027-03-06T16:00:00+00:00	0		unresolved
+m_3uZ787	unmatched	Troyes	Lorient	2027-03-06T16:00:00+00:00	0		unresolved
+m_3S1aEs	unmatched	Toulouse	Le Mans	2027-03-06T16:00:00+00:00	0		unresolved
+m_2qUeTY	unmatched	Angers	Auxerre	2027-03-06T16:00:00+00:00	0		unresolved
+m_4Z1vV1	unmatched	Le Havre	Nice	2027-03-06T16:00:00+00:00	0		unresolved
+m_2nOMoT	unmatched	Lille	Marseille	2027-03-06T16:00:00+00:00	0		unresolved
+m_08FMIt	unmatched	Monaco	Lyon	2027-03-06T16:00:00+00:00	0		unresolved
+m_1ZwzoO	unmatched	Paris FC	Brest	2027-03-06T16:00:00+00:00	0		unresolved
+m_2Sl8ZH	unmatched	Le Havre	Lens	2027-03-13T16:00:00+00:00	0		unresolved
+m_3wLioT	unmatched	Auxerre	Paris Saint-Germain	2027-03-13T16:00:00+00:00	0		unresolved
+m_10hqrY	unmatched	Marseille	Monaco	2027-03-13T16:00:00+00:00	0		unresolved
+m_10MMEn	unmatched	Nice	Toulouse	2027-03-13T16:00:00+00:00	0		unresolved
+m_10fVMg	unmatched	Paris FC	Lorient	2027-03-13T16:00:00+00:00	0		unresolved
+m_3bZvcl	unmatched	Lyon	Troyes	2027-03-13T16:00:00+00:00	0		unresolved
+m_2zn88g	unmatched	Strasbourg	Angers	2027-03-13T16:00:00+00:00	0		unresolved
+m_3wUQD0	unmatched	Le Mans	Rennes	2027-03-13T16:00:00+00:00	0		unresolved
+m_4cHzql	unmatched	Brest	Lille	2027-03-13T16:00:00+00:00	0		unresolved
+m_3yLBnk	unmatched	Angers	Le Mans	2027-03-20T16:00:00+00:00	0		unresolved
+m_1ScbQ3	unmatched	Monaco	Le Havre	2027-03-20T16:00:00+00:00	0		unresolved
+m_49jDOy	unmatched	Lorient	Nice	2027-03-20T16:00:00+00:00	0		unresolved
+m_3pxI1x	unmatched	Paris Saint-Germain	Strasbourg	2027-03-20T16:00:00+00:00	0		unresolved
+m_20ffah	unmatched	Rennes	Paris FC	2027-03-20T16:00:00+00:00	0		unresolved
+m_4R8Q1l	unmatched	Toulouse	Brest	2027-03-20T16:00:00+00:00	0		unresolved
+m_2Li9eX	unmatched	Troyes	Auxerre	2027-03-20T16:00:00+00:00	0		unresolved
+m_3Qj2bV	unmatched	Lens	Lille	2027-03-20T16:00:00+00:00	0		unresolved
+m_2qCO4o	mapped	Marseille	Lyon	2027-03-21T19:45:00+00:00	1	0.0	exact
+m_2fyqQU	unmatched	Le Mans	Marseille	2027-04-03T15:00:00+00:00	0		unresolved
+m_3DWZQu	unmatched	Angers	Monaco	2027-04-03T15:00:00+00:00	0		unresolved
+m_3apvdy	unmatched	Lille	Rennes	2027-04-03T15:00:00+00:00	0		unresolved
+m_2RG8rY	unmatched	Strasbourg	Toulouse	2027-04-03T15:00:00+00:00	0		unresolved
+m_24XPat	unmatched	Paris FC	Paris Saint-Germain	2027-04-03T15:00:00+00:00	0		unresolved
+m_2s1Wig	unmatched	Brest	Lorient	2027-04-03T15:00:00+00:00	0		unresolved
+m_35jtdL	unmatched	Auxerre	Lens	2027-04-03T15:00:00+00:00	0		unresolved
+m_4eRgFa	unmatched	Nice	Lyon	2027-04-03T15:00:00+00:00	0		unresolved
+m_28XUQs	unmatched	Le Havre	Troyes	2027-04-03T15:00:00+00:00	0		unresolved
+m_4ZIIX9	unmatched	Lille	Toulouse	2027-04-10T15:00:00+00:00	0		unresolved
+m_4R11hN	unmatched	Le Mans	Auxerre	2027-04-10T15:00:00+00:00	0		unresolved
+m_1AmBgm	unmatched	Lorient	Lens	2027-04-10T15:00:00+00:00	0		unresolved
+m_2vpXwX	unmatched	Lyon	Strasbourg	2027-04-10T15:00:00+00:00	0		unresolved
+m_4DSfpz	unmatched	Marseille	Brest	2027-04-10T15:00:00+00:00	0		unresolved
+m_4Iofh3	unmatched	Monaco	Rennes	2027-04-10T15:00:00+00:00	0		unresolved
+m_2NZSUG	unmatched	Nice	Paris FC	2027-04-10T15:00:00+00:00	0		unresolved
+m_3MS116	unmatched	Troyes	Angers	2027-04-10T15:00:00+00:00	0		unresolved
+m_0xYpMa	unmatched	Paris Saint-Germain	Le Havre	2027-04-10T15:00:00+00:00	0		unresolved
+m_1XUAPt	unmatched	Auxerre	Lorient	2027-04-17T15:00:00+00:00	0		unresolved
+m_2TDHD9	unmatched	Angers	Lyon	2027-04-17T15:00:00+00:00	0		unresolved
+m_38jnPa	unmatched	Toulouse	Paris FC	2027-04-17T15:00:00+00:00	0		unresolved
+m_1NDI5M	unmatched	Rennes	Troyes	2027-04-17T15:00:00+00:00	0		unresolved
+m_40RK1O	unmatched	Paris Saint-Germain	Lille	2027-04-17T15:00:00+00:00	0		unresolved
+m_3X0V5e	unmatched	Monaco	Strasbourg	2027-04-17T15:00:00+00:00	0		unresolved
+m_4GNkoP	unmatched	Lens	Nice	2027-04-17T15:00:00+00:00	0		unresolved
+m_1cNkCg	unmatched	Le Havre	Marseille	2027-04-17T15:00:00+00:00	0		unresolved
+m_1ktGB1	unmatched	Brest	Le Mans	2027-04-17T15:00:00+00:00	0		unresolved
+m_47xAiz	unmatched	Troyes	Toulouse	2027-04-24T15:00:00+00:00	0		unresolved
+m_0QQn2i	unmatched	Le Mans	Le Havre	2027-04-24T15:00:00+00:00	0		unresolved
+m_2Kn6g3	unmatched	Lille	Monaco	2027-04-24T15:00:00+00:00	0		unresolved
+m_2CqEbH	unmatched	Lorient	Paris Saint-Germain	2027-04-24T15:00:00+00:00	0		unresolved
+m_0SSyI5	unmatched	Lyon	Brest	2027-04-24T15:00:00+00:00	0		unresolved
+m_3j0iDp	unmatched	Marseille	Auxerre	2027-04-24T15:00:00+00:00	0		unresolved
+m_4gQM4I	unmatched	Nice	Angers	2027-04-24T15:00:00+00:00	0		unresolved
+m_07XTql	unmatched	Paris FC	Lens	2027-04-24T15:00:00+00:00	0		unresolved
+m_1SY52q	unmatched	Strasbourg	Rennes	2027-04-24T15:00:00+00:00	0		unresolved
+m_4YG0LF	unmatched	Le Havre	Paris FC	2027-05-01T15:00:00+00:00	0		unresolved
+m_2Il4Pj	unmatched	Toulouse	Marseille	2027-05-01T15:00:00+00:00	0		unresolved
+m_4WWxb6	unmatched	Troyes	Brest	2027-05-01T15:00:00+00:00	0		unresolved
+m_2NK6BY	unmatched	Strasbourg	Lille	2027-05-01T15:00:00+00:00	0		unresolved
+m_2uDR3N	unmatched	Rennes	Nice	2027-05-01T15:00:00+00:00	0		unresolved
+m_3cODAX	unmatched	Paris Saint-Germain	Angers	2027-05-01T15:00:00+00:00	0		unresolved
+m_0r9J7c	unmatched	Monaco	Lorient	2027-05-01T15:00:00+00:00	0		unresolved
+m_3jLzRq	unmatched	Lens	Le Mans	2027-05-01T15:00:00+00:00	0		unresolved
+m_3fHD6D	unmatched	Auxerre	Lyon	2027-05-01T15:00:00+00:00	0		unresolved
+m_2QFssX	unmatched	Rennes	Le Havre	2027-05-08T15:00:00+00:00	0		unresolved
+m_0iviKt	unmatched	Brest	Auxerre	2027-05-08T15:00:00+00:00	0		unresolved
+m_2pmYjE	unmatched	Le Mans	Troyes	2027-05-08T15:00:00+00:00	0		unresolved
+m_1Cop9P	unmatched	Lens	Monaco	2027-05-08T15:00:00+00:00	0		unresolved
+m_1hVHCz	unmatched	Lorient	Strasbourg	2027-05-08T15:00:00+00:00	0		unresolved
+m_1pd9kA	unmatched	Nice	Marseille	2027-05-08T15:00:00+00:00	0		unresolved
+m_3ZTRD2	unmatched	Paris FC	Lille	2027-05-08T15:00:00+00:00	0		unresolved
+m_2goJ7W	unmatched	Angers	Toulouse	2027-05-08T15:00:00+00:00	0		unresolved
+m_3Jg5SS	mapped	Lyon	Paris Saint-Germain	2027-05-09T18:45:00+00:00	1	0.0	exact
+m_41pxSl	unmatched	Paris Saint-Germain	Nice	2027-05-16T15:00:00+00:00	0		unresolved
+m_3eMa7E	unmatched	Monaco	Paris FC	2027-05-16T15:00:00+00:00	0		unresolved
+m_1zJAfX	unmatched	Marseille	Lens	2027-05-16T15:00:00+00:00	0		unresolved
+m_1ffqzp	unmatched	Lyon	Le Mans	2027-05-16T15:00:00+00:00	0		unresolved
+m_47vSDZ	unmatched	Lille	Angers	2027-05-16T15:00:00+00:00	0		unresolved
+m_2DPHza	unmatched	Brest	Le Havre	2027-05-16T15:00:00+00:00	0		unresolved
+m_4gRmso	unmatched	Auxerre	Rennes	2027-05-16T15:00:00+00:00	0		unresolved
+m_1LjEip	unmatched	Strasbourg	Troyes	2027-05-16T15:00:00+00:00	0		unresolved
+m_2MytaI	unmatched	Toulouse	Lorient	2027-05-16T15:00:00+00:00	0		unresolved
+m_4axeiq	unmatched	Paris FC	Marseille	2027-05-22T15:00:00+00:00	0		unresolved
+m_30IV88	unmatched	Troyes	Paris Saint-Germain	2027-05-22T15:00:00+00:00	0		unresolved
+m_2mhe2b	unmatched	Nice	Monaco	2027-05-22T15:00:00+00:00	0		unresolved
+m_1eZ8yK	unmatched	Lorient	Lyon	2027-05-22T15:00:00+00:00	0		unresolved
+m_3do58L	unmatched	Lens	Rennes	2027-05-22T15:00:00+00:00	0		unresolved
+m_3KD0rT	unmatched	Le Mans	Strasbourg	2027-05-22T15:00:00+00:00	0		unresolved
+m_2Y42yA	unmatched	Le Havre	Lille	2027-05-22T15:00:00+00:00	0		unresolved
+m_0g0FXX	unmatched	Angers	Brest	2027-05-22T15:00:00+00:00	0		unresolved
+m_0XsrHi	unmatched	Toulouse	Auxerre	2027-05-22T15:00:00+00:00	0		unresolved
+m_0kLGwO	outside_source_window	Strasbourg	Nice	2027-05-29T19:00:00+00:00	0		unresolved
+m_4O7qJB	outside_source_window	Paris Saint-Germain	Toulouse	2027-05-29T19:00:00+00:00	0		unresolved
+m_4VM0RM	outside_source_window	Monaco	Troyes	2027-05-29T19:00:00+00:00	0		unresolved
+m_1fjpeO	outside_source_window	Marseille	Lorient	2027-05-29T19:00:00+00:00	0		unresolved
+m_0Kr4Qk	outside_source_window	Brest	Lens	2027-05-29T19:00:00+00:00	0		unresolved
+m_3m3JTU	outside_source_window	Lyon	Paris FC	2027-05-29T19:00:00+00:00	0		unresolved
+m_3io1uv	outside_source_window	Lille	Le Mans	2027-05-29T19:00:00+00:00	0		unresolved
+m_26rQwQ	outside_source_window	Auxerre	Le Havre	2027-05-29T19:00:00+00:00	0		unresolved
+m_15pTZW	outside_source_window	Rennes	Angers	2027-05-29T19:00:00+00:00	0		unresolved

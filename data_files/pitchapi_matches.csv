@@ -1,0 +1,307 @@
+match_id	league_id	season	match_date	kickoff_utc	status	home_team_id_provider	away_team_id_provider	home_team_name_provider	away_team_name_provider	home_team	away_team	score_home	score_away	round_name	observed_at	provider_schema_version	league_key	fixture_id	home_team_id	away_team_id
+m_0HBFDr	l_3FJFUl	2026/2027	2026-08-21	2026-08-21T18:45:00+00:00	finished	t_2s2eyG	t_1p1AQf	Marseille	Strasbourg	Marseille	Strasbourg	4.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:448d1043fbafc6d96701	ligue1:marseille	ligue1:strasbourg
+m_3t6E4V	l_3FJFUl	2026/2027	2026-08-22	2026-08-22T15:15:00+00:00	finished	t_38NVJO	t_2Vc7mg	Lens	Auxerre	Lens	Auxerre	5.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:f07b430ea64ac2ef5d72	ligue1:lens	ligue1:auxerre
+m_0UIJhg	l_3FJFUl	2026/2027	2026-08-22	2026-08-22T18:45:00+00:00	finished	t_0zVhE4	t_0LMnwp	Troyes	Paris FC	Troyes	Paris FC	0.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:a26f49cbcc78f1a91fab	ligue1:troyes	ligue1:paris-fc
+m_11sFY1	l_3FJFUl	2026/2027	2026-08-22	2026-08-22T18:45:00+00:00	finished	t_3t6spd	t_0xMlRV	Toulouse	Lyon	Toulouse	Lyon	0.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:3644ba0b9a9873970211	ligue1:toulouse	ligue1:lyon
+m_2j1zSm	l_3FJFUl	2026/2027	2026-08-22	2026-08-22T18:45:00+00:00	finished	t_0QUJ2Y	t_2lHmy6	Nice	Lorient	Nice	Lorient	0.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:8aabc7548d22b02ce021	ligue1:nice	ligue1:lorient
+m_43BQ7u	l_3FJFUl	2026/2027	2026-08-22	2026-08-22T18:45:00+00:00	finished	t_0GDAiO	t_0EMLtg	Le Mans	Brest	Le Mans	Brest	2.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:1ce2fcc4e5437cb1ef49	ligue1:le-mans	ligue1:brest
+m_2Oa6al	l_3FJFUl	2026/2027	2026-08-23	2026-08-23T13:00:00+00:00	finished	t_0ZkdUF	t_0tnX1I	Angers	Lille	Angers	Lille	0.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:316d90c868c3265b725c	ligue1:angers	ligue1:lille
+m_0d3qYl	l_3FJFUl	2026/2027	2026-08-23	2026-08-23T15:15:00+00:00	finished	t_4BCeSu	t_13gLEF	Le Havre	Monaco	Le Havre	Monaco	0.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:01e34b760b6e90ea5e37	ligue1:le-havre	ligue1:monaco
+m_4BqUyD	l_3FJFUl	2026/2027	2026-08-23	2026-08-23T18:45:00+00:00	finished	t_3Ng6PH	t_41iFW3	Rennes	Paris Saint-Germain	Rennes	Paris Saint-Germain	2.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:91c8813b2e79a536c877	ligue1:rennes	ligue1:paris-sg
+m_2CVXle	l_3FJFUl	2026/2027	2026-08-28	2026-08-28T19:00:00+00:00	finished	t_0tnX1I	t_41iFW3	Lille	Paris Saint-Germain	Lille	Paris Saint-Germain	2.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:21efc866776953134f9e	ligue1:lille	ligue1:paris-sg
+m_0KExAF	l_3FJFUl	2026/2027	2026-08-29	2026-08-29T15:15:00+00:00	finished	t_1p1AQf	t_38NVJO	Strasbourg	Lens	Strasbourg	Lens	2.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:834b0f3804fbca9d40a5	ligue1:strasbourg	ligue1:lens
+m_1COnmK	l_3FJFUl	2026/2027	2026-08-29	2026-08-29T18:45:00+00:00	finished	t_0xMlRV	t_4BCeSu	Lyon	Le Havre	Lyon	Le Havre	1.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:f6d541fcf2eb95b41a71	ligue1:lyon	ligue1:le-havre
+m_30gqUp	l_3FJFUl	2026/2027	2026-08-29	2026-08-29T18:45:00+00:00	finished	t_2Vc7mg	t_0ZkdUF	Auxerre	Angers	Auxerre	Angers	1.0	3.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:5fd3a44f86983eba519c	ligue1:auxerre	ligue1:angers
+m_30na8W	l_3FJFUl	2026/2027	2026-08-29	2026-08-29T18:45:00+00:00	finished	t_0EMLtg	t_3t6spd	Brest	Toulouse	Brest	Toulouse	2.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:d7bce3ff2e6bafa53f3a	ligue1:brest	ligue1:toulouse
+m_4Feezp	l_3FJFUl	2026/2027	2026-08-29	2026-08-29T18:45:00+00:00	finished	t_2lHmy6	t_0zVhE4	Lorient	Troyes	Lorient	Troyes	1.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:9ffc4dda3b203a050d48	ligue1:lorient	ligue1:troyes
+m_1pNRoG	l_3FJFUl	2026/2027	2026-08-30	2026-08-30T13:00:00+00:00	finished	t_0LMnwp	t_0QUJ2Y	Paris FC	Nice	Paris FC	Nice	3.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:d319adfda5c52bfe3545	ligue1:paris-fc	ligue1:nice
+m_3jG0Mg	l_3FJFUl	2026/2027	2026-08-30	2026-08-30T15:15:00+00:00	finished	t_3Ng6PH	t_0GDAiO	Rennes	Le Mans	Rennes	Le Mans	3.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:d98baa9aba361008e211	ligue1:rennes	ligue1:le-mans
+m_1WMWmb	l_3FJFUl	2026/2027	2026-08-30	2026-08-30T18:45:00+00:00	finished	t_13gLEF	t_2s2eyG	Monaco	Marseille	Monaco	Marseille	2.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:7333e966169e9100d73a	ligue1:monaco	ligue1:marseille
+m_3b4P88	l_3FJFUl	2026/2027	2026-09-03	2026-09-03T18:45:00+00:00	finished	t_3t6spd	t_0tnX1I	Toulouse	Lille	Toulouse	Lille	0.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:885917164fb42a3e4316	ligue1:toulouse	ligue1:lille
+m_2sQo0n	l_3FJFUl	2026/2027	2026-09-04	2026-09-04T17:00:00+00:00	finished	t_0xMlRV	t_2Vc7mg	Lyon	Auxerre	Lyon	Auxerre	3.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:193bd6dd8a07dbdcbccb	ligue1:lyon	ligue1:auxerre
+m_0i1XIU	l_3FJFUl	2026/2027	2026-09-04	2026-09-04T19:05:00+00:00	finished	t_41iFW3	t_13gLEF	Paris Saint-Germain	Monaco	Paris Saint-Germain	Monaco	1.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:12f135e420645746b382	ligue1:paris-sg	ligue1:monaco
+m_0PAbQE	l_3FJFUl	2026/2027	2026-09-05	2026-09-05T15:15:00+00:00	finished	t_38NVJO	t_2lHmy6	Lens	Lorient	Lens	Lorient	0.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:4d483081a9c656674b0c	ligue1:lens	ligue1:lorient
+m_0GEPfT	l_3FJFUl	2026/2027	2026-09-05	2026-09-05T18:45:00+00:00	finished	t_4BCeSu	t_0EMLtg	Le Havre	Brest	Le Havre	Brest	1.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:40f979fdf65b69527364	ligue1:le-havre	ligue1:brest
+m_2QvPlu	l_3FJFUl	2026/2027	2026-09-05	2026-09-05T18:45:00+00:00	finished	t_0QUJ2Y	t_0GDAiO	Nice	Le Mans	Nice	Le Mans	1.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:a3fe78e33f9258673dc3	ligue1:nice	ligue1:le-mans
+m_42jThF	l_3FJFUl	2026/2027	2026-09-06	2026-09-06T13:00:00+00:00	finished	t_0zVhE4	t_1p1AQf	Troyes	Strasbourg	Troyes	Strasbourg	2.0	6.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:700745a820ad0ee4d5cd	ligue1:troyes	ligue1:strasbourg
+m_14GPFx	l_3FJFUl	2026/2027	2026-09-06	2026-09-06T15:15:00+00:00	finished	t_0ZkdUF	t_3Ng6PH	Angers	Rennes	Angers	Rennes	1.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:dfba05ecdc689629a40d	ligue1:angers	ligue1:rennes
+m_3VGnVW	l_3FJFUl	2026/2027	2026-09-06	2026-09-06T18:45:00+00:00	finished	t_2s2eyG	t_0LMnwp	Marseille	Paris FC	Marseille	Paris FC	2.0	3.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:73f4536763f0fe4bace3	ligue1:marseille	ligue1:paris-fc
+m_3RQ5Ya	l_3FJFUl	2026/2027	2026-09-11	2026-09-11T18:45:00+00:00	finished	t_3Ng6PH	t_2s2eyG	Rennes	Marseille	Rennes	Marseille	1.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:95616a36eed3dfcc2d5d	ligue1:rennes	ligue1:marseille
+m_3qOWTi	l_3FJFUl	2026/2027	2026-09-12	2026-09-12T15:15:00+00:00	finished	t_1p1AQf	t_13gLEF	Strasbourg	Monaco	Strasbourg	Monaco	1.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:46230d1a66c96e7c0a93	ligue1:strasbourg	ligue1:monaco
+m_1Wo9WZ	l_3FJFUl	2026/2027	2026-09-12	2026-09-12T18:45:00+00:00	finished	t_4BCeSu	t_0ZkdUF	Le Havre	Angers	Le Havre	Angers	0.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:a61d351650d90702ac11	ligue1:le-havre	ligue1:angers
+m_2NWHQm	l_3FJFUl	2026/2027	2026-09-12	2026-09-12T18:45:00+00:00	finished	t_0LMnwp	t_0xMlRV	Paris FC	Lyon	Paris FC	Lyon	0.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:af18b5371c7f29ffff53	ligue1:paris-fc	ligue1:lyon
+m_3MHRhp	l_3FJFUl	2026/2027	2026-09-12	2026-09-12T18:45:00+00:00	finished	t_2Vc7mg	t_0QUJ2Y	Auxerre	Nice	Auxerre	Nice	1.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:c37602855aba9438e6a5	ligue1:auxerre	ligue1:nice
+m_4YH1e4	l_3FJFUl	2026/2027	2026-09-12	2026-09-12T18:45:00+00:00	finished	t_2lHmy6	t_3t6spd	Lorient	Toulouse	Lorient	Toulouse	2.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:2d0ecdc3703757f7e29e	ligue1:lorient	ligue1:toulouse
+m_0jezHD	l_3FJFUl	2026/2027	2026-09-13	2026-09-13T13:00:00+00:00	finished	t_0tnX1I	t_0zVhE4	Lille	Troyes	Lille	Troyes	2.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:1884c9f5302d28550aac	ligue1:lille	ligue1:troyes
+m_2DgiSu	l_3FJFUl	2026/2027	2026-09-13	2026-09-13T15:15:00+00:00	finished	t_0GDAiO	t_38NVJO	Le Mans	Lens	Le Mans	Lens	2.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:d9db923d85df7790a297	ligue1:le-mans	ligue1:lens
+m_2voYlx	l_3FJFUl	2026/2027	2026-09-13	2026-09-13T18:45:00+00:00	finished	t_0EMLtg	t_41iFW3	Brest	Paris Saint-Germain	Brest	Paris Saint-Germain	0.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:d1c2afd760d1c80ba456	ligue1:brest	ligue1:paris-sg
+m_0kZhZF	l_3FJFUl	2026/2027	2026-09-18	2026-09-18T18:45:00+00:00	finished	t_13gLEF	t_38NVJO	Monaco	Lens	Monaco	Lens	2.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:e0f4ce122ac8c3f85d48	ligue1:monaco	ligue1:lens
+m_1BGUy4	l_3FJFUl	2026/2027	2026-09-19	2026-09-19T15:15:00+00:00	finished	t_0LMnwp	t_1p1AQf	Paris FC	Strasbourg	Paris FC	Strasbourg	2.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:6e27e433593e8dab070d	ligue1:paris-fc	ligue1:strasbourg
+m_1bJohP	l_3FJFUl	2026/2027	2026-09-19	2026-09-19T18:45:00+00:00	finished	t_3t6spd	t_4BCeSu	Toulouse	Le Havre	Toulouse	Le Havre	3.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:4c9140680f6c9f6a49ee	ligue1:toulouse	ligue1:le-havre
+m_2UIzIv	l_3FJFUl	2026/2027	2026-09-19	2026-09-19T18:45:00+00:00	finished	t_0xMlRV	t_3Ng6PH	Lyon	Rennes	Lyon	Rennes	4.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:52625bb930f51ebdbfbc	ligue1:lyon	ligue1:rennes
+m_3gPTHA	l_3FJFUl	2026/2027	2026-09-19	2026-09-19T18:45:00+00:00	finished	t_0GDAiO	t_2lHmy6	Le Mans	Lorient	Le Mans	Lorient	2.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:84fd8822722161edf55e	ligue1:le-mans	ligue1:lorient
+m_4GPNrD	l_3FJFUl	2026/2027	2026-09-19	2026-09-19T18:45:00+00:00	finished	t_0ZkdUF	t_0zVhE4	Angers	Troyes	Angers	Troyes	2.0	0.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:9877ba36e94ab103cb3e	ligue1:angers	ligue1:troyes
+m_1aMvWP	l_3FJFUl	2026/2027	2026-09-20	2026-09-20T13:00:00+00:00	finished	t_2Vc7mg	t_0EMLtg	Auxerre	Brest	Auxerre	Brest	2.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:30150999117ad6d6c7f7	ligue1:auxerre	ligue1:brest
+m_3WB8Fu	l_3FJFUl	2026/2027	2026-09-20	2026-09-20T15:15:00+00:00	finished	t_0QUJ2Y	t_0tnX1I	Nice	Lille	Nice	Lille	2.0	1.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:2ec5c74701432b6bf6e4	ligue1:nice	ligue1:lille
+m_2SY7ro	l_3FJFUl	2026/2027	2026-09-20	2026-09-20T18:45:00+00:00	finished	t_2s2eyG	t_41iFW3	Marseille	Paris Saint-Germain	Marseille	Paris Saint-Germain	1.0	2.0		2026-10-02T15:40:16.068289+00:00	2	ligue1	fx:43718f659b68b8b830ed	ligue1:marseille	ligue1:paris-sg
+m_14JcCL	l_3FJFUl	2026/2027	2026-10-09	2026-10-09T18:45:00+00:00	not_started	t_38NVJO	t_0xMlRV	Lens	Lyon	Lens	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2hLxyT	l_3FJFUl	2026/2027	2026-10-10	2026-10-10T15:15:00+00:00	not_started	t_0tnX1I	t_4BCeSu	Lille	Le Havre	Lille	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559674	ligue1:lille	ligue1:le-havre
+m_2LT2Nd	l_3FJFUl	2026/2027	2026-10-10	2026-10-10T18:45:00+00:00	not_started	t_0EMLtg	t_0ZkdUF	Brest	Angers	Brest	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559666	ligue1:brest	ligue1:angers
+m_2uHH60	l_3FJFUl	2026/2027	2026-10-10	2026-10-10T18:45:00+00:00	not_started	t_41iFW3	t_0GDAiO	Paris Saint-Germain	Le Mans	Paris Saint-Germain	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3O9aDT	l_3FJFUl	2026/2027	2026-10-10	2026-10-10T18:45:00+00:00	not_started	t_2lHmy6	t_0LMnwp	Lorient	Paris FC	Lorient	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559668	ligue1:lorient	ligue1:paris-fc
+m_4HKcRB	l_3FJFUl	2026/2027	2026-10-10	2026-10-10T18:45:00+00:00	not_started	t_13gLEF	t_3t6spd	Monaco	Toulouse	Monaco	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559673	ligue1:monaco	ligue1:toulouse
+m_480LDf	l_3FJFUl	2026/2027	2026-10-11	2026-10-11T13:00:00+00:00	not_started	t_0QUJ2Y	t_1p1AQf	Nice	Strasbourg	Nice	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559670	ligue1:nice	ligue1:strasbourg
+m_3PIYm0	l_3FJFUl	2026/2027	2026-10-11	2026-10-11T15:15:00+00:00	not_started	t_3Ng6PH	t_2Vc7mg	Rennes	Auxerre	Rennes	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2U09kV	l_3FJFUl	2026/2027	2026-10-11	2026-10-11T18:45:00+00:00	not_started	t_0zVhE4	t_2s2eyG	Troyes	Marseille	Troyes	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3pln58	l_3FJFUl	2026/2027	2026-10-16	2026-10-16T18:45:00+00:00	not_started	t_0GDAiO	t_3t6spd	Le Mans	Toulouse	Le Mans	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4RbsRB	l_3FJFUl	2026/2027	2026-10-17	2026-10-17T15:15:00+00:00	not_started	t_1p1AQf	t_41iFW3	Strasbourg	Paris Saint-Germain	Strasbourg	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559662	ligue1:strasbourg	ligue1:paris-sg
+m_1b4zha	l_3FJFUl	2026/2027	2026-10-17	2026-10-17T18:45:00+00:00	not_started	t_0tnX1I	t_0EMLtg	Lille	Brest	Lille	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559660	ligue1:lille	ligue1:brest
+m_1kZJPW	l_3FJFUl	2026/2027	2026-10-17	2026-10-17T18:45:00+00:00	not_started	t_0zVhE4	t_38NVJO	Troyes	Lens	Troyes	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2RULhx	l_3FJFUl	2026/2027	2026-10-18	2026-10-18T13:00:00+00:00	not_started	t_0ZkdUF	t_2s2eyG	Angers	Marseille	Angers	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559664	ligue1:angers	ligue1:marseille
+m_0iPVoc	l_3FJFUl	2026/2027	2026-10-18	2026-10-18T15:15:00+00:00	not_started	t_0LMnwp	t_3Ng6PH	Paris FC	Rennes	Paris FC	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1uUPuf	l_3FJFUl	2026/2027	2026-10-18	2026-10-18T15:15:00+00:00	not_started	t_4BCeSu	t_2Vc7mg	Le Havre	Auxerre	Le Havre	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559663	ligue1:le-havre	ligue1:auxerre
+m_1ybaO4	l_3FJFUl	2026/2027	2026-10-18	2026-10-18T15:15:00+00:00	not_started	t_2lHmy6	t_13gLEF	Lorient	Monaco	Lorient	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559657	ligue1:lorient	ligue1:monaco
+m_2VNJyu	l_3FJFUl	2026/2027	2026-10-18	2026-10-18T18:45:00+00:00	not_started	t_0xMlRV	t_0QUJ2Y	Lyon	Nice	Lyon	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559665	ligue1:lyon	ligue1:nice
+m_1rlN1U	l_3FJFUl	2026/2027	2026-10-23	2026-10-23T18:45:00+00:00	not_started	t_0EMLtg	t_0QUJ2Y	Brest	Nice	Brest	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559654	ligue1:brest	ligue1:nice
+m_2Atdht	l_3FJFUl	2026/2027	2026-10-24	2026-10-24T15:15:00+00:00	not_started	t_3t6spd	t_0zVhE4	Toulouse	Troyes	Toulouse	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2L1RAf	l_3FJFUl	2026/2027	2026-10-24	2026-10-24T18:45:00+00:00	not_started	t_38NVJO	t_0LMnwp	Lens	Paris FC	Lens	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4Z1eLV	l_3FJFUl	2026/2027	2026-10-25	2026-10-25T14:00:00+00:00	not_started	t_13gLEF	t_0tnX1I	Monaco	Lille	Monaco	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559650	ligue1:monaco	ligue1:lille
+m_0LOiqg	l_3FJFUl	2026/2027	2026-10-25	2026-10-25T16:15:00+00:00	not_started	t_2s2eyG	t_4BCeSu	Marseille	Le Havre	Marseille	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559649	ligue1:marseille	ligue1:le-havre
+m_1l9Fv2	l_3FJFUl	2026/2027	2026-10-25	2026-10-25T16:15:00+00:00	not_started	t_3Ng6PH	t_1p1AQf	Rennes	Strasbourg	Rennes	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_43stYq	l_3FJFUl	2026/2027	2026-10-25	2026-10-25T16:15:00+00:00	not_started	t_0ZkdUF	t_2lHmy6	Angers	Lorient	Angers	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559653	ligue1:angers	ligue1:lorient
+m_49KZ0T	l_3FJFUl	2026/2027	2026-10-25	2026-10-25T16:15:00+00:00	not_started	t_2Vc7mg	t_0GDAiO	Auxerre	Le Mans	Auxerre	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3DY8iO	l_3FJFUl	2026/2027	2026-10-25	2026-10-25T19:45:00+00:00	not_started	t_41iFW3	t_0xMlRV	Paris Saint-Germain	Lyon	Paris Saint-Germain	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559648	ligue1:paris-sg	ligue1:lyon
+m_49qvGz	l_3FJFUl	2026/2027	2026-10-30	2026-10-30T18:00:00+00:00	not_started	t_4BCeSu	t_41iFW3	Le Havre	Paris Saint-Germain	Le Havre	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559644	ligue1:le-havre	ligue1:paris-sg
+m_1bgQkd	l_3FJFUl	2026/2027	2026-10-30	2026-10-30T20:05:00+00:00	not_started	t_0tnX1I	t_38NVJO	Lille	Lens	Lille	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_08g6fR	l_3FJFUl	2026/2027	2026-10-31	2026-10-31T16:15:00+00:00	not_started	t_0QUJ2Y	t_3Ng6PH	Nice	Rennes	Nice	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0xOQtL	l_3FJFUl	2026/2027	2026-10-31	2026-10-31T19:45:00+00:00	not_started	t_2lHmy6	t_0EMLtg	Lorient	Brest	Lorient	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559641	ligue1:lorient	ligue1:brest
+m_1IGE7o	l_3FJFUl	2026/2027	2026-10-31	2026-10-31T19:45:00+00:00	not_started	t_0xMlRV	t_0ZkdUF	Lyon	Angers	Lyon	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559640	ligue1:lyon	ligue1:angers
+m_4XOc3a	l_3FJFUl	2026/2027	2026-10-31	2026-10-31T19:45:00+00:00	not_started	t_0zVhE4	t_0GDAiO	Troyes	Le Mans	Troyes	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0h9fte	l_3FJFUl	2026/2027	2026-11-01	2026-11-01T14:00:00+00:00	not_started	t_1p1AQf	t_2Vc7mg	Strasbourg	Auxerre	Strasbourg	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559647	ligue1:strasbourg	ligue1:auxerre
+m_18Uw0k	l_3FJFUl	2026/2027	2026-11-01	2026-11-01T16:15:00+00:00	not_started	t_0LMnwp	t_13gLEF	Paris FC	Monaco	Paris FC	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559642	ligue1:paris-fc	ligue1:monaco
+m_22n8XS	l_3FJFUl	2026/2027	2026-11-01	2026-11-01T19:45:00+00:00	not_started	t_2s2eyG	t_3t6spd	Marseille	Toulouse	Marseille	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559645	ligue1:marseille	ligue1:toulouse
+m_2vsKSO	l_3FJFUl	2026/2027	2026-11-06	2026-11-06T19:45:00+00:00	not_started	t_3t6spd	t_1p1AQf	Toulouse	Strasbourg	Toulouse	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559638	ligue1:toulouse	ligue1:strasbourg
+m_1ronn6	l_3FJFUl	2026/2027	2026-11-07	2026-11-07T16:15:00+00:00	not_started	t_2Vc7mg	t_0LMnwp	Auxerre	Paris FC	Auxerre	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559637	ligue1:auxerre	ligue1:paris-fc
+m_264TKg	l_3FJFUl	2026/2027	2026-11-07	2026-11-07T19:45:00+00:00	not_started	t_41iFW3	t_0zVhE4	Paris Saint-Germain	Troyes	Paris Saint-Germain	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0mizTH	l_3FJFUl	2026/2027	2026-11-08	2026-11-08T14:00:00+00:00	not_started	t_3Ng6PH	t_0tnX1I	Rennes	Lille	Rennes	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0BcQYa	l_3FJFUl	2026/2027	2026-11-08	2026-11-08T16:15:00+00:00	not_started	t_4BCeSu	t_2lHmy6	Le Havre	Lorient	Le Havre	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559633	ligue1:le-havre	ligue1:lorient
+m_16ULxt	l_3FJFUl	2026/2027	2026-11-08	2026-11-08T16:15:00+00:00	not_started	t_0EMLtg	t_0xMlRV	Brest	Lyon	Brest	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559632	ligue1:brest	ligue1:lyon
+m_1fpHlF	l_3FJFUl	2026/2027	2026-11-08	2026-11-08T16:15:00+00:00	not_started	t_0ZkdUF	t_0QUJ2Y	Angers	Nice	Angers	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559634	ligue1:angers	ligue1:nice
+m_3osflk	l_3FJFUl	2026/2027	2026-11-08	2026-11-08T16:15:00+00:00	not_started	t_0GDAiO	t_13gLEF	Le Mans	Monaco	Le Mans	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3xBldf	l_3FJFUl	2026/2027	2026-11-08	2026-11-08T19:45:00+00:00	not_started	t_38NVJO	t_2s2eyG	Lens	Marseille	Lens	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3rtQqb	l_3FJFUl	2026/2027	2026-11-20	2026-11-20T19:45:00+00:00	not_started	t_0zVhE4	t_4BCeSu	Troyes	Le Havre	Troyes	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3qap9x	l_3FJFUl	2026/2027	2026-11-21	2026-11-21T16:15:00+00:00	not_started	t_0QUJ2Y	t_41iFW3	Nice	Paris Saint-Germain	Nice	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559628	ligue1:nice	ligue1:paris-sg
+m_1waD57	l_3FJFUl	2026/2027	2026-11-21	2026-11-21T19:45:00+00:00	not_started	t_0tnX1I	t_0xMlRV	Lille	Lyon	Lille	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559624	ligue1:lille	ligue1:lyon
+m_39zXtJ	l_3FJFUl	2026/2027	2026-11-21	2026-11-21T19:45:00+00:00	not_started	t_38NVJO	t_3t6spd	Lens	Toulouse	Lens	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3vBvLr	l_3FJFUl	2026/2027	2026-11-21	2026-11-21T19:45:00+00:00	not_started	t_13gLEF	t_2Vc7mg	Monaco	Auxerre	Monaco	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559621	ligue1:monaco	ligue1:auxerre
+m_47p1ca	l_3FJFUl	2026/2027	2026-11-21	2026-11-21T19:45:00+00:00	not_started	t_1p1AQf	t_0EMLtg	Strasbourg	Brest	Strasbourg	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559627	ligue1:strasbourg	ligue1:brest
+m_11vVyC	l_3FJFUl	2026/2027	2026-11-22	2026-11-22T14:00:00+00:00	not_started	t_0LMnwp	t_0ZkdUF	Paris FC	Angers	Paris FC	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559625	ligue1:paris-fc	ligue1:angers
+m_1AvzJo	l_3FJFUl	2026/2027	2026-11-22	2026-11-22T16:15:00+00:00	not_started	t_2lHmy6	t_3Ng6PH	Lorient	Rennes	Lorient	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3pvUaB	l_3FJFUl	2026/2027	2026-11-22	2026-11-22T19:45:00+00:00	not_started	t_2s2eyG	t_0GDAiO	Marseille	Le Mans	Marseille	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1oxRzF	l_3FJFUl	2026/2027	2026-11-27	2026-11-27T19:45:00+00:00	not_started	t_0EMLtg	t_0LMnwp	Brest	Paris FC	Brest	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559616	ligue1:brest	ligue1:paris-fc
+m_2KbgcS	l_3FJFUl	2026/2027	2026-11-28	2026-11-28T16:15:00+00:00	not_started	t_0ZkdUF	t_38NVJO	Angers	Lens	Angers	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1LWSAq	l_3FJFUl	2026/2027	2026-11-28	2026-11-28T19:45:00+00:00	not_started	t_41iFW3	t_2lHmy6	Paris Saint-Germain	Lorient	Paris Saint-Germain	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559614	ligue1:paris-sg	ligue1:lorient
+m_1m7rKw	l_3FJFUl	2026/2027	2026-11-28	2026-11-28T19:45:00+00:00	not_started	t_0QUJ2Y	t_0zVhE4	Nice	Troyes	Nice	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2UeyHL	l_3FJFUl	2026/2027	2026-11-28	2026-11-28T19:45:00+00:00	not_started	t_0GDAiO	t_0tnX1I	Le Mans	Lille	Le Mans	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4f73g7	l_3FJFUl	2026/2027	2026-11-28	2026-11-28T19:45:00+00:00	not_started	t_4BCeSu	t_1p1AQf	Le Havre	Strasbourg	Le Havre	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559613	ligue1:le-havre	ligue1:strasbourg
+m_4g4g9c	l_3FJFUl	2026/2027	2026-11-29	2026-11-29T14:00:00+00:00	not_started	t_2Vc7mg	t_2s2eyG	Auxerre	Marseille	Auxerre	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559619	ligue1:auxerre	ligue1:marseille
+m_2M85c1	l_3FJFUl	2026/2027	2026-11-29	2026-11-29T16:15:00+00:00	not_started	t_3t6spd	t_3Ng6PH	Toulouse	Rennes	Toulouse	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1UrggI	l_3FJFUl	2026/2027	2026-11-29	2026-11-29T19:45:00+00:00	not_started	t_0xMlRV	t_13gLEF	Lyon	Monaco	Lyon	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559615	ligue1:lyon	ligue1:monaco
+m_0ddwIc	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_13gLEF	t_0ZkdUF	Monaco	Angers	Monaco	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0mOmWm	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_38NVJO	t_4BCeSu	Lens	Le Havre	Lens	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2QI0Cp	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_2s2eyG	t_0QUJ2Y	Marseille	Nice	Marseille	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2axaMF	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_1p1AQf	t_2lHmy6	Strasbourg	Lorient	Strasbourg	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3MY6tQ	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_3t6spd	t_41iFW3	Toulouse	Paris Saint-Germain	Toulouse	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3v8yI3	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_0tnX1I	t_2Vc7mg	Lille	Auxerre	Lille	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4BiPXT	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_0LMnwp	t_0GDAiO	Paris FC	Le Mans	Paris FC	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4W2YYV	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_0zVhE4	t_0xMlRV	Troyes	Lyon	Troyes	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4bGNFs	l_3FJFUl	2026/2027	2026-12-05	2026-12-05T16:00:00+00:00	not_started	t_3Ng6PH	t_0EMLtg	Rennes	Brest	Rennes	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0b7SX2	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_0ZkdUF	t_1p1AQf	Angers	Strasbourg	Angers	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0haaqY	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_0EMLtg	t_0zVhE4	Brest	Troyes	Brest	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_146ffC	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_0QUJ2Y	t_38NVJO	Nice	Lens	Nice	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1FFcXp	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_4BCeSu	t_0GDAiO	Le Havre	Le Mans	Le Havre	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2CxXPa	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_2Vc7mg	t_3t6spd	Auxerre	Toulouse	Auxerre	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3IWMkY	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_41iFW3	t_0LMnwp	Paris Saint-Germain	Paris FC	Paris Saint-Germain	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_46NjNS	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_3Ng6PH	t_13gLEF	Rennes	Monaco	Rennes	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4aNtHe	l_3FJFUl	2026/2027	2026-12-12	2026-12-12T16:00:00+00:00	not_started	t_2lHmy6	t_0tnX1I	Lorient	Lille	Lorient	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2idWzA	l_3FJFUl	2026/2027	2026-12-13	2026-12-13T19:45:00+00:00	not_started	t_0xMlRV	t_2s2eyG	Lyon	Marseille	Lyon	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559594	ligue1:lyon	ligue1:marseille
+m_08b4IX	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_0tnX1I	t_1p1AQf	Lille	Strasbourg	Lille	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0EOsXz	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_0EMLtg	t_2s2eyG	Brest	Marseille	Brest	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1vile4	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_2lHmy6	t_2Vc7mg	Lorient	Auxerre	Lorient	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2VkKEa	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_0zVhE4	t_3Ng6PH	Troyes	Rennes	Troyes	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2YFkl2	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_0GDAiO	t_0xMlRV	Le Mans	Lyon	Le Mans	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_35txD0	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_3t6spd	t_0ZkdUF	Toulouse	Angers	Toulouse	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3M2rJJ	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_0LMnwp	t_4BCeSu	Paris FC	Le Havre	Paris FC	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3pUo04	l_3FJFUl	2026/2027	2027-01-02	2027-01-02T16:00:00+00:00	not_started	t_13gLEF	t_0QUJ2Y	Monaco	Nice	Monaco	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1zb4HL	l_3FJFUl	2026/2027	2027-01-03	2027-01-03T19:45:00+00:00	not_started	t_38NVJO	t_41iFW3	Lens	Paris Saint-Germain	Lens	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_01lr9r	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_0QUJ2Y	t_4BCeSu	Nice	Le Havre	Nice	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0Qm8QZ	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_0xMlRV	t_2lHmy6	Lyon	Lorient	Lyon	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0iQbwk	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_2Vc7mg	t_0zVhE4	Auxerre	Troyes	Auxerre	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_15ypul	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_1p1AQf	t_0GDAiO	Strasbourg	Le Mans	Strasbourg	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2ZAjyP	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_0LMnwp	t_3t6spd	Paris FC	Toulouse	Paris FC	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3PoM0j	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_3Ng6PH	t_38NVJO	Rennes	Lens	Rennes	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3WiPsI	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_13gLEF	t_0EMLtg	Monaco	Brest	Monaco	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3YXEfX	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_2s2eyG	t_0tnX1I	Marseille	Lille	Marseille	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3tE0l2	l_3FJFUl	2026/2027	2027-01-16	2027-01-16T16:00:00+00:00	not_started	t_0ZkdUF	t_41iFW3	Angers	Paris Saint-Germain	Angers	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0oWIRf	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_0zVhE4	t_13gLEF	Troyes	Monaco	Troyes	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0x2V6L	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_38NVJO	t_0EMLtg	Lens	Brest	Lens	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1DLYoO	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_1p1AQf	t_0xMlRV	Strasbourg	Lyon	Strasbourg	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1QOiNm	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_0GDAiO	t_0ZkdUF	Le Mans	Angers	Le Mans	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1SisMC	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_0tnX1I	t_0LMnwp	Lille	Paris FC	Lille	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2HlKhh	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_3t6spd	t_0QUJ2Y	Toulouse	Nice	Toulouse	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2XTnG4	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_4BCeSu	t_3Ng6PH	Le Havre	Rennes	Le Havre	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4XdgmW	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_2lHmy6	t_2s2eyG	Lorient	Marseille	Lorient	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4bQma9	l_3FJFUl	2026/2027	2027-01-23	2027-01-23T16:00:00+00:00	not_started	t_41iFW3	t_2Vc7mg	Paris Saint-Germain	Auxerre	Paris Saint-Germain	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_06OJvR	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_0EMLtg	t_1p1AQf	Brest	Strasbourg	Brest	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0tCKyT	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_0ZkdUF	t_4BCeSu	Angers	Le Havre	Angers	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_15fqJH	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_2s2eyG	t_0zVhE4	Marseille	Troyes	Marseille	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2ISF1C	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_13gLEF	t_41iFW3	Monaco	Paris Saint-Germain	Monaco	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Jx0vu	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_0LMnwp	t_2Vc7mg	Paris FC	Auxerre	Paris FC	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2orHIF	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_0xMlRV	t_0tnX1I	Lyon	Lille	Lyon	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3NTjzA	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_0GDAiO	t_0QUJ2Y	Le Mans	Nice	Le Mans	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3gvplx	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_3Ng6PH	t_2lHmy6	Rennes	Lorient	Rennes	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4csvOn	l_3FJFUl	2026/2027	2027-01-30	2027-01-30T16:00:00+00:00	not_started	t_3t6spd	t_38NVJO	Toulouse	Lens	Toulouse	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_04RLr7	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_1p1AQf	t_0LMnwp	Strasbourg	Paris FC	Strasbourg	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_07qDSV	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_0QUJ2Y	t_0EMLtg	Nice	Brest	Nice	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0IfyNQ	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_38NVJO	t_0ZkdUF	Lens	Angers	Lens	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0gNsjW	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_0zVhE4	t_0tnX1I	Troyes	Lille	Troyes	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1T8lFU	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_2Vc7mg	t_13gLEF	Auxerre	Monaco	Auxerre	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1ulEif	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_4BCeSu	t_3t6spd	Le Havre	Toulouse	Le Havre	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Moxz7	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_3Ng6PH	t_0xMlRV	Rennes	Lyon	Rennes	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3qYLVe	l_3FJFUl	2026/2027	2027-02-06	2027-02-06T16:00:00+00:00	not_started	t_2lHmy6	t_0GDAiO	Lorient	Le Mans	Lorient	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3coiJR	l_3FJFUl	2026/2027	2027-02-07	2027-02-07T19:45:00+00:00	not_started	t_41iFW3	t_2s2eyG	Paris Saint-Germain	Marseille	Paris Saint-Germain	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559549	ligue1:paris-sg	ligue1:marseille
+m_1Gw8sU	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_0GDAiO	t_41iFW3	Le Mans	Paris Saint-Germain	Le Mans	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1V4wCu	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_2s2eyG	t_0ZkdUF	Marseille	Angers	Marseille	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1wmEex	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_0EMLtg	t_3Ng6PH	Brest	Rennes	Brest	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1yNbLl	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_3t6spd	t_13gLEF	Toulouse	Monaco	Toulouse	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Zp4KF	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_2Vc7mg	t_1p1AQf	Auxerre	Strasbourg	Auxerre	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3EcXpI	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_0LMnwp	t_0zVhE4	Paris FC	Troyes	Paris FC	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3UttXk	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_2lHmy6	t_4BCeSu	Lorient	Le Havre	Lorient	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_40z1qu	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_0tnX1I	t_0QUJ2Y	Lille	Nice	Lille	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4d2qyY	l_3FJFUl	2026/2027	2027-02-13	2027-02-13T16:00:00+00:00	not_started	t_0xMlRV	t_38NVJO	Lyon	Lens	Lyon	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0PaeGX	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_38NVJO	t_0zVhE4	Lens	Troyes	Lens	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0XIpFe	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_0ZkdUF	t_0LMnwp	Angers	Paris FC	Angers	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0bshJH	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_0QUJ2Y	t_2Vc7mg	Nice	Auxerre	Nice	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1EPfoK	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_13gLEF	t_0GDAiO	Monaco	Le Mans	Monaco	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2G14Yh	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_1p1AQf	t_2s2eyG	Strasbourg	Marseille	Strasbourg	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_38IaxK	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_41iFW3	t_0EMLtg	Paris Saint-Germain	Brest	Paris Saint-Germain	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3D0tqV	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_4BCeSu	t_0xMlRV	Le Havre	Lyon	Le Havre	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3w8426	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_0tnX1I	t_2lHmy6	Lille	Lorient	Lille	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4fN9kp	l_3FJFUl	2026/2027	2027-02-20	2027-02-20T16:00:00+00:00	not_started	t_3Ng6PH	t_3t6spd	Rennes	Toulouse	Rennes	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_00Vb1W	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_2lHmy6	t_0ZkdUF	Lorient	Angers	Lorient	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0l0JYI	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_0EMLtg	t_13gLEF	Brest	Monaco	Brest	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0uyoUy	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_0zVhE4	t_0QUJ2Y	Troyes	Nice	Troyes	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_15nEty	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_2Vc7mg	t_0tnX1I	Auxerre	Lille	Auxerre	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_19bl8J	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_2s2eyG	t_3Ng6PH	Marseille	Rennes	Marseille	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_28A3HH	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_0GDAiO	t_0LMnwp	Le Mans	Paris FC	Le Mans	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2LB69e	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_1p1AQf	t_4BCeSu	Strasbourg	Le Havre	Strasbourg	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4Qsyji	l_3FJFUl	2026/2027	2027-02-27	2027-02-27T16:00:00+00:00	not_started	t_0xMlRV	t_3t6spd	Lyon	Toulouse	Lyon	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_008AHR	l_3FJFUl	2026/2027	2027-02-28	2027-02-28T19:45:00+00:00	not_started	t_41iFW3	t_38NVJO	Paris Saint-Germain	Lens	Paris Saint-Germain	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_07NkjK	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_38NVJO	t_1p1AQf	Lens	Strasbourg	Lens	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_08FMIt	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_13gLEF	t_0xMlRV	Monaco	Lyon	Monaco	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1ZwzoO	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_0LMnwp	t_0EMLtg	Paris FC	Brest	Paris FC	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2nOMoT	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_0tnX1I	t_2s2eyG	Lille	Marseille	Lille	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2qUeTY	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_0ZkdUF	t_2Vc7mg	Angers	Auxerre	Angers	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3S1aEs	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_3t6spd	t_0GDAiO	Toulouse	Le Mans	Toulouse	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3uZ787	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_0zVhE4	t_2lHmy6	Troyes	Lorient	Troyes	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4H6IAa	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_41iFW3	t_3Ng6PH	Paris Saint-Germain	Rennes	Paris Saint-Germain	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4Z1vV1	l_3FJFUl	2026/2027	2027-03-06	2027-03-06T16:00:00+00:00	not_started	t_4BCeSu	t_0QUJ2Y	Le Havre	Nice	Le Havre	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_10MMEn	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_0QUJ2Y	t_3t6spd	Nice	Toulouse	Nice	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_10fVMg	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_0LMnwp	t_2lHmy6	Paris FC	Lorient	Paris FC	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_10hqrY	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_2s2eyG	t_13gLEF	Marseille	Monaco	Marseille	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Sl8ZH	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_4BCeSu	t_38NVJO	Le Havre	Lens	Le Havre	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2zn88g	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_1p1AQf	t_0ZkdUF	Strasbourg	Angers	Strasbourg	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3bZvcl	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_0xMlRV	t_0zVhE4	Lyon	Troyes	Lyon	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3wLioT	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_2Vc7mg	t_41iFW3	Auxerre	Paris Saint-Germain	Auxerre	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3wUQD0	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_0GDAiO	t_3Ng6PH	Le Mans	Rennes	Le Mans	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4cHzql	l_3FJFUl	2026/2027	2027-03-13	2027-03-13T16:00:00+00:00	not_started	t_0EMLtg	t_0tnX1I	Brest	Lille	Brest	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1ScbQ3	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_13gLEF	t_4BCeSu	Monaco	Le Havre	Monaco	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_20ffah	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_3Ng6PH	t_0LMnwp	Rennes	Paris FC	Rennes	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Li9eX	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_0zVhE4	t_2Vc7mg	Troyes	Auxerre	Troyes	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3Qj2bV	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_38NVJO	t_0tnX1I	Lens	Lille	Lens	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3pxI1x	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_41iFW3	t_1p1AQf	Paris Saint-Germain	Strasbourg	Paris Saint-Germain	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3yLBnk	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_0ZkdUF	t_0GDAiO	Angers	Le Mans	Angers	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_49jDOy	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_2lHmy6	t_0QUJ2Y	Lorient	Nice	Lorient	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4R8Q1l	l_3FJFUl	2026/2027	2027-03-20	2027-03-20T16:00:00+00:00	not_started	t_3t6spd	t_0EMLtg	Toulouse	Brest	Toulouse	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2qCO4o	l_3FJFUl	2026/2027	2027-03-21	2027-03-21T19:45:00+00:00	not_started	t_2s2eyG	t_0xMlRV	Marseille	Lyon	Marseille	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559495	ligue1:marseille	ligue1:lyon
+m_24XPat	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_0LMnwp	t_41iFW3	Paris FC	Paris Saint-Germain	Paris FC	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_28XUQs	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_4BCeSu	t_0zVhE4	Le Havre	Troyes	Le Havre	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2RG8rY	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_1p1AQf	t_3t6spd	Strasbourg	Toulouse	Strasbourg	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2fyqQU	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_0GDAiO	t_2s2eyG	Le Mans	Marseille	Le Mans	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2s1Wig	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_0EMLtg	t_2lHmy6	Brest	Lorient	Brest	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_35jtdL	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_2Vc7mg	t_38NVJO	Auxerre	Lens	Auxerre	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3DWZQu	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_0ZkdUF	t_13gLEF	Angers	Monaco	Angers	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3apvdy	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_0tnX1I	t_3Ng6PH	Lille	Rennes	Lille	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4eRgFa	l_3FJFUl	2026/2027	2027-04-03	2027-04-03T15:00:00+00:00	not_started	t_0QUJ2Y	t_0xMlRV	Nice	Lyon	Nice	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0xYpMa	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_41iFW3	t_4BCeSu	Paris Saint-Germain	Le Havre	Paris Saint-Germain	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1AmBgm	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_2lHmy6	t_38NVJO	Lorient	Lens	Lorient	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2NZSUG	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_0QUJ2Y	t_0LMnwp	Nice	Paris FC	Nice	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2vpXwX	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_0xMlRV	t_1p1AQf	Lyon	Strasbourg	Lyon	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3MS116	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_0zVhE4	t_0ZkdUF	Troyes	Angers	Troyes	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4DSfpz	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_2s2eyG	t_0EMLtg	Marseille	Brest	Marseille	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4Iofh3	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_13gLEF	t_3Ng6PH	Monaco	Rennes	Monaco	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4R11hN	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_0GDAiO	t_2Vc7mg	Le Mans	Auxerre	Le Mans	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4ZIIX9	l_3FJFUl	2026/2027	2027-04-10	2027-04-10T15:00:00+00:00	not_started	t_0tnX1I	t_3t6spd	Lille	Toulouse	Lille	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1NDI5M	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_3Ng6PH	t_0zVhE4	Rennes	Troyes	Rennes	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1XUAPt	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_2Vc7mg	t_2lHmy6	Auxerre	Lorient	Auxerre	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1cNkCg	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_4BCeSu	t_2s2eyG	Le Havre	Marseille	Le Havre	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1ktGB1	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_0EMLtg	t_0GDAiO	Brest	Le Mans	Brest	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2TDHD9	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_0ZkdUF	t_0xMlRV	Angers	Lyon	Angers	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_38jnPa	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_3t6spd	t_0LMnwp	Toulouse	Paris FC	Toulouse	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3X0V5e	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_13gLEF	t_1p1AQf	Monaco	Strasbourg	Monaco	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_40RK1O	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_41iFW3	t_0tnX1I	Paris Saint-Germain	Lille	Paris Saint-Germain	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4GNkoP	l_3FJFUl	2026/2027	2027-04-17	2027-04-17T15:00:00+00:00	not_started	t_38NVJO	t_0QUJ2Y	Lens	Nice	Lens	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_07XTql	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_0LMnwp	t_38NVJO	Paris FC	Lens	Paris FC	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0QQn2i	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_0GDAiO	t_4BCeSu	Le Mans	Le Havre	Le Mans	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0SSyI5	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_0xMlRV	t_0EMLtg	Lyon	Brest	Lyon	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1SY52q	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_1p1AQf	t_3Ng6PH	Strasbourg	Rennes	Strasbourg	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2CqEbH	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_2lHmy6	t_41iFW3	Lorient	Paris Saint-Germain	Lorient	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Kn6g3	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_0tnX1I	t_13gLEF	Lille	Monaco	Lille	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3j0iDp	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_2s2eyG	t_2Vc7mg	Marseille	Auxerre	Marseille	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_47xAiz	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_0zVhE4	t_3t6spd	Troyes	Toulouse	Troyes	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4gQM4I	l_3FJFUl	2026/2027	2027-04-24	2027-04-24T15:00:00+00:00	not_started	t_0QUJ2Y	t_0ZkdUF	Nice	Angers	Nice	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0r9J7c	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_13gLEF	t_2lHmy6	Monaco	Lorient	Monaco	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Il4Pj	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_3t6spd	t_2s2eyG	Toulouse	Marseille	Toulouse	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2NK6BY	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_1p1AQf	t_0tnX1I	Strasbourg	Lille	Strasbourg	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2uDR3N	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_3Ng6PH	t_0QUJ2Y	Rennes	Nice	Rennes	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3cODAX	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_41iFW3	t_0ZkdUF	Paris Saint-Germain	Angers	Paris Saint-Germain	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3fHD6D	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_2Vc7mg	t_0xMlRV	Auxerre	Lyon	Auxerre	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3jLzRq	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_38NVJO	t_0GDAiO	Lens	Le Mans	Lens	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4WWxb6	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_0zVhE4	t_0EMLtg	Troyes	Brest	Troyes	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4YG0LF	l_3FJFUl	2026/2027	2027-05-01	2027-05-01T15:00:00+00:00	not_started	t_4BCeSu	t_0LMnwp	Le Havre	Paris FC	Le Havre	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0iviKt	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_0EMLtg	t_2Vc7mg	Brest	Auxerre	Brest	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1Cop9P	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_38NVJO	t_13gLEF	Lens	Monaco	Lens	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1hVHCz	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_2lHmy6	t_1p1AQf	Lorient	Strasbourg	Lorient	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1pd9kA	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_0QUJ2Y	t_2s2eyG	Nice	Marseille	Nice	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2QFssX	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_3Ng6PH	t_4BCeSu	Rennes	Le Havre	Rennes	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2goJ7W	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_0ZkdUF	t_3t6spd	Angers	Toulouse	Angers	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2pmYjE	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_0GDAiO	t_0zVhE4	Le Mans	Troyes	Le Mans	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3ZTRD2	l_3FJFUl	2026/2027	2027-05-08	2027-05-08T15:00:00+00:00	not_started	t_0LMnwp	t_0tnX1I	Paris FC	Lille	Paris FC	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3Jg5SS	l_3FJFUl	2026/2027	2027-05-09	2027-05-09T18:45:00+00:00	not_started	t_0xMlRV	t_41iFW3	Lyon	Paris Saint-Germain	Lyon	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1	ligue1:football-data:559441	ligue1:lyon	ligue1:paris-sg
+m_1LjEip	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_1p1AQf	t_0zVhE4	Strasbourg	Troyes	Strasbourg	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1ffqzp	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_0xMlRV	t_0GDAiO	Lyon	Le Mans	Lyon	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1zJAfX	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_2s2eyG	t_38NVJO	Marseille	Lens	Marseille	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2DPHza	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_0EMLtg	t_4BCeSu	Brest	Le Havre	Brest	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2MytaI	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_3t6spd	t_2lHmy6	Toulouse	Lorient	Toulouse	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3eMa7E	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_13gLEF	t_0LMnwp	Monaco	Paris FC	Monaco	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_41pxSl	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_41iFW3	t_0QUJ2Y	Paris Saint-Germain	Nice	Paris Saint-Germain	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_47vSDZ	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_0tnX1I	t_0ZkdUF	Lille	Angers	Lille	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4gRmso	l_3FJFUl	2026/2027	2027-05-16	2027-05-16T15:00:00+00:00	not_started	t_2Vc7mg	t_3Ng6PH	Auxerre	Rennes	Auxerre	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0XsrHi	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_3t6spd	t_2Vc7mg	Toulouse	Auxerre	Toulouse	Auxerre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0g0FXX	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_0ZkdUF	t_0EMLtg	Angers	Brest	Angers	Brest				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1eZ8yK	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_2lHmy6	t_0xMlRV	Lorient	Lyon	Lorient	Lyon				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2Y42yA	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_4BCeSu	t_0tnX1I	Le Havre	Lille	Le Havre	Lille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_2mhe2b	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_0QUJ2Y	t_13gLEF	Nice	Monaco	Nice	Monaco				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_30IV88	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_0zVhE4	t_41iFW3	Troyes	Paris Saint-Germain	Troyes	Paris Saint-Germain				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3KD0rT	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_0GDAiO	t_1p1AQf	Le Mans	Strasbourg	Le Mans	Strasbourg				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3do58L	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_38NVJO	t_3Ng6PH	Lens	Rennes	Lens	Rennes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4axeiq	l_3FJFUl	2026/2027	2027-05-22	2027-05-22T15:00:00+00:00	not_started	t_0LMnwp	t_2s2eyG	Paris FC	Marseille	Paris FC	Marseille				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0Kr4Qk	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_0EMLtg	t_38NVJO	Brest	Lens	Brest	Lens				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_0kLGwO	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_1p1AQf	t_0QUJ2Y	Strasbourg	Nice	Strasbourg	Nice				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_15pTZW	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_3Ng6PH	t_0ZkdUF	Rennes	Angers	Rennes	Angers				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_1fjpeO	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_2s2eyG	t_2lHmy6	Marseille	Lorient	Marseille	Lorient				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_26rQwQ	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_2Vc7mg	t_4BCeSu	Auxerre	Le Havre	Auxerre	Le Havre				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3io1uv	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_0tnX1I	t_0GDAiO	Lille	Le Mans	Lille	Le Mans				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_3m3JTU	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_0xMlRV	t_0LMnwp	Lyon	Paris FC	Lyon	Paris FC				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4O7qJB	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_41iFW3	t_3t6spd	Paris Saint-Germain	Toulouse	Paris Saint-Germain	Toulouse				2026-10-02T15:53:53.107512+00:00	2	ligue1			
+m_4VM0RM	l_3FJFUl	2026/2027	2027-05-29	2027-05-29T19:00:00+00:00	not_started	t_13gLEF	t_0zVhE4	Monaco	Troyes	Monaco	Troyes				2026-10-02T15:53:53.107512+00:00	2	ligue1			
