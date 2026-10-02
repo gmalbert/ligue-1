@@ -12,7 +12,7 @@ Requires:
 from __future__ import annotations
 
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -29,7 +29,7 @@ BASE_URL = "https://api.football-data.org/v4"
 HEADERS = {"X-Auth-Token": FOOTBALL_DATA_KEY}
 
 OUT_PATH = "data_files/upcoming_fixtures.csv"
-OUTPUT_COLUMNS = ["Date", "Time", "Matchday", "HomeTeam", "AwayTeam", "Status"]
+OUTPUT_COLUMNS = ["Date", "Time", "Matchday", "HomeTeam", "AwayTeam", "Status", "fixture_id", "provider_event_id", "source", "observed_at", "kickoff_utc"]
 
 
 def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
@@ -61,12 +61,18 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
         df.to_csv(OUT_PATH, index=False)
         return df
 
+    observed_at = datetime.now(timezone.utc).isoformat()
     et = pytz.timezone("America/New_York")
     rows = []
     for m in matches:
         utc_dt = datetime.fromisoformat(m["utcDate"].replace("Z", "+00:00"))
         et_dt = utc_dt.astimezone(et)
         rows.append({
+            "fixture_id": "ligue1:football-data:" + str(m["id"]),
+            "provider_event_id": str(m["id"]),
+            "source": "football-data.org",
+            "observed_at": observed_at,
+            "kickoff_utc": utc_dt.isoformat(),
             "Date":      et_dt.strftime("%Y-%m-%d"),
             "Time":      et_dt.strftime("%I:%M %p ET"),
             "Matchday":  m.get("matchday"),
@@ -88,7 +94,7 @@ def fetch_upcoming_pd_fixtures(season: int | None = None) -> pd.DataFrame:
     df = df.sort_values("Date").reset_index(drop=True)
 
     df.to_csv(OUT_PATH, index=False)
-    print(f"✓ Saved {len(df)} upcoming fixtures → {OUT_PATH}")
+    print(f"OK Saved {len(df)} upcoming fixtures -> {OUT_PATH}")
     return df
 
 

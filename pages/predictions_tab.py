@@ -136,6 +136,8 @@ st.caption("Ensemble model: XGBoost · Random Forest · Gradient Boosting · Log
 metrics = _load_metrics()
 fixtures = _safe_read_csv(FIXTURES_PATH)
 preds_log = _safe_read_csv(PRED_LOG_PATH)
+from pitch_oracle_core.pitchapi.serving import legacy_prediction_overlay
+preds_log = legacy_prediction_overlay(preds_log, league_key="ligue1")
 
 if preds_log.empty:
     _render_empty_predictions_page(preds_log, fixtures, metrics)
@@ -153,6 +155,7 @@ if preds_log.empty:
 # ── Model version selector ────────────────────────────────────────────────
 available_models = sorted(preds_log["ModelVersion"].dropna().unique()) if "ModelVersion" in preds_log.columns else ["ensemble_v1"]
 model_labels = {
+    "pitchapi_v1": "Validated PitchAPI forecast / baseline fallback",
     "ensemble_v1": "🤝 Ensemble (XGB + RF + GB + LR)",
     "nn_v1":       "🧠 Neural Network (LaLigaNet)",
 }
@@ -162,6 +165,7 @@ if len(available_models) > 1:
         options=available_models,
         format_func=lambda x: model_labels.get(x, x),
         key="model_version_sel",
+        index=available_models.index("pitchapi_v1") if "pitchapi_v1" in available_models else 0,
     )
     preds_log = preds_log[preds_log["ModelVersion"] == sel_model].copy()
 else:
@@ -172,7 +176,7 @@ else:
 if path.exists(FIXTURES_PATH):
     fix_times = pd.read_csv(FIXTURES_PATH)[["HomeTeam", "AwayTeam", "Date", "Time"]]
     preds_log = preds_log.rename(columns={"MatchDate": "Date"})
-    preds_log = preds_log.merge(fix_times, on=["HomeTeam", "AwayTeam", "Date"], how="left")
+    preds_log = preds_log.merge(fix_times, on=["HomeTeam", "AwayTeam", "Date"], how="inner", validate="many_to_one")
 else:
     preds_log = preds_log.rename(columns={"MatchDate": "Date"})
     preds_log["Time"] = ""

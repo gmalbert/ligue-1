@@ -1,0 +1,26 @@
+name: Hourly lineup and forecast capture
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "25 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.repository }}-runtime-artifacts
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    uses: gmalbert/pitch-oracle-core/.github/workflows/pitchapi-hourly-consumer.yml@e31c5b9703ef05bad486fc348894fedd64655033
+    with:
+      core_ref: e31c5b9703ef05bad486fc348894fedd64655033
+      league_key: ligue1
+      install_command: python -m pip install -r requirements.txt
+      fixture_command: python fetch_upcoming_fixtures.py
+      historical_file: pitchapi_historical_features.csv
+      prediction_command: python automation/generate_predictions.py
+      manifest_command: python automation/precompute_app_cache.py
+    secrets: inherit
