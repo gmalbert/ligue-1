@@ -34,6 +34,7 @@ STEPS: list[tuple[str, list[str], bool, bool]] = [
     # (label, command, requires_odds_api, requires_api_football)
     ("Fetch historical CSVs",       ["python", "fetch_historical_csvs.py"],   False, False),
     ("Fetch upcoming fixtures",     ["python", "fetch_upcoming_fixtures.py"], False, False),
+    ("PitchAPI daily", ["python", "-m", "pitch_oracle_core.pitchapi.pipeline", "daily", "--league", "ligue1", "--historical-file", "pitchapi_historical_features.csv"], False, False),
     ("Fetch xG proxy",              ["python", "fetch_fbref_xg.py"],          False, False),
     ("Fetch Coupe de France",       ["python", "fetch_copa_fixtures.py"],     False, False),
     ("Fetch bookmaker odds",        ["python", "fetch_odds.py"],              True,  False),
@@ -45,8 +46,10 @@ STEPS: list[tuple[str, list[str], bool, bool]] = [
     ("Prepare model features",      ["python", "prepare_model_data.py"],      False, False),
     ("Build enriched feature store", ["python", "build_enriched_features.py"], False, False),
     ("Train models",                ["python", "train_models.py"],            False, False),
+    ("PitchAPI train", ["python", "-m", "pitch_oracle_core.pitchapi.pipeline", "train", "--league", "ligue1", "--historical-file", "pitchapi_historical_features.csv"], False, False),
     ("Run historical backtest",     ["python", "backtest.py"],                False, False),
     ("Pre-generate predictions",    ["python", "automation/generate_predictions.py"], False, False),
+    ("PitchAPI hourly", ["python", "-m", "pitch_oracle_core.pitchapi.pipeline", "hourly", "--league", "ligue1", "--historical-file", "pitchapi_historical_features.csv"], False, False),
     ("Validate prediction log",     ["python", "track_predictions.py", "--validate"], False, False),
     ("Precompute app cache",        ["python", "automation/precompute_app_cache.py"], False, False),
 ]

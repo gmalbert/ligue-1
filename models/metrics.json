@@ -1,24 +1,24 @@
 {
   "accuracy": 0.4706,
-  "f1_macro": 0.3086,
+  "f1_macro": 0.309,
   "draw_recall": 0.0,
-  "log_loss": 1.0187,
-  "brier_score": 0.6107,
-  "calibration_error": 0.0538,
-  "roc_auc_ovr_macro": 0.6007,
+  "log_loss": 1.0189,
+  "brier_score": 0.6109,
+  "calibration_error": 0.0499,
+  "roc_auc_ovr_macro": 0.6092,
   "majority_baseline_accuracy": 0.4608,
   "market_baseline_accuracy": 0.4706,
   "market_baseline_log_loss": 1.0189,
   "market_baseline_brier_score": 0.6109,
   "market_accuracy_delta": 0.0,
-  "market_log_loss_delta": 0.0001,
-  "market_brier_delta": 0.0002,
-  "roi_pct": -18.62,
-  "profit_units": -22.9,
-  "bets_placed": 123,
-  "bet_win_rate": 0.187,
-  "closing_line_value_pct": 0.32,
-  "market_blend_weight": 0.95,
+  "market_log_loss_delta": 0.0,
+  "market_brier_delta": 0.0,
+  "roi_pct": -17.95,
+  "profit_units": -21.9,
+  "bets_placed": 122,
+  "bet_win_rate": 0.1885,
+  "closing_line_value_pct": 0.2,
+  "market_blend_weight": 1.0,
   "class_distribution_train": {
     "0": 0.3081,
     "1": 0.2563,
@@ -70,39 +70,39 @@
       "matches": 380,
       "accuracy": 0.4816,
       "market_accuracy": 0.4842,
-      "log_loss": 1.0574,
+      "log_loss": 1.0631,
       "market_log_loss": 1.0033
     },
     {
       "season": "2019-20",
       "matches": 279,
-      "accuracy": 0.4301,
+      "accuracy": 0.4516,
       "market_accuracy": 0.5233,
-      "log_loss": 1.0709,
+      "log_loss": 1.0617,
       "market_log_loss": 0.9913
     },
     {
       "season": "2020-21",
       "matches": 380,
-      "accuracy": 0.4711,
+      "accuracy": 0.4763,
       "market_accuracy": 0.5105,
-      "log_loss": 1.0644,
+      "log_loss": 1.0527,
       "market_log_loss": 1.0003
     },
     {
       "season": "2021-22",
       "matches": 380,
-      "accuracy": 0.4947,
+      "accuracy": 0.4895,
       "market_accuracy": 0.5,
-      "log_loss": 1.0172,
+      "log_loss": 1.0263,
       "market_log_loss": 1.0003
     },
     {
       "season": "2022-23",
       "matches": 380,
-      "accuracy": 0.5026,
+      "accuracy": 0.5053,
       "market_accuracy": 0.55,
-      "log_loss": 0.9984,
+      "log_loss": 0.9893,
       "market_log_loss": 0.9696
     },
     {
@@ -110,24 +110,32 @@
       "matches": 306,
       "accuracy": 0.4444,
       "market_accuracy": 0.5065,
-      "log_loss": 1.0794,
+      "log_loss": 1.0679,
       "market_log_loss": 1.0149
     },
     {
       "season": "2024-25",
       "matches": 306,
-      "accuracy": 0.5392,
+      "accuracy": 0.549,
       "market_accuracy": 0.5425,
-      "log_loss": 0.9964,
+      "log_loss": 0.9935,
       "market_log_loss": 0.9585
     },
     {
       "season": "2025-26",
       "matches": 306,
-      "accuracy": 0.4706,
+      "accuracy": 0.4542,
       "market_accuracy": 0.4706,
-      "log_loss": 1.0501,
+      "log_loss": 1.0541,
       "market_log_loss": 1.0189
+    },
+    {
+      "season": "2026-27",
+      "matches": 45,
+      "accuracy": 0.6,
+      "market_accuracy": 0.4,
+      "log_loss": 1.0336,
+      "market_log_loss": 1.0937
     }
   ]
 }

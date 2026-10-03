@@ -6,6 +6,7 @@ Run with:
 
 from os import path
 from datetime import datetime
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import streamlit as st
 
@@ -23,33 +24,13 @@ from utils import load_upcoming_fixtures, next_match_countdown  # noqa: E402
 
 _logo = path.join("data_files", "logo.png")
 
-# ── Mode must be set before apply_theme() ─────────────────────────────────
-# Browser-local time is sent to Streamlit via a query param. First paint uses
-# night mode until the browser reports its hour, then the page reruns.
-_hour_param = st.query_params.get("browser_hour", None)
+# Detect the browser clock through native Streamlit context.
+_browser_timezone = getattr(st.context, "timezone", None)
 try:
-    _browser_hour = int(_hour_param) if _hour_param is not None else None
-except ValueError:
-    _browser_hour = None
-
-_theme_hour = _browser_hour if _browser_hour is not None else datetime.now().hour
+    _theme_hour = datetime.now(ZoneInfo(_browser_timezone)).hour if _browser_timezone else datetime.now().hour
+except (ZoneInfoNotFoundError, ValueError):
+    _theme_hour = datetime.now().hour
 st.session_state["dark_mode"] = not (6 <= _theme_hour < 20)
-
-st.iframe(
-    """
-    <script>
-    const h = new Date().getHours();
-    const url = new URL(window.parent.location.href);
-    const existing = url.searchParams.get('browser_hour');
-    if (existing === null || parseInt(existing, 10) !== h) {
-        url.searchParams.set('browser_hour', h);
-        window.parent.location.replace(url.toString());
-    }
-    </script>
-    """,
-    height=1,
-    tab_index=-1,
-)
 
 # ── Navigation ─────────────────────────────────────────────────────────────
 pg = st.navigation(
@@ -65,6 +46,9 @@ pg = st.navigation(
             st.Page("pages/statistics.py",      title="Statistics",           icon="📊"),
             st.Page("pages/team_deep_dive.py",  title="Team Deep Dive",       icon="🔬"),
             st.Page("pages/raw_data.py",        title="Raw Data",             icon="📁"),
+            st.Page("pages/pitchapi_match.py", title="Match analytics", icon=":material/analytics:", url_path="match-analytics"),
+            st.Page("pages/pitchapi_team.py", title="Team analytics", icon=":material/shield:", url_path="team-analytics"),
+            st.Page("pages/pitchapi_model.py", title="Feature validation", icon=":material/science:", url_path="feature-validation"),
         ],
         "💰 Betting": [
             st.Page("pages/markets.py",     title="Markets",    icon="📈"),
@@ -93,7 +77,7 @@ if path.exists(_fix_path):
         st.sidebar.info(_cd)
 
 # Season selector — stored in session state so all pages can read it
-_seasons = ["2025-26", "2024-25", "2023-24", "2022-23", "2021-22"]
+_seasons = ["2026-27", "2025-26", "2024-25", "2023-24", "2022-23", "2021-22"]
 if "selected_season" not in st.session_state:
     st.session_state["selected_season"] = _seasons[0]
 

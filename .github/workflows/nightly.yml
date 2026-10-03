@@ -5,6 +5,14 @@ on:
     - cron: "0 7 * * *"   # 3:00 AM ET (UTC-4 summer / UTC-5 winter)
   workflow_dispatch:        # Allow manual trigger from GitHub Actions UI
 
+concurrency:
+  group: ${{ github.repository }}-runtime-artifacts
+  cancel-in-progress: false
+
+env:
+  PITCH_API_KEY: ${{ secrets.PITCH_API_KEY }}
+  PITCH_ORACLE_LEAGUE: ligue1
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -17,10 +25,10 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: "pip"
 
       - name: Install dependencies
@@ -38,6 +46,9 @@ jobs:
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: python fetch_upcoming_fixtures.py
         continue-on-error: true
+
+      - name: Refresh optional PitchAPI observations and strict history
+        run: python -m pitch_oracle_core.pitchapi.pipeline daily --league ligue1 --historical-file pitchapi_historical_features.csv
 
       - name: Fetch xG proxy from historical data
         run: python fetch_fbref_xg.py
@@ -110,6 +121,9 @@ jobs:
       - name: Train ensemble, Poisson, and neural network models
         run: python train_models.py
 
+      - name: Fit independent PitchAPI baseline and any validated families
+        run: python -m pitch_oracle_core.pitchapi.pipeline train --league ligue1 --historical-file pitchapi_historical_features.csv
+
       # ── Post-training analysis ──────────────────────────────────────────
 
       - name: Run historical backtest
@@ -119,6 +133,9 @@ jobs:
 
       - name: Pre-generate predictions log (ensemble + neural network)
         run: python automation/generate_predictions.py
+
+      - name: Archive lineup and forecast issues
+        run: python -m pitch_oracle_core.pitchapi.pipeline hourly --league ligue1 --historical-file pitchapi_historical_features.csv
 
       # ── Validate & commit ───────────────────────────────────────────────
 
@@ -140,5 +157,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data_files/ models/
-          git diff --staged --quiet || git commit -m "chore: nightly update $(date -u +%Y-%m-%d)"
+          git add -f models/pitchapi_baseline.pkl
+          if [ -f models/pitchapi_promoted.pkl ]; then git add -f models/pitchapi_promoted.pkl; fi
+          git diff --staged --quiet || git commit -m "chore: nightly update $(date -u +%Y-%m-%d)" -m $'## Generated artifacts\nRefresh primary data, fitted legacy and independent models, provider capability health, and immutable observation/forecast revisions.\n\n## Validation\nThe nightly preparation, training and prediction steps completed before publication.'
           git push

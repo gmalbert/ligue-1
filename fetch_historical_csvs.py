@@ -15,6 +15,7 @@ from __future__ import annotations
 import io
 import sys
 from pathlib import Path
+from datetime import date
 
 import pandas as pd
 
@@ -40,6 +41,11 @@ SEASONS: dict[str, str] = {
     "2425": "2024-25",
     "2526": "2025-26",
 }
+
+# Include the current season without requiring an annual source edit.
+_current_start = date.today().year if date.today().month >= 7 else date.today().year - 1
+for _year in range(2026, _current_start + 1):
+    SEASONS[f"{_year % 100:02d}{(_year + 1) % 100:02d}"] = f"{_year}-{(_year + 1) % 100:02d}"
 
 # Ligue-1 uses FR1.csv (not SP1.csv which is La Liga)
 BASE_URL = "https://www.football-data.co.uk/mmz4281/{code}/FR1.csv"
@@ -99,7 +105,8 @@ def download_season(season_code: str, season_label: str) -> pd.DataFrame:
         keep = {k: v for k, v in COLUMN_MAP.items() if k in df.columns}
         df = df[list(keep.keys())].rename(columns=keep)
         df["Season"] = season_label
-        df["MatchDate"] = pd.to_datetime(df["MatchDate"], dayfirst=True, errors="coerce")
+        df["MatchDate"] = pd.to_datetime(df["MatchDate"], format="mixed", dayfirst=True, errors="coerce")
+        df = df.dropna(subset=["HomeTeam", "AwayTeam", "MatchDate"])
         return df
     except Exception as e:
         print(f"  ✗ {season_label}: {e}")

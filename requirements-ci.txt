@@ -1,0 +1,1 @@
+pitch-oracle-core[runtime,pipeline,test] @ git+https://github.com/gmalbert/pitch-oracle-core.git@e31c5b9703ef05bad486fc348894fedd64655033
