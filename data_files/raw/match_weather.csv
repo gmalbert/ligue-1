@@ -1,31 +1,30 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-10-09,Racing Club de Lens,N/A,,,
-2026-10-10,Lille,Partly cloudy,14.6,0.0,21.6
-2026-10-10,Brest,Rainy,16.5,0.1,14.9
-2026-10-10,Lorient,Partly cloudy,17.3,0.0,14.9
-2026-10-10,Paris SG,Showers,17.3,0.2,15.9
-2026-10-10,Monaco,Partly cloudy,22.0,0.0,11.0
-2026-10-11,Nice,Partly cloudy,22.4,0.0,8.3
+2026-10-10,Lille,Partly cloudy,15.3,0.0,19.8
+2026-10-10,Brest,Partly cloudy,16.2,0.0,16.9
+2026-10-10,Lorient,Rainy,17.8,0.03,19.2
+2026-10-10,Paris SG,Partly cloudy,17.8,0.0,16.3
+2026-10-10,Monaco,Partly cloudy,21.4,0.0,10.3
+2026-10-11,Nice,Partly cloudy,22.9,0.0,10.1
 2026-10-11,Stade Rennais FC 1901,N/A,,,
 2026-10-11,ES Troyes AC,N/A,,,
 2026-10-16,Le Mans FC,N/A,,,
-2026-10-17,Strasbourg,Partly cloudy,17.3,0.0,15.9
+2026-10-17,Strasbourg,Partly cloudy,13.9,0.0,16.3
 2026-10-17,ES Troyes AC,N/A,,,
-2026-10-17,Lille,Partly cloudy,15.4,0.0,10.9
-2026-10-18,Angers,Partly cloudy,20.5,0.0,13.2
-2026-10-18,Lorient,Rainy,18.2,3.6,15.6
+2026-10-17,Lille,Rainy,13.3,8.7,22.8
+2026-10-18,Angers,Rainy,12.4,2.4,19.3
+2026-10-18,Lorient,N/A,,,
 2026-10-18,Paris FC,N/A,,,
 2026-10-18,Le Havre,N/A,,,
-2026-10-18,Lyon,N/A,,,
-2026-10-23,Brest,Rainy,13.2,6.6,43.4
-2026-10-24,Toulouse,Rainy,18.9,0.3,21.1
+2026-10-18,Lyon,Showers,10.6,9.0,15.5
+2026-10-23,Brest,Clear,17.1,0.0,13.9
+2026-10-24,Toulouse,Partly cloudy,21.7,0.0,9.4
 2026-10-24,Racing Club de Lens,N/A,,,
-2026-10-25,Monaco,N/A,,,
-2026-10-25,Marseille,N/A,,,
+2026-10-25,Monaco,Partly cloudy,19.9,0.0,11.6
+2026-10-25,Marseille,Clear,20.3,0.0,9.4
 2026-10-25,Stade Rennais FC 1901,N/A,,,
-2026-10-25,Angers,N/A,,,
-2026-10-25,Auxerre,N/A,,,
-2026-10-25,Paris SG,N/A,,,
+2026-10-25,Angers,Partly cloudy,18.0,0.0,13.4
+2026-10-25,Auxerre,Partly cloudy,19.4,0.0,11.2
+2026-10-25,Paris SG,Partly cloudy,18.2,0.0,11.9
 2026-10-30,Le Havre,N/A,,,
 2026-10-30,Lille,N/A,,,
 2026-10-31,Nice,N/A,,,
