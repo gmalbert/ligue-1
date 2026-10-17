@@ -1,10 +1,100 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-10-16T12:54:14.267530+00:00",
+    "generated_at": "2026-10-17T12:10:52.838528+00:00",
     "model_version": "1.0.0",
-    "season": "2026",
-    "notes": "No qualifying Ligue1 picks for 2026-10-16"
+    "season": "2026"
   },
-  "bets": []
+  "bets": [
+    {
+      "game_date": "2026-10-17",
+      "game_time": null,
+      "game": "Paris SG @ Strasbourg",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.453,
+      "edge": 0.2863,
+      "tier": "Elite",
+      "odds": 500,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-10-17",
+      "game_time": null,
+      "game": "Paris SG @ Strasbourg",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "bet_type": "Match Result",
+      "pick": "Draw",
+      "confidence": 0.266,
+      "edge": 0.0755,
+      "tier": "Strong",
+      "odds": 425,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-10-17",
+      "game_time": null,
+      "game": "Paris SG @ Strasbourg",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.453,
+      "edge": 0.2992,
+      "tier": "Elite",
+      "odds": 550,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-10-17",
+      "game_time": null,
+      "game": "Paris SG @ Strasbourg",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "bet_type": "Match Result",
+      "pick": "Draw",
+      "confidence": 0.266,
+      "edge": 0.0842,
+      "tier": "Elite",
+      "odds": 450,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-10-17",
+      "game_time": null,
+      "game": "Paris SG @ Strasbourg",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.574,
+      "edge": 0.4073,
+      "tier": "Elite",
+      "odds": 500,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-10-17",
+      "game_time": null,
+      "game": "Paris SG @ Strasbourg",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.574,
+      "edge": 0.4202,
+      "tier": "Elite",
+      "odds": 550,
+      "line": null,
+      "league": "Ligue 1"
+    }
+  ]
 }

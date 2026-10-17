@@ -1,31 +1,30 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-10-16,Le Mans FC,N/A,,,
-2026-10-17,Strasbourg,Rainy,17.8,4.0,12.2
+2026-10-17,Strasbourg,Rainy,16.8,3.5,13.6
 2026-10-17,ES Troyes AC,N/A,,,
-2026-10-17,Lille,Rainy,14.8,1.0,22.0
-2026-10-18,Angers,Partly cloudy,14.5,0.0,12.5
-2026-10-18,Lorient,Partly cloudy,16.2,0.0,20.9
+2026-10-17,Lille,Rainy,13.7,3.7,23.8
+2026-10-18,Angers,Partly cloudy,14.7,0.0,10.5
+2026-10-18,Lorient,Rainy,15.7,0.1,24.4
 2026-10-18,Paris FC,N/A,,,
-2026-10-18,Le Havre,Showers,13.3,5.6,13.3
-2026-10-18,Lyon,Rainy,12.6,16.28,16.9
-2026-10-23,Brest,Rainy,16.0,14.2,44.7
-2026-10-24,Toulouse,Partly cloudy,17.4,0.0,12.9
+2026-10-18,Le Havre,Showers,14.4,9.4,16.5
+2026-10-18,Lyon,Rainy,12.3,0.2,16.2
+2026-10-23,Brest,Showers,14.8,9.2,41.0
+2026-10-24,Toulouse,Partly cloudy,16.8,0.0,11.6
 2026-10-24,Racing Club de Lens,N/A,,,
-2026-10-25,Monaco,Partly cloudy,21.0,0.0,8.6
+2026-10-25,Monaco,Partly cloudy,19.7,0.0,15.2
 2026-10-25,Marseille,N/A,,,
 2026-10-25,Stade Rennais FC 1901,N/A,,,
 2026-10-25,Angers,N/A,,,
 2026-10-25,Auxerre,N/A,,,
-2026-10-25,Paris SG,Partly cloudy,15.0,0.0,15.9
-2026-10-30,Le Havre,Rainy,12.5,4.2,34.1
-2026-10-30,Lille,Rainy,11.4,2.4,23.2
-2026-10-31,Nice,Partly cloudy,18.5,0.0,10.0
-2026-10-31,Lyon,Partly cloudy,14.5,0.0,14.3
-2026-10-31,Lorient,Partly cloudy,15.0,0.0,23.5
+2026-10-25,Paris SG,Showers,14.9,13.2,30.5
+2026-10-30,Le Havre,Partly cloudy,12.0,0.0,17.1
+2026-10-30,Lille,Partly cloudy,12.7,0.0,15.5
+2026-10-31,Nice,Showers,19.2,30.8,10.1
+2026-10-31,Lyon,Rainy,14.7,0.6,8.6
+2026-10-31,Lorient,Partly cloudy,14.8,0.0,21.1
 2026-10-31,ES Troyes AC,N/A,,,
-2026-11-01,Strasbourg,N/A,,,
+2026-11-01,Strasbourg,Partly cloudy,13.3,0.0,6.7
 2026-11-01,Paris FC,N/A,,,
-2026-11-01,Marseille,N/A,,,
+2026-11-01,Marseille,Rainy,18.6,0.08,30.2
 2026-11-06,Toulouse,N/A,,,
 2026-11-07,Auxerre,N/A,,,
 2026-11-07,Paris SG,N/A,,,
