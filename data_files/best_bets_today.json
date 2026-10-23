@@ -1,10 +1,40 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-10-22T13:32:38.519786+00:00",
+    "generated_at": "2026-10-23T13:09:41.080574+00:00",
     "model_version": "1.0.0",
-    "season": "2026",
-    "notes": "No Ligue1 predictions for 2026-10-22"
+    "season": "2026"
   },
-  "bets": []
+  "bets": [
+    {
+      "game_date": "2026-10-23",
+      "game_time": null,
+      "game": "Nice @ Brest",
+      "home_team": "Brest",
+      "away_team": "Nice",
+      "bet_type": "Match Result",
+      "pick": "Draw",
+      "confidence": 0.406,
+      "edge": 0.1203,
+      "tier": "Elite",
+      "odds": 250,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-10-23",
+      "game_time": null,
+      "game": "Nice @ Brest",
+      "home_team": "Brest",
+      "away_team": "Nice",
+      "bet_type": "Match Result",
+      "pick": "Draw",
+      "confidence": 0.406,
+      "edge": 0.1203,
+      "tier": "Elite",
+      "odds": 250,
+      "line": null,
+      "league": "Ligue 1"
+    }
+  ]
 }

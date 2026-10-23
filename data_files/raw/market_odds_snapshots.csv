@@ -13752,8 +13752,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,1X2,,Home,2.15,0.465116
 2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,1X2,,Draw,3.4,0.294118
 2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,1X2,,Draw,3.6,0.277778
-2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Spread,+0.5,Away,1.625,0.615385
-2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Spread,+0.5,Away,1.6666666666666665,0.6
+2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Spread,0.5,Away,1.625,0.615385
+2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Spread,0.5,Away,1.6666666666666665,0.6
 2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Spread,-0.5,Home,2.15,0.465116
 2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Spread,-0.5,Home,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Totals,2.5,Over,1.7142857142857144,0.583333
@@ -13768,8 +13768,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,1X2,,Draw,3.7,0.27027
 2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Spread,-0.5,Home,2.25,0.444444
 2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Spread,-0.5,Home,2.15,0.465116
-2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Spread,+0.5,Away,1.5714285714285714,0.636364
-2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Spread,+0.5,Away,1.606060606060606,0.622642
+2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Spread,0.5,Away,1.5714285714285714,0.636364
+2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Spread,0.5,Away,1.606060606060606,0.622642
 2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Totals,2.5,Over,1.6451612903225805,0.607843
 2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Totals,2.5,Over,1.606060606060606,0.622642
 2026-10-22T12:46:44+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Totals,2.5,Under,2.2,0.454545
@@ -13780,8 +13780,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,1X2,,Home,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,1X2,,Draw,3.35,0.298507
 2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,1X2,,Draw,3.5,0.285714
-2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Spread,+0.5,LOSC Lille,1.7142857142857144,0.583333
-2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Spread,+0.5,LOSC Lille,1.7142857142857144,0.583333
+2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Spread,0.5,LOSC Lille,1.7142857142857144,0.583333
+2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Spread,0.5,LOSC Lille,1.7142857142857144,0.583333
 2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Spread,-0.5,Home,2.0,0.5
 2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Spread,-0.5,Home,1.9803921568627452,0.50495
 2026-10-22T12:46:44+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Totals,2.5,Over,1.7692307692307692,0.565217
@@ -13794,8 +13794,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,1X2,,Home,1.7407407407407407,0.574468
 2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,1X2,,Draw,4.3,0.232558
 2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,1X2,,Draw,4.2,0.238095
-2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Spread,+0.5,Away,2.05,0.487805
-2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Spread,+0.5,Away,2.05,0.487805
+2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Spread,0.5,Away,2.05,0.487805
+2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Spread,0.5,Away,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Spread,-0.5,Home,1.6896551724137931,0.591837
 2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Spread,-0.5,Home,1.6896551724137931,0.591837
 2026-10-22T12:46:44+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Totals,3.5,Over,2.05,0.487805
@@ -13810,8 +13810,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,1X2,,Draw,3.6,0.277778
 2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Spread,-0.5,Home,2.0,0.5
 2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Spread,-0.5,Home,2.0,0.5
-2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Spread,+0.5,Away,1.7142857142857144,0.583333
-2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Spread,+0.5,Away,1.6896551724137931,0.591837
+2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Spread,0.5,Away,1.7142857142857144,0.583333
+2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Spread,0.5,Away,1.6896551724137931,0.591837
 2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Totals,2.5,Over,1.6666666666666665,0.6
 2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Totals,2.5,Over,1.6666666666666665,0.6
 2026-10-22T12:46:44+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Totals,2.5,Under,2.1,0.47619
@@ -13822,8 +13822,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,1X2,,Home,1.6666666666666665,0.6
 2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,1X2,,Draw,4.2,0.238095
 2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,1X2,,Draw,4.3,0.232558
-2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Spread,+0.5,Away,2.2,0.454545
-2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Spread,+0.5,Away,2.15,0.465116
+2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Spread,0.5,Away,2.2,0.454545
+2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Spread,0.5,Away,2.15,0.465116
 2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Spread,-0.5,Home,1.5882352941176472,0.62963
 2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Spread,-0.5,Home,1.606060606060606,0.622642
 2026-10-22T12:46:44+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Totals,2.5,Over,1.5714285714285714,0.636364
@@ -13836,8 +13836,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,1X2,,Away,2.4,0.416667
 2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,1X2,,Draw,3.3,0.30303
 2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,1X2,,Draw,3.3,0.30303
-2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Spread,+0.5,Home,1.5555555555555556,0.642857
-2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Spread,+0.5,Home,1.5405405405405406,0.649123
+2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Spread,0.5,Home,1.5555555555555556,0.642857
+2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Spread,0.5,Home,1.5405405405405406,0.649123
 2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Spread,-0.5,Away,2.3,0.434783
 2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Spread,-0.5,Away,2.3,0.434783
 2026-10-22T12:46:44+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Totals,2.5,Over,1.9523809523809523,0.512195
@@ -13852,8 +13852,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,1X2,,Draw,4.33,0.230947
 2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Spread,-0.5,Home,1.526315789473684,0.655172
 2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Spread,-0.5,Home,1.526315789473684,0.655172
-2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Spread,+0.5,Away,2.35,0.425532
-2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Spread,+0.5,Away,2.35,0.425532
+2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Spread,0.5,Away,2.35,0.425532
+2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Spread,0.5,Away,2.35,0.425532
 2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Totals,3.5,Over,2.35,0.425532
 2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Totals,3.5,Over,2.3,0.434783
 2026-10-22T12:46:44+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Totals,3.5,Under,1.5714285714285714,0.636364
@@ -13864,8 +13864,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,1X2,,Home,1.4545454545454546,0.6875
 2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,1X2,,Draw,5.25,0.190476
 2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,1X2,,Draw,5.0,0.2
-2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Spread,+1.5,Away,1.6896551724137931,0.591837
-2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Spread,+1.5,Away,1.6896551724137931,0.591837
+2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Spread,1.5,Away,1.6896551724137931,0.591837
+2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Spread,1.5,Away,1.6896551724137931,0.591837
 2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Spread,-1.5,Home,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Spread,-1.5,Home,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Totals,3.5,Over,1.9523809523809523,0.512195
@@ -13876,20 +13876,20 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,1X2,,Home,8.5,0.117647
 2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,1X2,,Draw,6.5,0.153846
 2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Spread,-1.5,Away,1.5714285714285714,0.636364
-2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Spread,+1.5,Home,2.05,0.487805
+2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Spread,1.5,Home,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Totals,3.5,Over,1.7407407407407407,0.574468
 2026-10-22T12:46:44+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Totals,3.5,Under,1.8695652173913042,0.534884
 2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,1X2,,LOSC Lille,2.2,0.454545
 2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,1X2,,Away,2.9,0.344828
 2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,1X2,,Draw,3.35,0.298507
 2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Spread,-0.5,LOSC Lille,2.05,0.487805
-2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Spread,+0.5,Away,1.5555555555555556,0.642857
+2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Spread,0.5,Away,1.5555555555555556,0.642857
 2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Totals,2.5,Over,1.625,0.615385
 2026-10-22T12:46:44+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Totals,2.5,Under,2.05,0.487805
 2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,1X2,,Home,2.65,0.377358
 2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,1X2,,Away,2.3,0.434783
 2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,1X2,,Draw,3.55,0.28169
-2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Spread,+0.5,Home,1.526315789473684,0.655172
+2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Spread,0.5,Home,1.526315789473684,0.655172
 2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Spread,-0.5,Away,2.1,0.47619
 2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Totals,3.5,Over,2.25,0.444444
 2026-10-22T12:46:44+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Totals,3.5,Under,1.5128205128205128,0.661017
@@ -13897,21 +13897,21 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,1X2,,Away,3.15,0.31746
 2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,1X2,,Draw,3.35,0.298507
 2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Spread,-0.5,Home,1.9523809523809523,0.512195
-2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Spread,+0.5,Away,1.625,0.615385
+2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Spread,0.5,Away,1.625,0.615385
 2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Totals,2.5,Over,1.7407407407407407,0.574468
 2026-10-22T12:46:44+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Totals,2.5,Under,1.9090909090909092,0.52381
 2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,1X2,,Home,1.3703703703703702,0.72973
 2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,1X2,,Away,6.5,0.153846
 2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,1X2,,Draw,4.8,0.208333
 2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Spread,-1.5,Home,1.9090909090909092,0.52381
-2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Spread,+1.5,Away,1.6451612903225805,0.607843
+2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Spread,1.5,Away,1.6451612903225805,0.607843
 2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Totals,2.5,Over,1.5,0.666667
 2026-10-22T12:46:44+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Totals,2.5,Under,2.3,0.434783
 2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,1X2,,Home,2.5,0.4
 2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,1X2,,Away,2.55,0.392157
 2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,1X2,,Draw,3.35,0.298507
 2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Spread,-0.5,Home,2.3,0.434783
-2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Spread,+0.5,Away,1.4444444444444444,0.692308
+2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Spread,0.5,Away,1.4444444444444444,0.692308
 2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Totals,2.5,Over,1.8,0.555556
 2026-10-22T12:46:44+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Totals,2.5,Under,1.8333333333333335,0.545455
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,1X2,,Home,1.7692307692307692,0.565217
@@ -13922,8 +13922,8 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,1X2,,Draw,3.8,0.263158
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Spread,-0.5,Home,1.6666666666666665,0.6
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Spread,-0.5,Home,1.7407407407407407,0.574468
-2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Spread,+0.5,Away,1.8695652173913042,0.534884
-2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Spread,+0.5,Away,1.9523809523809523,0.512195
+2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Spread,0.5,Away,1.8695652173913042,0.534884
+2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Spread,0.5,Away,1.9523809523809523,0.512195
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Totals,2.5,Over,1.526315789473684,0.655172
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Totals,2.5,Over,1.5714285714285714,0.636364
 2026-10-22T12:46:44+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Totals,2.5,Under,2.2,0.454545
@@ -13931,7 +13931,7 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,1X2,,Away,2.8,0.357143
 2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,1X2,,Home,2.25,0.444444
 2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,1X2,,Draw,3.45,0.289855
-2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Spread,+0.5,Away,1.5405405405405406,0.649123
+2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Spread,0.5,Away,1.5405405405405406,0.649123
 2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Spread,-0.5,Home,2.1,0.47619
 2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Totals,2.5,Over,1.6451612903225805,0.607843
 2026-10-22T12:46:44+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Totals,2.5,Under,2.0,0.5
@@ -13943,9 +13943,212 @@ SnapshotTime,Provider,EventId,Date,HomeTeam,AwayTeam,Bookmaker,Market,Line,Outco
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,1X2,,Draw,4.0,0.25
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Spread,-0.5,Home,1.6896551724137931,0.591837
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Spread,-0.5,Home,1.7407407407407407,0.574468
-2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Spread,+0.5,Away,1.8695652173913042,0.534884
-2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Spread,+0.5,Away,1.925925925925926,0.519231
+2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Spread,0.5,Away,1.8695652173913042,0.534884
+2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Spread,0.5,Away,1.925925925925926,0.519231
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Totals,2.5,Over,1.526315789473684,0.655172
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Totals,2.5,Over,1.5405405405405406,0.649123
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Totals,2.5,Under,2.25,0.444444
 2026-10-22T12:46:44+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Totals,2.5,Under,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,1X2,,Away,3.15,0.31746
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,1X2,,Away,3.2,0.3125
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,1X2,,Home,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,1X2,,Home,2.2,0.454545
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,1X2,,Draw,3.5,0.285714
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,1X2,,Draw,3.5,0.285714
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Spread,+0.5,Away,1.6451612903225805,0.607843
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Spread,+0.5,Away,1.625,0.615385
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Spread,-0.5,Home,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Spread,-0.5,Home,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Totals,2.5,Over,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Totals,2.5,Over,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,DraftKings,Totals,2.5,Under,2.15,0.465116
+2026-10-23T12:24:03+00:00,therundown,4bddc006bf20b066f9e188e5a678e72c,2026-10-23,Brest,Nice,BetMGM,Totals,2.5,Under,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,1X2,,Home,2.4,0.416667
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,1X2,,Home,2.4,0.416667
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,1X2,,Away,2.8,0.357143
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,1X2,,Away,2.75,0.363636
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,1X2,,Draw,3.65,0.273973
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,1X2,,Draw,3.6,0.277778
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Spread,-0.5,Home,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Spread,-0.5,Home,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Spread,+0.5,Away,1.5555555555555556,0.642857
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Spread,+0.5,Away,1.5405405405405406,0.649123
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Totals,2.5,Over,1.6451612903225805,0.607843
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Totals,2.5,Over,1.625,0.615385
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,BetMGM,Totals,2.5,Under,2.15,0.465116
+2026-10-23T12:24:03+00:00,therundown,87edbbd2990eabfa5fb2947c8b65c7ee,2026-10-24,Lens,Paris FC,DraftKings,Totals,2.5,Under,2.2,0.454545
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,1X2,,LOSC Lille,3.4,0.294118
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,1X2,,LOSC Lille,3.75,0.266667
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,1X2,,Home,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,1X2,,Home,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,1X2,,Draw,3.4,0.294118
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,1X2,,Draw,3.5,0.285714
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Spread,+0.5,LOSC Lille,1.7142857142857144,0.583333
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Spread,+0.5,LOSC Lille,1.7407407407407407,0.574468
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Spread,-0.5,Home,1.9523809523809523,0.512195
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Spread,-0.5,Home,1.9803921568627452,0.50495
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Totals,2.5,Over,1.8,0.555556
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Totals,2.5,Over,1.7692307692307692,0.565217
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,DraftKings,Totals,2.5,Under,2.0,0.5
+2026-10-23T12:24:03+00:00,therundown,7cc59cc73d92de047d091c27803dda8a,2026-10-25,Monaco,LOSC,BetMGM,Totals,2.5,Under,1.925925925925926,0.519231
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,1X2,,Away,4.0,0.25
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,1X2,,Away,4.1,0.243902
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,1X2,,Home,1.7692307692307692,0.565217
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,1X2,,Home,1.7407407407407407,0.574468
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,1X2,,Draw,4.3,0.232558
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,1X2,,Draw,4.2,0.238095
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Spread,+0.5,Away,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Spread,+0.5,Away,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Spread,-0.5,Home,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Spread,-0.5,Home,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Totals,3.5,Over,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Totals,3.5,Over,2.0,0.5
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,DraftKings,Totals,3.5,Under,1.7692307692307692,0.565217
+2026-10-23T12:24:03+00:00,therundown,20d5ee2448f772311105ab79b8df621b,2026-10-25,Stade Rennes,Strasbourg,BetMGM,Totals,3.5,Under,1.7142857142857144,0.583333
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,1X2,,Home,2.15,0.465116
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,1X2,,Home,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,1X2,,Away,3.25,0.307692
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,1X2,,Away,3.3,0.30303
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,1X2,,Draw,3.65,0.273973
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,1X2,,Draw,3.6,0.277778
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Spread,-0.5,Home,2.0,0.5
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Spread,-0.5,Home,2.0,0.5
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Spread,+0.5,Away,1.7142857142857144,0.583333
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Spread,+0.5,Away,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Totals,2.5,Over,1.6666666666666665,0.6
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Totals,2.5,Over,1.6666666666666665,0.6
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,DraftKings,Totals,2.5,Under,2.2,0.454545
+2026-10-23T12:24:03+00:00,therundown,47b72448c286f4b9aecd275edfaa73a5,2026-10-25,Auxerre,Le Mans,BetMGM,Totals,2.5,Under,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,1X2,,Away,5.0,0.2
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,1X2,,Away,4.8,0.208333
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,1X2,,Home,1.625,0.615385
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,1X2,,Home,1.625,0.615385
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,1X2,,Draw,4.3,0.232558
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,1X2,,Draw,4.2,0.238095
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Spread,+0.5,Away,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Spread,+0.5,Away,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Spread,-0.5,Home,1.5714285714285714,0.636364
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Spread,-0.5,Home,1.5714285714285714,0.636364
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Totals,2.5,Over,1.606060606060606,0.622642
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Totals,2.5,Over,1.5714285714285714,0.636364
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,DraftKings,Totals,2.5,Under,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,66983d993f8529c8d2479c3edf007d9d,2026-10-25,Toulouse,Troyes,BetMGM,Totals,2.5,Under,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,1X2,,Home,3.0,0.333333
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,1X2,,Home,2.9,0.344828
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,1X2,,Away,2.45,0.408163
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,1X2,,Away,2.4,0.416667
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,1X2,,Draw,3.3,0.30303
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,1X2,,Draw,3.35,0.298507
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Spread,+0.5,Home,1.5405405405405406,0.649123
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Spread,+0.5,Home,1.5555555555555556,0.642857
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Spread,-0.5,Away,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Spread,-0.5,Away,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Totals,2.5,Over,2.0,0.5
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Totals,2.5,Over,1.9523809523809523,0.512195
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,DraftKings,Totals,2.5,Under,1.8,0.555556
+2026-10-23T12:24:03+00:00,therundown,bdbb06a90f356a435f043d793d6de683,2026-10-25,Angers,Lorient,BetMGM,Totals,2.5,Under,1.7407407407407407,0.574468
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,1X2,,Home,1.5882352941176472,0.62963
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,1X2,,Home,1.5714285714285714,0.636364
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,1X2,,Away,5.0,0.2
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,1X2,,Away,5.25,0.190476
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,1X2,,Draw,4.7,0.212766
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,1X2,,Draw,4.33,0.230947
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Spread,-0.5,Home,1.526315789473684,0.655172
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Spread,-0.5,Home,1.526315789473684,0.655172
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Spread,+0.5,Away,2.35,0.425532
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Spread,+0.5,Away,2.35,0.425532
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Totals,3.5,Over,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Totals,3.5,Over,2.35,0.425532
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,DraftKings,Totals,3.5,Under,1.5714285714285714,0.636364
+2026-10-23T12:24:03+00:00,therundown,cf52239f06dc8e8ed69e913889bea9a9,2026-10-25,Marseille,Le Havre,BetMGM,Totals,3.5,Under,1.5405405405405406,0.649123
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,1X2,,Away,6.0,0.166667
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,1X2,,Away,6.0,0.166667
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,1X2,,Home,1.4444444444444444,0.692308
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,1X2,,Home,1.4545454545454546,0.6875
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,1X2,,Draw,5.25,0.190476
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,1X2,,Draw,5.0,0.2
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Spread,+1.5,Away,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Spread,+1.5,Away,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Spread,-1.5,Home,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Spread,-1.5,Home,2.05,0.487805
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Totals,3.5,Over,1.9523809523809523,0.512195
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Totals,3.5,Over,1.9090909090909092,0.52381
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,DraftKings,Totals,3.5,Under,1.8333333333333335,0.545455
+2026-10-23T12:24:03+00:00,therundown,73690793ab5befc5b341602bde3e78c5,2026-10-25,Paris SG,Lyon,BetMGM,Totals,3.5,Under,1.8,0.555556
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,1X2,,Away,1.2352941176470589,0.809524
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,1X2,,Home,9.5,0.105263
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,1X2,,Draw,7.0,0.142857
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Spread,-1.5,Away,1.606060606060606,0.622642
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Spread,+1.5,Home,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Totals,3.5,Over,1.8,0.555556
+2026-10-23T12:24:03+00:00,therundown,5a35d87f09dbafda4dc282d0a941236d,2026-10-30,Le Havre,Paris SG,DraftKings,Totals,3.5,Under,1.9523809523809523,0.512195
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,1X2,,LOSC Lille,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,1X2,,Away,3.0,0.333333
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,1X2,,Draw,3.5,0.285714
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Spread,-0.5,LOSC Lille,2.15,0.465116
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Spread,+0.5,Away,1.5882352941176472,0.62963
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Totals,2.5,Over,1.6666666666666665,0.6
+2026-10-23T12:24:03+00:00,therundown,84aab876cc0a87d00017590d58d99d54,2026-10-30,LOSC,Lens,DraftKings,Totals,2.5,Under,2.15,0.465116
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,1X2,,Home,2.65,0.377358
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,1X2,,Away,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,1X2,,Draw,3.55,0.28169
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Spread,+0.5,Home,1.526315789473684,0.655172
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Spread,-0.5,Away,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Totals,3.5,Over,2.2,0.454545
+2026-10-23T12:24:03+00:00,therundown,2606fe8f25de00fe781517abd60baec4,2026-10-31,Nice,Stade Rennes,DraftKings,Totals,3.5,Under,1.5405405405405406,0.649123
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,1X2,,Home,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,1X2,,Away,3.15,0.31746
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,1X2,,Draw,3.35,0.298507
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Spread,-0.5,Home,1.9523809523809523,0.512195
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Spread,+0.5,Away,1.625,0.615385
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Totals,2.5,Over,1.7407407407407407,0.574468
+2026-10-23T12:24:03+00:00,therundown,1ef550322b808a7721aef4bbf770fa2a,2026-10-31,Troyes,Le Mans,DraftKings,Totals,2.5,Under,1.9090909090909092,0.52381
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,1X2,,Home,1.3703703703703702,0.72973
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,1X2,,Away,6.5,0.153846
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,1X2,,Draw,4.8,0.208333
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Spread,-1.5,Home,1.9090909090909092,0.52381
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Spread,+1.5,Away,1.6451612903225805,0.607843
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Totals,2.5,Over,1.5,0.666667
+2026-10-23T12:24:03+00:00,therundown,26f1331704cd421e3fed978d3a3a052f,2026-10-31,Lyon,Angers,DraftKings,Totals,2.5,Under,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,1X2,,Home,2.5,0.4
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,1X2,,Away,2.55,0.392157
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,1X2,,Draw,3.35,0.298507
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Spread,-0.5,Home,2.3,0.434783
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Spread,+0.5,Away,1.4444444444444444,0.692308
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Totals,2.5,Over,1.8,0.555556
+2026-10-23T12:24:03+00:00,therundown,880e46298b0aed6130a0e1d6d48d12e9,2026-10-31,Lorient,Brest,DraftKings,Totals,2.5,Under,1.8333333333333335,0.545455
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,1X2,,Home,1.7692307692307692,0.565217
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,1X2,,Home,1.8333333333333335,0.545455
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,1X2,,Away,3.85,0.25974
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,1X2,,Away,3.9,0.25641
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,1X2,,Draw,3.8,0.263158
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,1X2,,Draw,3.9,0.25641
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Spread,-0.5,Home,1.6666666666666665,0.6
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Spread,-0.5,Home,1.7407407407407407,0.574468
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Spread,+0.5,Away,1.8695652173913042,0.534884
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Spread,+0.5,Away,1.9523809523809523,0.512195
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Totals,2.5,Over,1.526315789473684,0.655172
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Totals,2.5,Over,1.5714285714285714,0.636364
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,DraftKings,Totals,2.5,Under,2.2,0.454545
+2026-10-23T12:24:03+00:00,therundown,497a8188dd97b160830811b0912fc73d,2026-11-01,Strasbourg,Auxerre,BetMGM,Totals,2.5,Under,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,1X2,,Away,2.8,0.357143
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,1X2,,Home,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,1X2,,Draw,3.45,0.289855
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Spread,+0.5,Away,1.5405405405405406,0.649123
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Spread,-0.5,Home,2.1,0.47619
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Totals,2.5,Over,1.6451612903225805,0.607843
+2026-10-23T12:24:03+00:00,therundown,2977f2f57b2ebec2fd746118757a8d8b,2026-11-01,Paris FC,Monaco,DraftKings,Totals,2.5,Under,2.0,0.5
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,1X2,,Home,1.7692307692307692,0.565217
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,1X2,,Home,1.8333333333333335,0.545455
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,1X2,,Away,3.8,0.263158
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,1X2,,Away,3.8,0.263158
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,1X2,,Draw,3.8,0.263158
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,1X2,,Draw,4.0,0.25
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Spread,-0.5,Home,1.7407407407407407,0.574468
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Spread,-0.5,Home,1.6896551724137931,0.591837
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Spread,+0.5,Away,1.8695652173913042,0.534884
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Spread,+0.5,Away,1.925925925925926,0.519231
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Totals,2.5,Over,1.526315789473684,0.655172
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Totals,2.5,Over,1.5405405405405406,0.649123
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,DraftKings,Totals,2.5,Under,2.25,0.444444
+2026-10-23T12:24:03+00:00,therundown,91bb5b61d64f125a74584b1597868bad,2026-11-01,Marseille,Toulouse,BetMGM,Totals,2.5,Under,2.3,0.434783
