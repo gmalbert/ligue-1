@@ -1,100 +1,10 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-10-26T14:37:27.395790+00:00",
+    "generated_at": "2026-10-27T13:41:37.213899+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "No Ligue1 predictions for 2026-10-27"
   },
-  "bets": [
-    {
-      "game_date": "2026-10-26",
-      "game_time": null,
-      "game": "Lyon @ Paris SG",
-      "home_team": "Paris SG",
-      "away_team": "Lyon",
-      "bet_type": "Match Result",
-      "pick": "Draw",
-      "confidence": 0.274,
-      "edge": 0.1001,
-      "tier": "Elite",
-      "odds": 475,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-10-26",
-      "game_time": null,
-      "game": "Lyon @ Paris SG",
-      "home_team": "Paris SG",
-      "away_team": "Lyon",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.282,
-      "edge": 0.1441,
-      "tier": "Elite",
-      "odds": 625,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-10-26",
-      "game_time": null,
-      "game": "Lyon @ Paris SG",
-      "home_team": "Paris SG",
-      "away_team": "Lyon",
-      "bet_type": "Match Result",
-      "pick": "Draw",
-      "confidence": 0.274,
-      "edge": 0.1001,
-      "tier": "Elite",
-      "odds": 475,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-10-26",
-      "game_time": null,
-      "game": "Lyon @ Paris SG",
-      "home_team": "Paris SG",
-      "away_team": "Lyon",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.282,
-      "edge": 0.157,
-      "tier": "Elite",
-      "odds": 700,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-10-26",
-      "game_time": null,
-      "game": "Lyon @ Paris SG",
-      "home_team": "Paris SG",
-      "away_team": "Lyon",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.766,
-      "edge": 0.6281,
-      "tier": "Elite",
-      "odds": 625,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-10-26",
-      "game_time": null,
-      "game": "Lyon @ Paris SG",
-      "home_team": "Paris SG",
-      "away_team": "Lyon",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.766,
-      "edge": 0.641,
-      "tier": "Elite",
-      "odds": 700,
-      "line": null,
-      "league": "Ligue 1"
-    }
-  ]
+  "bets": []
 }

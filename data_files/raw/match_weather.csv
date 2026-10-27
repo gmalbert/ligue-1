@@ -1,21 +1,20 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-10-26,Paris SG,Rainy,14.3,0.1,16.9
-2026-10-30,Le Havre,Partly cloudy,14.3,0.0,11.0
-2026-10-30,Lille,Partly cloudy,12.9,0.0,8.5
-2026-10-31,Nice,Showers,17.1,1.2,8.1
-2026-10-31,Lyon,Partly cloudy,8.8,0.0,16.2
-2026-10-31,Lorient,Foggy,14.7,0.0,8.7
+2026-10-30,Le Havre,Partly cloudy,14.7,0.0,14.5
+2026-10-30,Lille,Clear,13.9,0.0,9.6
+2026-10-31,Nice,Partly cloudy,18.7,0.0,9.9
+2026-10-31,Lyon,Foggy,10.3,0.0,10.9
+2026-10-31,Lorient,Partly cloudy,15.6,0.0,17.0
 2026-10-31,ES Troyes AC,N/A,,,
-2026-11-01,Strasbourg,Partly cloudy,11.1,0.0,13.7
+2026-11-01,Strasbourg,Partly cloudy,12.4,0.0,12.1
 2026-11-01,Paris FC,N/A,,,
-2026-11-01,Marseille,Foggy,17.6,0.0,8.5
-2026-11-06,Toulouse,Rainy,15.8,0.6,18.7
-2026-11-07,Auxerre,Partly cloudy,12.4,0.0,15.0
-2026-11-07,Paris SG,Rainy,8.0,8.4,13.0
+2026-11-01,Marseille,Clear,17.4,0.0,8.6
+2026-11-06,Toulouse,Partly cloudy,17.7,0.0,10.3
+2026-11-07,Auxerre,Partly cloudy,9.7,0.0,14.7
+2026-11-07,Paris SG,Partly cloudy,10.1,0.0,10.4
 2026-11-08,Stade Rennais FC 1901,N/A,,,
 2026-11-08,Le Mans FC,N/A,,,
-2026-11-08,Brest,Rainy,14.0,3.8,20.2
-2026-11-08,Le Havre,N/A,,,
+2026-11-08,Brest,Partly cloudy,9.6,0.0,17.8
+2026-11-08,Le Havre,Partly cloudy,8.1,0.0,17.1
 2026-11-08,Angers,N/A,,,
 2026-11-08,Racing Club de Lens,N/A,,,
 2026-11-20,ES Troyes AC,N/A,,,
