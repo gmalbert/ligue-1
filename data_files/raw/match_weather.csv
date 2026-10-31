@@ -1,21 +1,18 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-10-30,Le Havre,Partly cloudy,15.3,0.0,12.7
-2026-10-30,Nice,Partly cloudy,20.0,0.0,9.6
-2026-10-30,Lille,Partly cloudy,14.3,0.0,14.0
 2026-10-31,ES Troyes AC,N/A,,,
-2026-11-01,Strasbourg,Partly cloudy,11.6,0.0,13.5
-2026-11-01,Lyon,Foggy,12.5,0.0,27.4
+2026-11-01,Strasbourg,Partly cloudy,11.4,0.0,15.0
+2026-11-01,Lyon,Partly cloudy,12.0,0.0,24.6
 2026-11-01,Paris FC,N/A,,,
-2026-11-01,Marseille,Rainy,16.5,3.9,14.2
-2026-11-02,Lorient,Partly cloudy,14.9,0.0,25.2
-2026-11-06,Toulouse,Foggy,15.1,0.0,13.1
-2026-11-07,Auxerre,Foggy,8.7,0.0,6.8
-2026-11-07,Paris SG,Clear,8.8,0.0,7.2
+2026-11-01,Marseille,Rainy,17.6,4.4,13.7
+2026-11-02,Lorient,Partly cloudy,13.4,0.0,21.4
+2026-11-06,Toulouse,Foggy,17.2,0.0,7.6
+2026-11-07,Auxerre,Foggy,13.3,0.0,6.6
+2026-11-07,Paris SG,Foggy,10.9,0.0,4.6
 2026-11-08,Stade Rennais FC 1901,N/A,,,
 2026-11-08,Le Mans FC,N/A,,,
-2026-11-08,Brest,Rainy,11.6,3.2,23.7
-2026-11-08,Le Havre,Foggy,7.3,0.0,23.3
-2026-11-08,Angers,Rainy,10.2,0.8,15.8
+2026-11-08,Brest,Rainy,13.6,1.8,16.9
+2026-11-08,Le Havre,Foggy,11.0,0.0,15.2
+2026-11-08,Angers,Rainy,11.3,1.0,11.7
 2026-11-08,Racing Club de Lens,N/A,,,
 2026-11-20,ES Troyes AC,N/A,,,
 2026-11-21,Nice,N/A,,,
