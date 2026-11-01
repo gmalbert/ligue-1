@@ -1,18 +1,17 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-10-31,ES Troyes AC,N/A,,,
-2026-11-01,Strasbourg,Partly cloudy,11.4,0.0,15.0
-2026-11-01,Lyon,Partly cloudy,12.0,0.0,24.6
+2026-11-01,Strasbourg,Partly cloudy,11.5,0.0,15.9
+2026-11-01,Lyon,Rainy,12.5,0.0,25.9
 2026-11-01,Paris FC,N/A,,,
-2026-11-01,Marseille,Rainy,17.6,4.4,13.7
-2026-11-02,Lorient,Partly cloudy,13.4,0.0,21.4
-2026-11-06,Toulouse,Foggy,17.2,0.0,7.6
-2026-11-07,Auxerre,Foggy,13.3,0.0,6.6
-2026-11-07,Paris SG,Foggy,10.9,0.0,4.6
+2026-11-01,Marseille,Rainy,19.4,0.45,14.2
+2026-11-02,Lorient,Partly cloudy,13.9,0.0,20.9
+2026-11-06,Toulouse,Foggy,16.0,0.0,11.0
+2026-11-07,Auxerre,Foggy,10.8,0.0,6.2
+2026-11-07,Paris SG,Foggy,5.6,0.0,6.3
 2026-11-08,Stade Rennais FC 1901,N/A,,,
 2026-11-08,Le Mans FC,N/A,,,
-2026-11-08,Brest,Rainy,13.6,1.8,16.9
-2026-11-08,Le Havre,Foggy,11.0,0.0,15.2
-2026-11-08,Angers,Rainy,11.3,1.0,11.7
+2026-11-08,Brest,Rainy,11.4,0.6,9.9
+2026-11-08,Le Havre,Partly cloudy,10.8,0.6,16.9
+2026-11-08,Angers,Partly cloudy,12.8,0.0,15.1
 2026-11-08,Racing Club de Lens,N/A,,,
 2026-11-20,ES Troyes AC,N/A,,,
 2026-11-21,Nice,N/A,,,
