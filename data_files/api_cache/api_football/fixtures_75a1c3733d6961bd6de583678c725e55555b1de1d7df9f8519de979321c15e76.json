@@ -1,0 +1,13 @@
+{
+  "fetched_at": "2026-11-02T16:48:38+00:00",
+  "path": "fixtures",
+  "params": {
+    "league": 61,
+    "season": 2026,
+    "from": "2026-11-02",
+    "to": "2026-11-16"
+  },
+  "error": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+  }
+}
