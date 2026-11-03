@@ -1,70 +1,10 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-11-02T17:29:10.439101+00:00",
+    "generated_at": "2026-11-03T15:33:39.019644+00:00",
     "model_version": "1.0.0",
-    "season": "2026"
+    "season": "2026",
+    "notes": "No Ligue1 predictions for 2026-11-03"
   },
-  "bets": [
-    {
-      "game_date": "2026-11-02",
-      "game_time": null,
-      "game": "Brest @ Lorient",
-      "home_team": "Lorient",
-      "away_team": "Brest",
-      "bet_type": "Match Result",
-      "pick": "Home Win",
-      "confidence": 0.445,
-      "edge": 0.0368,
-      "tier": "Good",
-      "odds": 145,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-11-02",
-      "game_time": null,
-      "game": "Brest @ Lorient",
-      "home_team": "Lorient",
-      "away_team": "Brest",
-      "bet_type": "Match Result",
-      "pick": "Home Win",
-      "confidence": 0.445,
-      "edge": 0.0528,
-      "tier": "Strong",
-      "odds": 155,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-11-02",
-      "game_time": null,
-      "game": "Brest @ Lorient",
-      "home_team": "Lorient",
-      "away_team": "Brest",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.68,
-      "edge": 0.3352,
-      "tier": "Elite",
-      "odds": 190,
-      "line": null,
-      "league": "Ligue 1"
-    },
-    {
-      "game_date": "2026-11-02",
-      "game_time": null,
-      "game": "Brest @ Lorient",
-      "home_team": "Lorient",
-      "away_team": "Brest",
-      "bet_type": "Match Result",
-      "pick": "Away Win",
-      "confidence": 0.68,
-      "edge": 0.341,
-      "tier": "Elite",
-      "odds": 195,
-      "line": null,
-      "league": "Ligue 1"
-    }
-  ]
+  "bets": []
 }
