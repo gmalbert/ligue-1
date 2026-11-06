@@ -1,10 +1,40 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-11-05T15:51:53.140883+00:00",
+    "generated_at": "2026-11-06T15:28:43.880801+00:00",
     "model_version": "1.0.0",
-    "season": "2026",
-    "notes": "No Ligue1 predictions for 2026-11-05"
+    "season": "2026"
   },
-  "bets": []
+  "bets": [
+    {
+      "game_date": "2026-11-06",
+      "game_time": null,
+      "game": "Strasbourg @ Toulouse",
+      "home_team": "Toulouse",
+      "away_team": "Strasbourg",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.654,
+      "edge": 0.3314,
+      "tier": "Elite",
+      "odds": 210,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-11-06",
+      "game_time": null,
+      "game": "Strasbourg @ Toulouse",
+      "home_team": "Toulouse",
+      "away_team": "Strasbourg",
+      "bet_type": "Match Result",
+      "pick": "Away Win",
+      "confidence": 0.654,
+      "edge": 0.3314,
+      "tier": "Elite",
+      "odds": 210,
+      "line": null,
+      "league": "Ligue 1"
+    }
+  ]
 }

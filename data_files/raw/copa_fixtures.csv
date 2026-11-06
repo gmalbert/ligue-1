@@ -11,29 +11,29 @@ MatchDate,TeamName
 2026-11-13,US Saint-Philbert-de-Grand-Lieu
 2026-11-13,Neuvillette-Jamin
 2026-11-13,Dijon FCO
-2026-11-14,Clermont
+2026-11-14,ES Thaon
+2026-11-14,Sundhoffen
+2026-11-14,Biesheim
 2026-11-14,Concarneau
 2026-11-14,La Baule-Le Pouliguen
 2026-11-14,Bourg-Peronnas
 2026-11-14,Vertou
-2026-11-14,ES Thaon
+2026-11-14,Selongey
 2026-11-14,Annecy
-2026-11-14,Biesheim
-2026-11-14,Hauts Lyonnais
-2026-11-14,La Tamponnaise
-2026-11-14,Sochaux
-2026-11-14,FC Fleury 91
-2026-11-14,Rodez Aveyron
 2026-11-14,Reims
-2026-11-14,Sundhoffen
+2026-11-14,Hauts Lyonnais
+2026-11-14,Frejus
+2026-11-14,Sochaux
+2026-11-14,Rodez Aveyron
+2026-11-14,FC Chambly
+2026-11-14,La Tamponnaise
 2026-11-14,Diables Noirs
-2026-11-14,US Quevilly
 2026-11-14,Montpellier
 2026-11-14,Thionville
-2026-11-14,Frejus
-2026-11-14,Selongey
-2026-11-14,Chassieu Declines FC
+2026-11-14,Clermont
 2026-11-14,ESA Linas-Montlhery
+2026-11-14,Riviera
+2026-11-14,US Quevilly
 2026-11-14,Nueillaubiers
 2026-11-14,Guingamp
 2026-11-14,Pau
@@ -47,6 +47,7 @@ MatchDate,TeamName
 2026-11-14,Entente Crest-Aouste
 2026-11-14,Castanet
 2026-11-14,Saint-Pierre Milizac
+2026-11-14,FC Fleury 91
 2026-11-14,Villefranche
 2026-11-14,Oberlauterbach
 2026-11-14,AS Nancy Lorraine
@@ -57,13 +58,12 @@ MatchDate,TeamName
 2026-11-14,US Feurs
 2026-11-14,Avranches
 2026-11-14,Rennes TA
-2026-11-14,Riviera
 2026-11-14,Horizon Patho
-2026-11-14,FC Chambly
+2026-11-14,Chassieu Declines FC
 2026-11-14,Mazeres Uzos Rontignon
 2026-11-14,SC Amiens
 2026-11-14,Bressuire
-2026-11-14,Lyon-la-Duchere
+2026-11-14,Pays de Saint-Omer
 2026-11-14,Chateaubriant
 2026-11-14,AS Tefana
 2026-11-14,Olympique des Membres de Cambrai Amerique
@@ -73,29 +73,27 @@ MatchDate,TeamName
 2026-11-14,FC Lourdes
 2026-11-14,ES Buxerolles
 2026-11-14,Claira / St Laurent
-2026-11-14,Le Touquet
+2026-11-14,Lyon-la-Duchere
 2026-11-14,Chauny
 2026-11-14,Brive
-2026-11-14,Pays de Saint-Omer
+2026-11-14,Racing Besancon
 2026-11-14,Boulazac
 2026-11-14,Avenir Foot Lozere
 2026-11-14,Balma
 2026-11-14,Vitre
+2026-11-14,Vesoul
 2026-11-14,US Cheminots Paray-Foot
 2026-11-14,Strasbourg Koenigshoffen
 2026-11-14,Stade Béthunois
-2026-11-14,St-Ouen L'Aumone
 2026-11-14,Cercle Paul Bert Brequigny Football
+2026-11-14,Le Touquet
 2026-11-14,GSI Pontivy
 2026-11-14,Grau-Du-Roi
-2026-11-14,Cournon
 2026-11-14,Balagne
-2026-11-14,Dunkerque
 2026-11-14,Le Puy
 2026-11-14,Saint-Pauloise FC
 2026-11-14,Tourcoing
 2026-11-14,Versailles 78
-2026-11-14,Vesoul
 2026-11-14,CA Boulay
 2026-11-14,Rhone Crussol Foot
 2026-11-14,Chalon-sur-Saone
@@ -112,8 +110,10 @@ MatchDate,TeamName
 2026-11-14,Asptt Dijon
 2026-11-14,Caen
 2026-11-14,Contres
+2026-11-14,Cournon
+2026-11-14,Dunkerque
+2026-11-14,St-Ouen L'Aumone
 2026-11-14,Saint-Brieuc
-2026-11-14,Racing Besancon
 2026-11-15,Epinal
 2026-11-15,USF Fecamp
 2026-11-15,Union Cosnoise
