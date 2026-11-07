@@ -1,22 +1,21 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-11-06,Toulouse,Foggy,9.5,0.0,8.4
-2026-11-07,Auxerre,Foggy,10.9,0.0,6.6
-2026-11-07,Paris SG,Foggy,12.5,0.03,5.0
+2026-11-07,Auxerre,Foggy,9.6,0.0,6.2
+2026-11-07,Paris SG,Foggy,11.2,0.0,7.6
 2026-11-08,Stade Rennais FC 1901,N/A,,,
 2026-11-08,Le Mans FC,N/A,,,
-2026-11-08,Brest,Partly cloudy,12.0,0.0,20.6
-2026-11-08,Le Havre,Partly cloudy,11.9,0.0,14.2
-2026-11-08,Angers,Foggy,8.6,0.0,12.3
+2026-11-08,Brest,Rainy,13.2,0.1,14.9
+2026-11-08,Le Havre,Foggy,11.8,0.0,10.3
+2026-11-08,Angers,Rainy,10.4,0.0,9.4
 2026-11-08,Racing Club de Lens,N/A,,,
 2026-11-20,ES Troyes AC,N/A,,,
-2026-11-21,Nice,Partly cloudy,16.9,0.0,16.3
-2026-11-21,Monaco,Partly cloudy,17.2,0.0,16.9
+2026-11-21,Nice,Rainy,12.5,6.2,13.6
+2026-11-21,Monaco,Rainy,12.9,6.0,7.4
 2026-11-21,Racing Club de Lens,N/A,,,
-2026-11-21,Lille,N/A,,,
-2026-11-21,Strasbourg,Rainy,8.5,0.9,13.7
+2026-11-21,Lille,Partly cloudy,6.3,0.0,12.5
+2026-11-21,Strasbourg,Partly cloudy,4.4,0.0,17.2
 2026-11-22,Paris FC,N/A,,,
-2026-11-22,Lorient,N/A,,,
-2026-11-22,Marseille,N/A,,,
+2026-11-22,Lorient,Showers,12.7,2.5,26.3
+2026-11-22,Marseille,Clear,12.7,0.0,55.8
 2026-11-27,Brest,N/A,,,
 2026-11-28,Angers,N/A,,,
 2026-11-28,Le Mans FC,N/A,,,
