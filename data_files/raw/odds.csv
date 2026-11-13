@@ -1,6 +1,6 @@
 Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_HomeWin,ImpliedProb_Draw,ImpliedProb_AwayWin,BookmakerMargin
 2026-11-20,Troyes,Le Havre,BetMGM,2.05,3.6,3.4,0.4603,0.2621,0.2775,5.97
-2026-11-20,Troyes,Le Havre,DraftKings,2.0,3.4,3.4,0.4595,0.2703,0.2703,8.82
+2026-11-20,Troyes,Le Havre,DraftKings,2.05,3.55,3.55,0.4641,0.268,0.268,5.12
 2026-11-21,Monaco,Auxerre,BetMGM,1.4,5.0,7.0,0.6757,0.1892,0.1351,5.71
 2026-11-21,Monaco,Auxerre,DraftKings,1.3703703703703702,4.8,6.5,0.6683,0.1908,0.1409,9.19
 2026-11-21,Lens,Toulouse,BetMGM,1.8333333333333335,3.9,3.9,0.5154,0.2423,0.2423,5.83
@@ -13,3 +13,10 @@ Date,HomeTeam,AwayTeam,Bookmaker,HomeWinOdds,DrawOdds,AwayWinOdds,ImpliedProb_Ho
 2026-11-22,Marseille,Le Mans,DraftKings,1.425531914893617,4.6,5.75,0.6419,0.1989,0.1591,9.28
 2026-11-22,Paris FC,Angers,BetMGM,1.3636363636363638,5.25,7.75,0.6965,0.1809,0.1226,5.28
 2026-11-22,Paris FC,Angers,DraftKings,1.3225806451612903,4.8,7.5,0.6888,0.1898,0.1215,9.78
+2026-11-27,Brest,Paris FC,DraftKings,3.05,3.2,2.2,0.2994,0.2854,0.4151,9.49
+2026-11-28,Angers,Lens,DraftKings,4.0,3.9,1.6896551724137931,0.2276,0.2335,0.5389,9.82
+2026-11-28,Le Havre,Strasbourg,DraftKings,2.85,3.5,2.2,0.3216,0.2619,0.4166,9.11
+2026-11-28,Nice,Troyes,DraftKings,1.625,4.0,4.4,0.5632,0.2288,0.208,9.27
+2026-11-28,Paris SG,Lorient,DraftKings,1.1904761904761905,6.5,10.0,0.7679,0.1406,0.0914,9.38
+2026-11-29,Auxerre,Marseille,DraftKings,3.65,3.75,1.8,0.2499,0.2433,0.5068,9.62
+2026-11-29,Lyon,Monaco,DraftKings,2.25,3.3,2.9,0.4069,0.2774,0.3157,9.23
