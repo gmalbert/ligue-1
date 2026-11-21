@@ -1,31 +1,30 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-11-20,ES Troyes AC,N/A,,,
-2026-11-21,Nice,Partly cloudy,17.0,0.0,9.5
-2026-11-21,Monaco,Partly cloudy,17.0,0.0,15.7
+2026-11-21,Nice,N/A,,,
+2026-11-21,Monaco,N/A,,,
 2026-11-21,Racing Club de Lens,N/A,,,
-2026-11-21,Lille,Partly cloudy,8.8,0.0,10.1
-2026-11-21,Strasbourg,Showers,9.2,0.1,11.2
+2026-11-21,Lille,N/A,,,
+2026-11-21,Strasbourg,N/A,,,
 2026-11-22,Paris FC,N/A,,,
-2026-11-22,Lorient,Rainy,14.0,7.0,31.0
-2026-11-22,Marseille,Rainy,17.6,12.05,43.6
-2026-11-27,Brest,Rainy,11.5,3.8,19.4
-2026-11-28,Angers,Rainy,11.1,1.2,17.4
+2026-11-22,Lorient,N/A,,,
+2026-11-22,Marseille,Rainy,17.6,5.5,29.7
+2026-11-27,Brest,Showers,11.0,14.6,30.7
+2026-11-28,Angers,Rainy,10.3,1.05,17.5
 2026-11-28,Le Mans FC,N/A,,,
-2026-11-28,Nice,Showers,13.6,12.6,12.8
-2026-11-28,Le Havre,Rainy,8.9,7.0,21.2
-2026-11-28,Paris SG,Rainy,8.9,8.4,13.3
-2026-11-29,Auxerre,Rainy,10.3,7.4,18.7
-2026-11-29,Toulouse,Rainy,13.0,2.4,19.0
-2026-11-29,Lyon,Showers,12.3,30.6,16.4
-2026-12-04,Toulouse,Rainy,13.9,4.4,16.7
-2026-12-05,Lille,N/A,,,
-2026-12-05,Monaco,Partly cloudy,13.3,0.0,12.6
+2026-11-28,Nice,Showers,11.6,12.6,14.6
+2026-11-28,Le Havre,Rainy,7.9,1.5,22.5
+2026-11-28,Paris SG,Rainy,6.4,2.7,13.8
+2026-11-29,Auxerre,Rainy,8.5,2.0,10.8
+2026-11-29,Toulouse,Partly cloudy,12.3,0.0,10.2
+2026-11-29,Lyon,Rainy,8.1,15.0,14.5
+2026-12-04,Toulouse,Rainy,11.8,4.8,13.5
+2026-12-05,Lille,Rainy,9.9,0.2,18.5
+2026-12-05,Monaco,Foggy,14.6,0.0,6.8
 2026-12-05,Racing Club de Lens,N/A,,,
-2026-12-05,Strasbourg,Rainy,5.7,1.1,10.9
+2026-12-05,Strasbourg,Rainy,9.7,4.4,14.2
 2026-12-05,Paris FC,N/A,,,
 2026-12-06,ES Troyes AC,N/A,,,
 2026-12-06,Stade Rennais FC 1901,N/A,,,
-2026-12-06,Marseille,N/A,,,
+2026-12-06,Marseille,Partly cloudy,8.5,0.0,23.0
 2026-12-11,Auxerre,N/A,,,
 2026-12-12,Paris SG,N/A,,,
 2026-12-12,Nice,N/A,,,
