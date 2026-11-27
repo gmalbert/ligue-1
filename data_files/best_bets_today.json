@@ -1,10 +1,70 @@
 {
   "meta": {
     "sport": "Ligue1",
-    "generated_at": "2026-11-26T17:41:59.828495+00:00",
+    "generated_at": "2026-11-27T17:21:13.289658+00:00",
     "model_version": "1.0.0",
-    "season": "2026",
-    "notes": "No Ligue1 predictions for 2026-11-26"
+    "season": "2026"
   },
-  "bets": []
+  "bets": [
+    {
+      "game_date": "2026-11-27",
+      "game_time": null,
+      "game": "Paris FC @ Brest",
+      "home_team": "Brest",
+      "away_team": "Paris FC",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.447,
+      "edge": 0.1529,
+      "tier": "Elite",
+      "odds": 240,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-11-27",
+      "game_time": null,
+      "game": "Paris FC @ Brest",
+      "home_team": "Brest",
+      "away_team": "Paris FC",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.447,
+      "edge": 0.1571,
+      "tier": "Elite",
+      "odds": 245,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-11-27",
+      "game_time": null,
+      "game": "Paris FC @ Brest",
+      "home_team": "Brest",
+      "away_team": "Paris FC",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.544,
+      "edge": 0.2499,
+      "tier": "Elite",
+      "odds": 240,
+      "line": null,
+      "league": "Ligue 1"
+    },
+    {
+      "game_date": "2026-11-27",
+      "game_time": null,
+      "game": "Paris FC @ Brest",
+      "home_team": "Brest",
+      "away_team": "Paris FC",
+      "bet_type": "Match Result",
+      "pick": "Home Win",
+      "confidence": 0.544,
+      "edge": 0.2541,
+      "tier": "Elite",
+      "odds": 245,
+      "line": null,
+      "league": "Ligue 1"
+    }
+  ]
 }
