@@ -1,31 +1,30 @@
 Date,HomeTeam,WeatherDesc,TempMaxC,PrecipMM,WindKmh
-2026-11-27,Brest,Rainy,12.8,2.3,18.5
-2026-11-28,Angers,Rainy,10.8,0.1,13.0
+2026-11-28,Angers,Rainy,11.7,0.1,12.9
 2026-11-28,Le Mans FC,N/A,,,
-2026-11-28,Nice,Showers,14.2,2.1,9.1
-2026-11-28,Le Havre,Rainy,7.6,3.48,18.5
-2026-11-28,Paris SG,Partly cloudy,5.1,0.0,12.7
-2026-11-29,Auxerre,Rainy,7.9,5.63,7.6
-2026-11-29,Toulouse,Rainy,10.5,1.97,8.2
-2026-11-29,Lyon,Rainy,7.2,2.75,3.8
-2026-12-04,Toulouse,Foggy,13.2,0.0,5.4
-2026-12-05,Lille,Partly cloudy,6.7,0.0,7.3
-2026-12-05,Monaco,Foggy,11.5,0.0,11.9
+2026-11-28,Nice,Partly cloudy,14.5,0.0,9.1
+2026-11-28,Le Havre,Rainy,8.5,0.4,17.7
+2026-11-28,Paris SG,Partly cloudy,5.3,0.0,12.5
+2026-11-29,Auxerre,Rainy,6.8,3.43,7.6
+2026-11-29,Toulouse,Showers,12.6,0.18,8.5
+2026-11-29,Lyon,Rainy,8.9,0.5,3.3
+2026-12-04,Toulouse,Foggy,14.0,0.0,5.1
+2026-12-05,Lille,Foggy,3.3,0.0,4.4
+2026-12-05,Monaco,Partly cloudy,13.1,0.0,11.9
 2026-12-05,Racing Club de Lens,N/A,,,
-2026-12-05,Strasbourg,Foggy,5.0,0.13,5.5
+2026-12-05,Strasbourg,Foggy,3.1,0.0,4.9
 2026-12-05,Paris FC,N/A,,,
 2026-12-06,ES Troyes AC,N/A,,,
 2026-12-06,Stade Rennais FC 1901,N/A,,,
-2026-12-06,Marseille,Partly cloudy,10.8,0.0,10.4
-2026-12-11,Auxerre,Rainy,6.1,3.8,26.8
-2026-12-12,Paris SG,Rainy,10.5,0.6,19.5
-2026-12-12,Nice,Partly cloudy,11.7,0.0,11.5
-2026-12-12,Angers,Partly cloudy,11.3,0.0,23.2
-2026-12-12,Brest,Partly cloudy,11.7,0.0,23.7
-2026-12-12,Le Havre,Rainy,11.2,0.8,30.4
-2026-12-13,Lorient,N/A,,,
+2026-12-06,Marseille,Partly cloudy,11.7,0.0,6.9
+2026-12-11,Auxerre,Partly cloudy,3.4,0.0,6.4
+2026-12-12,Paris SG,Rainy,5.3,0.6,12.0
+2026-12-12,Nice,Partly cloudy,10.0,0.0,14.0
+2026-12-12,Angers,Rainy,10.1,2.6,13.9
+2026-12-12,Brest,Rainy,10.1,1.2,23.3
+2026-12-12,Le Havre,Rainy,8.8,4.0,23.1
+2026-12-13,Lorient,Partly cloudy,7.6,0.0,15.5
 2026-12-13,Stade Rennais FC 1901,N/A,,,
-2026-12-13,Lyon,N/A,,,
+2026-12-13,Lyon,Rainy,2.8,0.4,22.5
 2027-01-02,Brest,N/A,,,
 2027-01-02,ES Troyes AC,N/A,,,
 2027-01-02,Toulouse,N/A,,,
